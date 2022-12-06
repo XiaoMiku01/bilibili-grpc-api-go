@@ -51,7 +51,7 @@ func init() {
 }
 
 // getBiliBiliMetaData get bilibili metadata
-// 获取bilibili元数据 用于鉴权
+// 获取bilibili元数据 用于鉴权 每个请求都需要重新生成
 func getBiliBiliMetaData(accessKey string) metadata.MD {
 	device := &device.Device{
 		MobiApp:  "android",
