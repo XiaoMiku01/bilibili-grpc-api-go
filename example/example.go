@@ -1,15 +1,10 @@
-package test
+package main
 
 import (
 	"context"
 	"crypto/tls"
 	"encoding/json"
-	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/locale"
-	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/rpc"
-	"google.golang.org/grpc/status"
-	"google.golang.org/protobuf/proto"
 	"log"
-	"testing"
 	"time"
 
 	"google.golang.org/grpc"
@@ -17,13 +12,17 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/metadata"
+	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/proto"
+
+	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/device"
+	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/locale"
+	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/network"
+	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/rpc"
 
 	dynamicapi "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/v2"
 	onlineapi "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playeronline/v1"
 	bilimetadata "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata"
-
-	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/device"
-	"github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/network"
 )
 
 // init a grpc client
@@ -49,26 +48,6 @@ func init() {
 
 	}
 	log.Println("BiliGRPC connect success")
-}
-
-// TestGetOnline test get online player
-// 使用grpc获取视频在线人数测试用例
-func TestGrpcApi(t *testing.T) {
-	onlineClient := onlineapi.NewPlayerOnlineClient(grpcClient)
-	onlineReq := &onlineapi.PlayerOnlineReq{
-		Aid:      390373397,
-		Cid:      898386251,
-		PlayOpen: true,
-	}
-	onlineResp, err := onlineClient.PlayerOnline(context.Background(), onlineReq)
-	if err != nil {
-		t.Error(err)
-	}
-	jsonString, err := json.Marshal(onlineResp)
-	if err != nil {
-		t.Error(err)
-	}
-	t.Log(string(jsonString))
 }
 
 // getBiliBiliMetaData get bilibili metadata
@@ -111,9 +90,29 @@ func getBiliBiliMetaData(accessKey string) metadata.MD {
 	return md
 }
 
-// TestGetDynamic test get dynamic with grpc api by access key
-// 使用grpc获取关注动态测试用例 access key 鉴权
-func TestGrpcApiWithAuthorize(t *testing.T) {
+// GrpcApiOnline TestGetOnline test get online player
+// 使用grpc获取视频在线人数
+func GrpcApiOnline() {
+	onlineClient := onlineapi.NewPlayerOnlineClient(grpcClient)
+	onlineReq := &onlineapi.PlayerOnlineReq{
+		Aid:      390373397,
+		Cid:      898386251,
+		PlayOpen: true,
+	}
+	onlineResp, err := onlineClient.PlayerOnline(context.Background(), onlineReq)
+	if err != nil {
+		log.Fatalf("BiliGRPC get online player error: %v", err)
+	}
+	jsonString, err := json.Marshal(onlineResp)
+	if err != nil {
+		log.Fatalf("BiliGRPC get online player error: %v", err)
+	}
+	log.Println(string(jsonString))
+}
+
+// GrpcApiGetDynamicWithAuthorize test get dynamic with grpc api by access key
+// 使用grpc获取关注动态 access key 鉴权
+func GrpcApiGetDynamicWithAuthorize() {
 	accessKey := "your access key"
 	md := getBiliBiliMetaData(accessKey)
 	ctx := metadata.NewOutgoingContext(context.Background(), md)
@@ -126,29 +125,34 @@ func TestGrpcApiWithAuthorize(t *testing.T) {
 	if err != nil {
 		status, ok := status.FromError(err)
 		if !ok {
-			t.Error(err)
+			log.Fatalf("BiliGRPC get online player error: %v", err)
 			return
 		}
 		// B站的grpc接口返回的错误码 例如鉴权错误
 		if status.Code() == codes.Unknown && len(status.Details()) > 0 {
 			rpc, ok := status.Details()[0].(*rpc.Status)
 			if !ok {
-				t.Error(err)
+				log.Fatalf("BiliGRPC get online player error: %v", err)
 				return
 			}
-			t.Error(rpc.Code, rpc.Message)
+			log.Fatalln(rpc.Code, rpc.Message)
 			return
 		} else {
-			t.Error(err)
+			log.Fatalf("BiliGRPC get online player error: %v", err)
 			return
 		}
 	}
-	t.Logf("获取 %d 条动态", len(dynAllResp.DynamicList.List))
+	log.Printf("获取 %d 条动态", len(dynAllResp.DynamicList.List))
 	jsonString, err := json.Marshal(dynAllResp)
 	if err != nil {
-		t.Error(err)
+		log.Fatalf("BiliGRPC get online player error: %v", err)
 		return
 	}
-	t.Log(string(jsonString))
+	log.Println(string(jsonString))
 	return
+}
+
+func main() {
+	GrpcApiOnline()
+	GrpcApiGetDynamicWithAuthorize()
 }
