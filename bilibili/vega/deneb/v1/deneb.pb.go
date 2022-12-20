@@ -26,11 +26,11 @@ type MessagePullsReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Data    []*anypb.Any `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
-	Pn      int32        `protobuf:"varint,2,opt,name=pn,proto3" json:"pn,omitempty"`
-	Ps      int32        `protobuf:"varint,3,opt,name=ps,proto3" json:"ps,omitempty"`
-	Count   int64        `protobuf:"varint,4,opt,name=count,proto3" json:"count,omitempty"`
-	HasNext bool         `protobuf:"varint,5,opt,name=has_next,json=hasNext,proto3" json:"has_next,omitempty"`
+	Data []*anypb.Any `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+	Pn int32 `protobuf:"varint,2,opt,name=pn,proto3" json:"pn,omitempty"`
+	Ps int32 `protobuf:"varint,3,opt,name=ps,proto3" json:"ps,omitempty"`
+	Count int64 `protobuf:"varint,4,opt,name=count,proto3" json:"count,omitempty"`
+	HasNext bool `protobuf:"varint,5,opt,name=has_next,json=hasNext,proto3" json:"has_next,omitempty"`
 }
 
 func (x *MessagePullsReply) Reset() {
@@ -106,9 +106,9 @@ type MessagePullsReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	StartSeqId int64 `protobuf:"varint,1,opt,name=start_seq_id,json=startSeqId,proto3" json:"start_seq_id,omitempty"`
-	EndSeqId   int64 `protobuf:"varint,2,opt,name=end_seq_id,json=endSeqId,proto3" json:"end_seq_id,omitempty"`
-	Pn         int32 `protobuf:"varint,3,opt,name=pn,proto3" json:"pn,omitempty"`
-	Ps         int32 `protobuf:"varint,4,opt,name=ps,proto3" json:"ps,omitempty"`
+	EndSeqId int64 `protobuf:"varint,2,opt,name=end_seq_id,json=endSeqId,proto3" json:"end_seq_id,omitempty"`
+	Pn int32 `protobuf:"varint,3,opt,name=pn,proto3" json:"pn,omitempty"`
+	Ps int32 `protobuf:"varint,4,opt,name=ps,proto3" json:"ps,omitempty"`
 }
 
 func (x *MessagePullsReq) Reset() {

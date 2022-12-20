@@ -87,11 +87,11 @@ type Arc struct {
 	// UGC合集id
 	SeasonId int64 `protobuf:"varint,29,opt,name=season_id,json=seasonId,proto3" json:"season_id,omitempty"`
 	// 新版属性位配置(也没用)
-	AttributeV2 int64        `protobuf:"varint,30,opt,name=attribute_v2,json=attributeV2,proto3" json:"attribute_v2,omitempty"`
+	AttributeV2 int64 `protobuf:"varint,30,opt,name=attribute_v2,json=attributeV2,proto3" json:"attribute_v2,omitempty"`
 	SeasonTheme *SeasonTheme `protobuf:"bytes,31,opt,name=season_theme,json=seasonTheme,proto3" json:"season_theme,omitempty"`
-	ShortLinkV2 string       `protobuf:"bytes,40,opt,name=short_link_v2,json=shortLinkV2,proto3" json:"short_link_v2,omitempty"`
-	UpFromV2    int32        `protobuf:"varint,41,opt,name=up_from_v2,json=upFromV2,proto3" json:"up_from_v2,omitempty"`
-	FirstFrame  string       `protobuf:"bytes,42,opt,name=first_frame,json=firstFrame,proto3" json:"first_frame,omitempty"`
+	ShortLinkV2 string `protobuf:"bytes,40,opt,name=short_link_v2,json=shortLinkV2,proto3" json:"short_link_v2,omitempty"`
+	UpFromV2 int32 `protobuf:"varint,41,opt,name=up_from_v2,json=upFromV2,proto3" json:"up_from_v2,omitempty"`
+	FirstFrame string `protobuf:"bytes,42,opt,name=first_frame,json=firstFrame,proto3" json:"first_frame,omitempty"`
 }
 
 func (x *Arc) Reset() {
@@ -523,8 +523,8 @@ type Page struct {
 	// 外链url
 	WebLink string `protobuf:"bytes,8,opt,name=webLink,proto3" json:"webLink,omitempty"`
 	// 分P分辨率
-	Dimension  *Dimension `protobuf:"bytes,9,opt,name=dimension,proto3" json:"dimension,omitempty"`
-	FirstFrame string     `protobuf:"bytes,10,opt,name=first_frame,json=firstFrame,proto3" json:"first_frame,omitempty"`
+	Dimension *Dimension `protobuf:"bytes,9,opt,name=dimension,proto3" json:"dimension,omitempty"`
+	FirstFrame string `protobuf:"bytes,10,opt,name=first_frame,json=firstFrame,proto3" json:"first_frame,omitempty"`
 }
 
 func (x *Page) Reset() {
@@ -800,9 +800,9 @@ type SeasonTheme struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	BgColor         string `protobuf:"bytes,1,opt,name=bg_color,json=bgColor,proto3" json:"bg_color,omitempty"`
+	BgColor string `protobuf:"bytes,1,opt,name=bg_color,json=bgColor,proto3" json:"bg_color,omitempty"`
 	SelectedBgColor string `protobuf:"bytes,2,opt,name=selected_bg_color,json=selectedBgColor,proto3" json:"selected_bg_color,omitempty"`
-	TextColor       string `protobuf:"bytes,3,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
+	TextColor string `protobuf:"bytes,3,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
 }
 
 func (x *SeasonTheme) Reset() {

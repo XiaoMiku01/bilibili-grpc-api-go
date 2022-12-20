@@ -109,7 +109,7 @@ type Config struct {
 	HeadImage string `protobuf:"bytes,6,opt,name=head_image,json=headImage,proto3" json:"head_image,omitempty"`
 	// 当前页按钮信息
 	PageItems []*EntranceShow `protobuf:"bytes,7,rep,name=page_items,json=pageItems,proto3" json:"page_items,omitempty"`
-	Hit       int32           `protobuf:"varint,8,opt,name=hit,proto3" json:"hit,omitempty"`
+	Hit int32 `protobuf:"varint,8,opt,name=hit,proto3" json:"hit,omitempty"`
 }
 
 func (x *Config) Reset() {

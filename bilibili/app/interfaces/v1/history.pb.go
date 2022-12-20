@@ -241,7 +241,7 @@ type CardCheese struct {
 	Duration int64 `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
 	// 单集标题
 	Subtitle string `protobuf:"bytes,4,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
-	State    int64  `protobuf:"varint,5,opt,name=state,proto3" json:"state,omitempty"`
+	State int64 `protobuf:"varint,5,opt,name=state,proto3" json:"state,omitempty"`
 }
 
 func (x *CardCheese) Reset() {
@@ -428,8 +428,8 @@ type CardOGV struct {
 	Duration int64 `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
 	// 单集标题
 	Subtitle string `protobuf:"bytes,4,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
-	Badge    string `protobuf:"bytes,5,opt,name=badge,proto3" json:"badge,omitempty"`
-	State    int64  `protobuf:"varint,6,opt,name=state,proto3" json:"state,omitempty"`
+	Badge string `protobuf:"bytes,5,opt,name=badge,proto3" json:"badge,omitempty"`
+	State int64 `protobuf:"varint,6,opt,name=state,proto3" json:"state,omitempty"`
 }
 
 func (x *CardOGV) Reset() {
@@ -541,7 +541,7 @@ type CardUGC struct {
 	// 分享副标题
 	ShareSubtitle string `protobuf:"bytes,14,opt,name=share_subtitle,json=shareSubtitle,proto3" json:"share_subtitle,omitempty"`
 	// 播放数
-	View  int64 `protobuf:"varint,15,opt,name=view,proto3" json:"view,omitempty"`
+	View int64 `protobuf:"varint,15,opt,name=view,proto3" json:"view,omitempty"`
 	State int64 `protobuf:"varint,16,opt,name=state,proto3" json:"state,omitempty"`
 }
 
@@ -1250,7 +1250,7 @@ type CursorV2Reply struct {
 	// 游标信息
 	Cursor *Cursor `protobuf:"bytes,2,opt,name=cursor,proto3" json:"cursor,omitempty"`
 	// 是否未拉取完
-	HasMore   bool   `protobuf:"varint,3,opt,name=hasMore,proto3" json:"hasMore,omitempty"`
+	HasMore bool `protobuf:"varint,3,opt,name=hasMore,proto3" json:"hasMore,omitempty"`
 	EmptyLink string `protobuf:"bytes,4,opt,name=empty_link,json=emptyLink,proto3" json:"empty_link,omitempty"`
 }
 

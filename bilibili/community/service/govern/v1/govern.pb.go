@@ -26,14 +26,14 @@ type QoeReportReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id           int64           `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Scene        int64           `protobuf:"varint,2,opt,name=scene,proto3" json:"scene,omitempty"`
-	Type         int32           `protobuf:"varint,3,opt,name=type,proto3" json:"type,omitempty"`
-	Cancel       bool            `protobuf:"varint,4,opt,name=cancel,proto3" json:"cancel,omitempty"`
-	BusinessType string          `protobuf:"bytes,5,opt,name=business_type,json=businessType,proto3" json:"business_type,omitempty"`
-	Oid          int64           `protobuf:"varint,6,opt,name=oid,proto3" json:"oid,omitempty"`
-	ScoreResult  *QoeScoreResult `protobuf:"bytes,7,opt,name=score_result,json=scoreResult,proto3" json:"score_result,omitempty"`
-	BusinessData string          `protobuf:"bytes,8,opt,name=business_data,json=businessData,proto3" json:"business_data,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Scene int64 `protobuf:"varint,2,opt,name=scene,proto3" json:"scene,omitempty"`
+	Type int32 `protobuf:"varint,3,opt,name=type,proto3" json:"type,omitempty"`
+	Cancel bool `protobuf:"varint,4,opt,name=cancel,proto3" json:"cancel,omitempty"`
+	BusinessType string `protobuf:"bytes,5,opt,name=business_type,json=businessType,proto3" json:"business_type,omitempty"`
+	Oid int64 `protobuf:"varint,6,opt,name=oid,proto3" json:"oid,omitempty"`
+	ScoreResult *QoeScoreResult `protobuf:"bytes,7,opt,name=score_result,json=scoreResult,proto3" json:"score_result,omitempty"`
+	BusinessData string `protobuf:"bytes,8,opt,name=business_data,json=businessData,proto3" json:"business_data,omitempty"`
 }
 
 func (x *QoeReportReq) Reset() {

@@ -504,7 +504,7 @@ type AB struct {
 	unknownFields protoimpl.UnknownFields
 
 	Glance *Glance `protobuf:"bytes,1,opt,name=glance,proto3" json:"glance,omitempty"`
-	Group  int32   `protobuf:"varint,2,opt,name=group,proto3" json:"group,omitempty"`
+	Group int32 `protobuf:"varint,2,opt,name=group,proto3" json:"group,omitempty"`
 }
 
 func (x *AB) Reset() {
@@ -560,8 +560,8 @@ type ArcConf struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 是否支持
-	IsSupport    bool          `protobuf:"varint,1,opt,name=is_support,json=isSupport,proto3" json:"is_support,omitempty"`
-	Disabled     bool          `protobuf:"varint,2,opt,name=disabled,proto3" json:"disabled,omitempty"`
+	IsSupport bool `protobuf:"varint,1,opt,name=is_support,json=isSupport,proto3" json:"is_support,omitempty"`
+	Disabled bool `protobuf:"varint,2,opt,name=disabled,proto3" json:"disabled,omitempty"`
 	ExtraContent *ExtraContent `protobuf:"bytes,3,opt,name=extra_content,json=extraContent,proto3" json:"extra_content,omitempty"`
 }
 
@@ -681,10 +681,10 @@ type ButtonStyle struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text      string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
 	TextColor string `protobuf:"bytes,2,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
-	BgColor   string `protobuf:"bytes,3,opt,name=bg_color,json=bgColor,proto3" json:"bg_color,omitempty"`
-	JumpLink  string `protobuf:"bytes,4,opt,name=jump_link,json=jumpLink,proto3" json:"jump_link,omitempty"`
+	BgColor string `protobuf:"bytes,3,opt,name=bg_color,json=bgColor,proto3" json:"bg_color,omitempty"`
+	JumpLink string `protobuf:"bytes,4,opt,name=jump_link,json=jumpLink,proto3" json:"jump_link,omitempty"`
 }
 
 func (x *ButtonStyle) Reset() {
@@ -755,9 +755,9 @@ type CloudConf struct {
 	// 是否展示功能
 	Show bool `protobuf:"varint,1,opt,name=show,proto3" json:"show,omitempty"`
 	// 设置类型
-	ConfType   ConfType    `protobuf:"varint,2,opt,name=conf_type,json=confType,proto3,enum=bilibili.app.playurl.v1.ConfType" json:"conf_type,omitempty"`
+	ConfType ConfType `protobuf:"varint,2,opt,name=conf_type,json=confType,proto3,enum=bilibili.app.playurl.v1.ConfType" json:"conf_type,omitempty"`
 	FieldValue *FieldValue `protobuf:"bytes,3,opt,name=field_value,json=fieldValue,proto3" json:"field_value,omitempty"`
-	ConfValue  *ConfValue  `protobuf:"bytes,4,opt,name=conf_value,json=confValue,proto3" json:"conf_value,omitempty"`
+	ConfValue *ConfValue `protobuf:"bytes,4,opt,name=conf_value,json=confValue,proto3" json:"conf_value,omitempty"`
 }
 
 func (x *CloudConf) Reset() {
@@ -922,7 +922,7 @@ type DashItem struct {
 	// 大小
 	Size uint64 `protobuf:"varint,7,opt,name=size,proto3" json:"size,omitempty"`
 	// 帧率
-	FrameRate    string `protobuf:"bytes,8,opt,name=frame_rate,json=frameRate,proto3" json:"frame_rate,omitempty"`
+	FrameRate string `protobuf:"bytes,8,opt,name=frame_rate,json=frameRate,proto3" json:"frame_rate,omitempty"`
 	WidevinePssh string `protobuf:"bytes,9,opt,name=widevine_pssh,json=widevinePssh,proto3" json:"widevine_pssh,omitempty"`
 }
 
@@ -1048,7 +1048,7 @@ type DashVideo struct {
 	// 宽度
 	Width int32 `protobuf:"varint,10,opt,name=width,proto3" json:"width,omitempty"`
 	// 高度
-	Height       int32  `protobuf:"varint,11,opt,name=height,proto3" json:"height,omitempty"`
+	Height int32 `protobuf:"varint,11,opt,name=height,proto3" json:"height,omitempty"`
 	WidevinePssh string `protobuf:"bytes,12,opt,name=widevine_pssh,json=widevinePssh,proto3" json:"widevine_pssh,omitempty"`
 }
 
@@ -1281,7 +1281,7 @@ type ExtraContent struct {
 	unknownFields protoimpl.UnknownFields
 
 	DisabledReason string `protobuf:"bytes,1,opt,name=disabled_reason,json=disabledReason,proto3" json:"disabled_reason,omitempty"`
-	DisabledCode   int64  `protobuf:"varint,2,opt,name=disabled_code,json=disabledCode,proto3" json:"disabled_code,omitempty"`
+	DisabledCode int64 `protobuf:"varint,2,opt,name=disabled_code,json=disabledCode,proto3" json:"disabled_code,omitempty"`
 }
 
 func (x *ExtraContent) Reset() {
@@ -1498,8 +1498,8 @@ type Glance struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CanWatch bool  `protobuf:"varint,1,opt,name=can_watch,json=canWatch,proto3" json:"can_watch,omitempty"`
-	Times    int64 `protobuf:"varint,2,opt,name=times,proto3" json:"times,omitempty"`
+	CanWatch bool `protobuf:"varint,1,opt,name=can_watch,json=canWatch,proto3" json:"can_watch,omitempty"`
+	Times int64 `protobuf:"varint,2,opt,name=times,proto3" json:"times,omitempty"`
 	Duration int64 `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
 }
 
@@ -2296,7 +2296,7 @@ type PlayConfState struct {
 	Show bool `protobuf:"varint,2,opt,name=show,proto3" json:"show,omitempty"`
 	// 配置字段值
 	FieldValue *FieldValue `protobuf:"bytes,3,opt,name=field_value,json=fieldValue,proto3" json:"field_value,omitempty"`
-	ConfValue  *ConfValue  `protobuf:"bytes,4,opt,name=conf_value,json=confValue,proto3" json:"conf_value,omitempty"`
+	ConfValue *ConfValue `protobuf:"bytes,4,opt,name=conf_value,json=confValue,proto3" json:"conf_value,omitempty"`
 }
 
 func (x *PlayConfState) Reset() {
@@ -2364,10 +2364,10 @@ type PlayLimit struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code       PlayLimitCode `protobuf:"varint,1,opt,name=code,proto3,enum=bilibili.app.playurl.v1.PlayLimitCode" json:"code,omitempty"`
-	Message    string        `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
-	SubMessage string        `protobuf:"bytes,3,opt,name=sub_message,json=subMessage,proto3" json:"sub_message,omitempty"`
-	Button     *ButtonStyle  `protobuf:"bytes,4,opt,name=button,proto3" json:"button,omitempty"`
+	Code PlayLimitCode `protobuf:"varint,1,opt,name=code,proto3,enum=bilibili.app.playurl.v1.PlayLimitCode" json:"code,omitempty"`
+	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
+	SubMessage string `protobuf:"bytes,3,opt,name=sub_message,json=subMessage,proto3" json:"sub_message,omitempty"`
+	Button *ButtonStyle `protobuf:"bytes,4,opt,name=button,proto3" json:"button,omitempty"`
 }
 
 func (x *PlayLimit) Reset() {
@@ -2736,8 +2736,8 @@ type PlayViewReply struct {
 	// 播放控件稿件配置
 	PlayArc *PlayArcConf `protobuf:"bytes,5,opt,name=play_arc,json=playArc,proto3" json:"play_arc,omitempty"`
 	// 事件
-	Event     *Event     `protobuf:"bytes,6,opt,name=event,proto3" json:"event,omitempty"`
-	Ab        *AB        `protobuf:"bytes,7,opt,name=ab,proto3" json:"ab,omitempty"`
+	Event *Event `protobuf:"bytes,6,opt,name=event,proto3" json:"event,omitempty"`
+	Ab *AB `protobuf:"bytes,7,opt,name=ab,proto3" json:"ab,omitempty"`
 	PlayLimit *PlayLimit `protobuf:"bytes,8,opt,name=play_limit,json=playLimit,proto3" json:"play_limit,omitempty"`
 }
 
@@ -2862,8 +2862,8 @@ type PlayViewReq struct {
 	// 编码
 	PreferCodecType CodeType `protobuf:"varint,12,opt,name=prefer_codec_type,json=preferCodecType,proto3,enum=bilibili.app.playurl.v1.CodeType" json:"prefer_codec_type,omitempty"`
 	// 业务类型
-	Business     Business `protobuf:"varint,13,opt,name=business,proto3,enum=bilibili.app.playurl.v1.Business" json:"business,omitempty"`
-	VoiceBalance int64    `protobuf:"varint,14,opt,name=voice_balance,json=voiceBalance,proto3" json:"voice_balance,omitempty"`
+	Business Business `protobuf:"varint,13,opt,name=business,proto3,enum=bilibili.app.playurl.v1.Business" json:"business,omitempty"`
+	VoiceBalance int64 `protobuf:"varint,14,opt,name=voice_balance,json=voiceBalance,proto3" json:"voice_balance,omitempty"`
 }
 
 func (x *PlayViewReq) Reset() {
@@ -3918,7 +3918,7 @@ type VideoInfo struct {
 	// 伴音流
 	DashAudio []*DashItem `protobuf:"bytes,6,rep,name=dash_audio,json=dashAudio,proto3" json:"dash_audio,omitempty"`
 	// 杜比伴音流
-	Dolby  *DolbyItem  `protobuf:"bytes,7,opt,name=dolby,proto3" json:"dolby,omitempty"`
+	Dolby *DolbyItem `protobuf:"bytes,7,opt,name=dolby,proto3" json:"dolby,omitempty"`
 	Volume *VolumeInfo `protobuf:"bytes,8,opt,name=volume,proto3" json:"volume,omitempty"`
 }
 
@@ -4015,13 +4015,13 @@ type VolumeInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MeasuredI         float64 `protobuf:"fixed64,1,opt,name=measured_i,json=measuredI,proto3" json:"measured_i,omitempty"`
-	MeasuredLra       float64 `protobuf:"fixed64,2,opt,name=measured_lra,json=measuredLra,proto3" json:"measured_lra,omitempty"`
-	MeasuredTp        float64 `protobuf:"fixed64,3,opt,name=measured_tp,json=measuredTp,proto3" json:"measured_tp,omitempty"`
+	MeasuredI float64 `protobuf:"fixed64,1,opt,name=measured_i,json=measuredI,proto3" json:"measured_i,omitempty"`
+	MeasuredLra float64 `protobuf:"fixed64,2,opt,name=measured_lra,json=measuredLra,proto3" json:"measured_lra,omitempty"`
+	MeasuredTp float64 `protobuf:"fixed64,3,opt,name=measured_tp,json=measuredTp,proto3" json:"measured_tp,omitempty"`
 	MeasuredThreshold float64 `protobuf:"fixed64,4,opt,name=measured_threshold,json=measuredThreshold,proto3" json:"measured_threshold,omitempty"`
-	TargetOffset      float64 `protobuf:"fixed64,5,opt,name=target_offset,json=targetOffset,proto3" json:"target_offset,omitempty"`
-	TargetI           float64 `protobuf:"fixed64,6,opt,name=target_i,json=targetI,proto3" json:"target_i,omitempty"`
-	TargetTp          float64 `protobuf:"fixed64,7,opt,name=target_tp,json=targetTp,proto3" json:"target_tp,omitempty"`
+	TargetOffset float64 `protobuf:"fixed64,5,opt,name=target_offset,json=targetOffset,proto3" json:"target_offset,omitempty"`
+	TargetI float64 `protobuf:"fixed64,6,opt,name=target_i,json=targetI,proto3" json:"target_i,omitempty"`
+	TargetTp float64 `protobuf:"fixed64,7,opt,name=target_tp,json=targetTp,proto3" json:"target_tp,omitempty"`
 }
 
 func (x *VolumeInfo) Reset() {

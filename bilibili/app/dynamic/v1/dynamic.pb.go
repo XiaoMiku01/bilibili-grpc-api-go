@@ -1391,7 +1391,7 @@ type Dimension struct {
 	unknownFields protoimpl.UnknownFields
 
 	Height int64 `protobuf:"varint,1,opt,name=height,proto3" json:"height,omitempty"`
-	Width  int64 `protobuf:"varint,2,opt,name=width,proto3" json:"width,omitempty"`
+	Width int64 `protobuf:"varint,2,opt,name=width,proto3" json:"width,omitempty"`
 	Rotate int64 `protobuf:"varint,3,opt,name=rotate,proto3" json:"rotate,omitempty"`
 }
 
@@ -2889,8 +2889,8 @@ type DynRedReply struct {
 	// 红点具体信息
 	DynRedItem *DynRedItem `protobuf:"bytes,2,opt,name=dyn_red_item,json=dynRedItem,proto3" json:"dyn_red_item,omitempty"`
 	// 默认tab 值对应tab接口下发的anchor
-	DefaultTab string       `protobuf:"bytes,3,opt,name=default_tab,json=defaultTab,proto3" json:"default_tab,omitempty"`
-	RedStyle   *DynRedStyle `protobuf:"bytes,4,opt,name=red_style,json=redStyle,proto3" json:"red_style,omitempty"`
+	DefaultTab string `protobuf:"bytes,3,opt,name=default_tab,json=defaultTab,proto3" json:"default_tab,omitempty"`
+	RedStyle *DynRedStyle `protobuf:"bytes,4,opt,name=red_style,json=redStyle,proto3" json:"red_style,omitempty"`
 }
 
 func (x *DynRedReply) Reset() {
@@ -3007,12 +3007,12 @@ type DynRedStyle struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	BgType      int32          `protobuf:"varint,1,opt,name=bg_type,json=bgType,proto3" json:"bg_type,omitempty"`
-	CornerType  int32          `protobuf:"varint,2,opt,name=corner_type,json=cornerType,proto3" json:"corner_type,omitempty"`
-	DisplayTime int32          `protobuf:"varint,3,opt,name=display_time,json=displayTime,proto3" json:"display_time,omitempty"`
-	CornerMark  string         `protobuf:"bytes,4,opt,name=corner_mark,json=cornerMark,proto3" json:"corner_mark,omitempty"`
-	Up          *DynRedStyleUp `protobuf:"bytes,5,opt,name=up,proto3" json:"up,omitempty"`
-	Type        int32          `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
+	BgType int32 `protobuf:"varint,1,opt,name=bg_type,json=bgType,proto3" json:"bg_type,omitempty"`
+	CornerType int32 `protobuf:"varint,2,opt,name=corner_type,json=cornerType,proto3" json:"corner_type,omitempty"`
+	DisplayTime int32 `protobuf:"varint,3,opt,name=display_time,json=displayTime,proto3" json:"display_time,omitempty"`
+	CornerMark string `protobuf:"bytes,4,opt,name=corner_mark,json=cornerMark,proto3" json:"corner_mark,omitempty"`
+	Up *DynRedStyleUp `protobuf:"bytes,5,opt,name=up,proto3" json:"up,omitempty"`
+	Type int32 `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
 }
 
 func (x *DynRedStyle) Reset() {
@@ -3094,7 +3094,7 @@ type DynRedStyleUp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uid  int64  `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Uid int64 `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
 	Face string `protobuf:"bytes,2,opt,name=face,proto3" json:"face,omitempty"`
 }
 
@@ -4944,9 +4944,9 @@ type MixUpListItem struct {
 	// 大会员信息
 	Vip *VipInfo `protobuf:"bytes,8,opt,name=vip,proto3" json:"vip,omitempty"`
 	// 关注状态
-	Relation      *Relation `protobuf:"bytes,9,opt,name=relation,proto3" json:"relation,omitempty"`
-	PremiereState int32     `protobuf:"varint,10,opt,name=premiere_state,json=premiereState,proto3" json:"premiere_state,omitempty"`
-	Uri           string    `protobuf:"bytes,11,opt,name=uri,proto3" json:"uri,omitempty"`
+	Relation *Relation `protobuf:"bytes,9,opt,name=relation,proto3" json:"relation,omitempty"`
+	PremiereState int32 `protobuf:"varint,10,opt,name=premiere_state,json=premiereState,proto3" json:"premiere_state,omitempty"`
+	Uri string `protobuf:"bytes,11,opt,name=uri,proto3" json:"uri,omitempty"`
 }
 
 func (x *MixUpListItem) Reset() {
@@ -5882,8 +5882,8 @@ type ModuleFollowList struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 查看全部的跳转链接
-	ViewAllLink string            `protobuf:"bytes,1,opt,name=view_all_link,json=viewAllLink,proto3" json:"view_all_link,omitempty"`
-	List        []*FollowListItem `protobuf:"bytes,2,rep,name=list,proto3" json:"list,omitempty"`
+	ViewAllLink string `protobuf:"bytes,1,opt,name=view_all_link,json=viewAllLink,proto3" json:"view_all_link,omitempty"`
+	List []*FollowListItem `protobuf:"bytes,2,rep,name=list,proto3" json:"list,omitempty"`
 }
 
 func (x *ModuleFollowList) Reset() {
@@ -6391,8 +6391,8 @@ type OfficialVerify struct {
 	// 127:未认证 0:个人 1:机构
 	Type int32 `protobuf:"varint,1,opt,name=type,proto3" json:"type,omitempty"`
 	// 认证描述
-	Desc    string `protobuf:"bytes,2,opt,name=desc,proto3" json:"desc,omitempty"`
-	IsAtten int32  `protobuf:"varint,3,opt,name=is_atten,json=isAtten,proto3" json:"is_atten,omitempty"`
+	Desc string `protobuf:"bytes,2,opt,name=desc,proto3" json:"desc,omitempty"`
+	IsAtten int32 `protobuf:"varint,3,opt,name=is_atten,json=isAtten,proto3" json:"is_atten,omitempty"`
 }
 
 func (x *OfficialVerify) Reset() {

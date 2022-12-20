@@ -57,8 +57,8 @@ type Device struct {
 	// APP版本号
 	VersionName string `protobuf:"bytes,13,opt,name=version_name,json=versionName,proto3" json:"version_name,omitempty"`
 	// 设备指纹, 不区分本地或远程设备指纹，作为推送目标的索引
-	Fp  string `protobuf:"bytes,14,opt,name=fp,proto3" json:"fp,omitempty"`
-	Fts int64  `protobuf:"varint,15,opt,name=fts,proto3" json:"fts,omitempty"`
+	Fp string `protobuf:"bytes,14,opt,name=fp,proto3" json:"fp,omitempty"`
+	Fts int64 `protobuf:"varint,15,opt,name=fts,proto3" json:"fts,omitempty"`
 }
 
 func (x *Device) Reset() {

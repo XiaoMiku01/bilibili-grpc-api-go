@@ -25,7 +25,7 @@ type Exp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Bucket int32 `protobuf:"varint,2,opt,name=bucket,proto3" json:"bucket,omitempty"`
 }
 

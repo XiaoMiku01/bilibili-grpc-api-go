@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.17.3
-// source: bilibili/polymer/contract/contract.proto
+// source: bilibili/polymer/contract/v1/contract.proto
 
-package contract
+package v1
 
 import (
 	context "context"
@@ -38,7 +38,7 @@ func NewContractClient(cc grpc.ClientConnInterface) ContractClient {
 
 func (c *contractClient) AddContract(ctx context.Context, in *AddContractReq, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, "/bilibili.polymer.contract.Contract/AddContract", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/bilibili.polymer.contract.v1.Contract/AddContract", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -47,7 +47,7 @@ func (c *contractClient) AddContract(ctx context.Context, in *AddContractReq, op
 
 func (c *contractClient) AddContractV2(ctx context.Context, in *AddContractReq, opts ...grpc.CallOption) (*AddContractReply, error) {
 	out := new(AddContractReply)
-	err := c.cc.Invoke(ctx, "/bilibili.polymer.contract.Contract/AddContractV2", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/bilibili.polymer.contract.v1.Contract/AddContractV2", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -56,7 +56,7 @@ func (c *contractClient) AddContractV2(ctx context.Context, in *AddContractReq, 
 
 func (c *contractClient) ContractConfig(ctx context.Context, in *ContractConfigReq, opts ...grpc.CallOption) (*ContractConfigReply, error) {
 	out := new(ContractConfigReply)
-	err := c.cc.Invoke(ctx, "/bilibili.polymer.contract.Contract/ContractConfig", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/bilibili.polymer.contract.v1.Contract/ContractConfig", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -109,7 +109,7 @@ func _Contract_AddContract_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bilibili.polymer.contract.Contract/AddContract",
+		FullMethod: "/bilibili.polymer.contract.v1.Contract/AddContract",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ContractServer).AddContract(ctx, req.(*AddContractReq))
@@ -127,7 +127,7 @@ func _Contract_AddContractV2_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bilibili.polymer.contract.Contract/AddContractV2",
+		FullMethod: "/bilibili.polymer.contract.v1.Contract/AddContractV2",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ContractServer).AddContractV2(ctx, req.(*AddContractReq))
@@ -145,7 +145,7 @@ func _Contract_ContractConfig_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/bilibili.polymer.contract.Contract/ContractConfig",
+		FullMethod: "/bilibili.polymer.contract.v1.Contract/ContractConfig",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ContractServer).ContractConfig(ctx, req.(*ContractConfigReq))
@@ -157,7 +157,7 @@ func _Contract_ContractConfig_Handler(srv interface{}, ctx context.Context, dec 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Contract_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bilibili.polymer.contract.Contract",
+	ServiceName: "bilibili.polymer.contract.v1.Contract",
 	HandlerType: (*ContractServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -174,5 +174,5 @@ var Contract_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "bilibili/polymer/contract/contract.proto",
+	Metadata: "bilibili/polymer/contract/v1/contract.proto",
 }

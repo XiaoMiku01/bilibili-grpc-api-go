@@ -112,17 +112,17 @@ type OfficialReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id         int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Uid        int64  `protobuf:"varint,2,opt,name=uid,proto3" json:"uid,omitempty"`
-	Name       string `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
-	Icon       string `protobuf:"bytes,4,opt,name=icon,proto3" json:"icon,omitempty"`
-	Scheme     string `protobuf:"bytes,5,opt,name=scheme,proto3" json:"scheme,omitempty"`
-	Rcmd       string `protobuf:"bytes,6,opt,name=rcmd,proto3" json:"rcmd,omitempty"`
-	IosUrl     string `protobuf:"bytes,7,opt,name=ios_url,json=iosUrl,proto3" json:"ios_url,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Uid int64 `protobuf:"varint,2,opt,name=uid,proto3" json:"uid,omitempty"`
+	Name string `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
+	Icon string `protobuf:"bytes,4,opt,name=icon,proto3" json:"icon,omitempty"`
+	Scheme string `protobuf:"bytes,5,opt,name=scheme,proto3" json:"scheme,omitempty"`
+	Rcmd string `protobuf:"bytes,6,opt,name=rcmd,proto3" json:"rcmd,omitempty"`
+	IosUrl string `protobuf:"bytes,7,opt,name=ios_url,json=iosUrl,proto3" json:"ios_url,omitempty"`
 	AndroidUrl string `protobuf:"bytes,8,opt,name=android_url,json=androidUrl,proto3" json:"android_url,omitempty"`
-	Button     string `protobuf:"bytes,9,opt,name=button,proto3" json:"button,omitempty"`
-	Deleted    string `protobuf:"bytes,10,opt,name=deleted,proto3" json:"deleted,omitempty"`
-	Mtime      int64  `protobuf:"varint,11,opt,name=mtime,proto3" json:"mtime,omitempty"`
+	Button string `protobuf:"bytes,9,opt,name=button,proto3" json:"button,omitempty"`
+	Deleted string `protobuf:"bytes,10,opt,name=deleted,proto3" json:"deleted,omitempty"`
+	Mtime int64 `protobuf:"varint,11,opt,name=mtime,proto3" json:"mtime,omitempty"`
 }
 
 func (x *OfficialReply) Reset() {
@@ -286,11 +286,11 @@ type PhotoMall struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id          int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Name        string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Img         string `protobuf:"bytes,3,opt,name=img,proto3" json:"img,omitempty"`
-	NightImg    string `protobuf:"bytes,4,opt,name=night_img,json=nightImg,proto3" json:"night_img,omitempty"`
-	IsActivated int64  `protobuf:"varint,5,opt,name=is_activated,json=isActivated,proto3" json:"is_activated,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Img string `protobuf:"bytes,3,opt,name=img,proto3" json:"img,omitempty"`
+	NightImg string `protobuf:"bytes,4,opt,name=night_img,json=nightImg,proto3" json:"night_img,omitempty"`
+	IsActivated int64 `protobuf:"varint,5,opt,name=is_activated,json=isActivated,proto3" json:"is_activated,omitempty"`
 }
 
 func (x *PhotoMall) Reset() {
@@ -413,8 +413,8 @@ type PhotoMallListReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	Mobiapp string `protobuf:"bytes,1,opt,name=mobiapp,proto3" json:"mobiapp,omitempty"`
-	Mid     int64  `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
-	Device  string `protobuf:"bytes,3,opt,name=device,proto3" json:"device,omitempty"`
+	Mid int64 `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
+	Device string `protobuf:"bytes,3,opt,name=device,proto3" json:"device,omitempty"`
 }
 
 func (x *PhotoMallListReq) Reset() {
@@ -570,9 +570,9 @@ type SetTopPhotoReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	Mobiapp string `protobuf:"bytes,1,opt,name=mobiapp,proto3" json:"mobiapp,omitempty"`
-	ID      int64  `protobuf:"varint,2,opt,name=i_d,json=iD,proto3" json:"i_d,omitempty"`
-	Mid     int64  `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
-	Type    int32  `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
+	ID int64 `protobuf:"varint,2,opt,name=i_d,json=iD,proto3" json:"i_d,omitempty"`
+	Mid int64 `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
+	Type int32 `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
 }
 
 func (x *SetTopPhotoReq) Reset() {
@@ -640,22 +640,22 @@ type SpaceSettingReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Channel           int64 `protobuf:"varint,1,opt,name=channel,proto3" json:"channel,omitempty"`
-	FavVideo          int64 `protobuf:"varint,2,opt,name=fav_video,json=favVideo,proto3" json:"fav_video,omitempty"`
-	CoinsVideo        int64 `protobuf:"varint,3,opt,name=coins_video,json=coinsVideo,proto3" json:"coins_video,omitempty"`
-	LikesVideo        int64 `protobuf:"varint,4,opt,name=likes_video,json=likesVideo,proto3" json:"likes_video,omitempty"`
-	Bangumi           int64 `protobuf:"varint,5,opt,name=bangumi,proto3" json:"bangumi,omitempty"`
-	PlayedGame        int64 `protobuf:"varint,6,opt,name=played_game,json=playedGame,proto3" json:"played_game,omitempty"`
-	Groups            int64 `protobuf:"varint,7,opt,name=groups,proto3" json:"groups,omitempty"`
-	Comic             int64 `protobuf:"varint,8,opt,name=comic,proto3" json:"comic,omitempty"`
-	BBq               int64 `protobuf:"varint,9,opt,name=b_bq,json=bBq,proto3" json:"b_bq,omitempty"`
-	DressUp           int64 `protobuf:"varint,10,opt,name=dress_up,json=dressUp,proto3" json:"dress_up,omitempty"`
-	DisableFollowing  int64 `protobuf:"varint,11,opt,name=disable_following,json=disableFollowing,proto3" json:"disable_following,omitempty"`
-	LivePlayback      int64 `protobuf:"varint,12,opt,name=live_playback,json=livePlayback,proto3" json:"live_playback,omitempty"`
-	CloseSpaceMedal   int64 `protobuf:"varint,13,opt,name=close_space_medal,json=closeSpaceMedal,proto3" json:"close_space_medal,omitempty"`
-	OnlyShowWearing   int64 `protobuf:"varint,14,opt,name=only_show_wearing,json=onlyShowWearing,proto3" json:"only_show_wearing,omitempty"`
+	Channel int64 `protobuf:"varint,1,opt,name=channel,proto3" json:"channel,omitempty"`
+	FavVideo int64 `protobuf:"varint,2,opt,name=fav_video,json=favVideo,proto3" json:"fav_video,omitempty"`
+	CoinsVideo int64 `protobuf:"varint,3,opt,name=coins_video,json=coinsVideo,proto3" json:"coins_video,omitempty"`
+	LikesVideo int64 `protobuf:"varint,4,opt,name=likes_video,json=likesVideo,proto3" json:"likes_video,omitempty"`
+	Bangumi int64 `protobuf:"varint,5,opt,name=bangumi,proto3" json:"bangumi,omitempty"`
+	PlayedGame int64 `protobuf:"varint,6,opt,name=played_game,json=playedGame,proto3" json:"played_game,omitempty"`
+	Groups int64 `protobuf:"varint,7,opt,name=groups,proto3" json:"groups,omitempty"`
+	Comic int64 `protobuf:"varint,8,opt,name=comic,proto3" json:"comic,omitempty"`
+	BBq int64 `protobuf:"varint,9,opt,name=b_bq,json=bBq,proto3" json:"b_bq,omitempty"`
+	DressUp int64 `protobuf:"varint,10,opt,name=dress_up,json=dressUp,proto3" json:"dress_up,omitempty"`
+	DisableFollowing int64 `protobuf:"varint,11,opt,name=disable_following,json=disableFollowing,proto3" json:"disable_following,omitempty"`
+	LivePlayback int64 `protobuf:"varint,12,opt,name=live_playback,json=livePlayback,proto3" json:"live_playback,omitempty"`
+	CloseSpaceMedal int64 `protobuf:"varint,13,opt,name=close_space_medal,json=closeSpaceMedal,proto3" json:"close_space_medal,omitempty"`
+	OnlyShowWearing int64 `protobuf:"varint,14,opt,name=only_show_wearing,json=onlyShowWearing,proto3" json:"only_show_wearing,omitempty"`
 	DisableShowSchool int64 `protobuf:"varint,15,opt,name=disable_show_school,json=disableShowSchool,proto3" json:"disable_show_school,omitempty"`
-	DisableShowNft    int64 `protobuf:"varint,16,opt,name=disable_show_nft,json=disableShowNft,proto3" json:"disable_show_nft,omitempty"`
+	DisableShowNft int64 `protobuf:"varint,16,opt,name=disable_show_nft,json=disableShowNft,proto3" json:"disable_show_nft,omitempty"`
 }
 
 func (x *SpaceSettingReply) Reset() {
@@ -854,9 +854,9 @@ type TopPhoto struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ImgUrl      string `protobuf:"bytes,1,opt,name=img_url,json=imgUrl,proto3" json:"img_url,omitempty"`
+	ImgUrl string `protobuf:"bytes,1,opt,name=img_url,json=imgUrl,proto3" json:"img_url,omitempty"`
 	NightImgUrl string `protobuf:"bytes,2,opt,name=night_img_url,json=nightImgUrl,proto3" json:"night_img_url,omitempty"`
-	Sid         int64  `protobuf:"varint,3,opt,name=sid,proto3" json:"sid,omitempty"`
+	Sid int64 `protobuf:"varint,3,opt,name=sid,proto3" json:"sid,omitempty"`
 }
 
 func (x *TopPhoto) Reset() {
@@ -917,9 +917,9 @@ type TopPhotoArc struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Show bool   `protobuf:"varint,1,opt,name=show,proto3" json:"show,omitempty"`
-	Aid  int64  `protobuf:"varint,2,opt,name=aid,proto3" json:"aid,omitempty"`
-	Pic  string `protobuf:"bytes,3,opt,name=pic,proto3" json:"pic,omitempty"`
+	Show bool `protobuf:"varint,1,opt,name=show,proto3" json:"show,omitempty"`
+	Aid int64 `protobuf:"varint,2,opt,name=aid,proto3" json:"aid,omitempty"`
+	Pic string `protobuf:"bytes,3,opt,name=pic,proto3" json:"pic,omitempty"`
 }
 
 func (x *TopPhotoArc) Reset() {
@@ -1027,7 +1027,7 @@ type TopPhotoReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TopPhoto    *TopPhoto    `protobuf:"bytes,1,opt,name=top_photo,json=topPhoto,proto3" json:"top_photo,omitempty"`
+	TopPhoto *TopPhoto `protobuf:"bytes,1,opt,name=top_photo,json=topPhoto,proto3" json:"top_photo,omitempty"`
 	TopPhotoArc *TopPhotoArc `protobuf:"bytes,2,opt,name=top_photo_arc,json=topPhotoArc,proto3" json:"top_photo_arc,omitempty"`
 }
 
@@ -1082,11 +1082,11 @@ type TopPhotoReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mobiapp  string `protobuf:"bytes,1,opt,name=mobiapp,proto3" json:"mobiapp,omitempty"`
-	Mid      int64  `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
-	Build    int32  `protobuf:"varint,3,opt,name=build,proto3" json:"build,omitempty"`
-	Device   string `protobuf:"bytes,4,opt,name=device,proto3" json:"device,omitempty"`
-	LoginMid int64  `protobuf:"varint,5,opt,name=login_mid,json=loginMid,proto3" json:"login_mid,omitempty"`
+	Mobiapp string `protobuf:"bytes,1,opt,name=mobiapp,proto3" json:"mobiapp,omitempty"`
+	Mid int64 `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
+	Build int32 `protobuf:"varint,3,opt,name=build,proto3" json:"build,omitempty"`
+	Device string `protobuf:"bytes,4,opt,name=device,proto3" json:"device,omitempty"`
+	LoginMid int64 `protobuf:"varint,5,opt,name=login_mid,json=loginMid,proto3" json:"login_mid,omitempty"`
 }
 
 func (x *TopPhotoReq) Reset() {
@@ -1161,9 +1161,9 @@ type UpActivityTabReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid     int64  `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
-	State   int32  `protobuf:"varint,2,opt,name=state,proto3" json:"state,omitempty"`
-	TabCont int64  `protobuf:"varint,3,opt,name=tab_cont,json=tabCont,proto3" json:"tab_cont,omitempty"`
+	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	State int32 `protobuf:"varint,2,opt,name=state,proto3" json:"state,omitempty"`
+	TabCont int64 `protobuf:"varint,3,opt,name=tab_cont,json=tabCont,proto3" json:"tab_cont,omitempty"`
 	TabName string `protobuf:"bytes,4,opt,name=tab_name,json=tabName,proto3" json:"tab_name,omitempty"`
 }
 
@@ -1317,13 +1317,13 @@ type UserTabReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TabType   int32  `protobuf:"varint,1,opt,name=tab_type,json=tabType,proto3" json:"tab_type,omitempty"`
-	Mid       int64  `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
-	TabName   string `protobuf:"bytes,3,opt,name=tab_name,json=tabName,proto3" json:"tab_name,omitempty"`
-	TabOrder  int32  `protobuf:"varint,4,opt,name=tab_order,json=tabOrder,proto3" json:"tab_order,omitempty"`
-	TabCont   int64  `protobuf:"varint,5,opt,name=tab_cont,json=tabCont,proto3" json:"tab_cont,omitempty"`
-	IsDefault int32  `protobuf:"varint,6,opt,name=is_default,json=isDefault,proto3" json:"is_default,omitempty"`
-	H5Link    string `protobuf:"bytes,7,opt,name=h5_link,json=h5Link,proto3" json:"h5_link,omitempty"`
+	TabType int32 `protobuf:"varint,1,opt,name=tab_type,json=tabType,proto3" json:"tab_type,omitempty"`
+	Mid int64 `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
+	TabName string `protobuf:"bytes,3,opt,name=tab_name,json=tabName,proto3" json:"tab_name,omitempty"`
+	TabOrder int32 `protobuf:"varint,4,opt,name=tab_order,json=tabOrder,proto3" json:"tab_order,omitempty"`
+	TabCont int64 `protobuf:"varint,5,opt,name=tab_cont,json=tabCont,proto3" json:"tab_cont,omitempty"`
+	IsDefault int32 `protobuf:"varint,6,opt,name=is_default,json=isDefault,proto3" json:"is_default,omitempty"`
+	H5Link string `protobuf:"bytes,7,opt,name=h5_link,json=h5Link,proto3" json:"h5_link,omitempty"`
 }
 
 func (x *UserTabReply) Reset() {
@@ -1412,8 +1412,8 @@ type UserTabReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid   int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
-	Plat  int32 `protobuf:"varint,2,opt,name=plat,proto3" json:"plat,omitempty"`
+	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Plat int32 `protobuf:"varint,2,opt,name=plat,proto3" json:"plat,omitempty"`
 	Build int32 `protobuf:"varint,3,opt,name=build,proto3" json:"build,omitempty"`
 }
 
@@ -1522,7 +1522,7 @@ type WhitelistAddReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid   int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	Stime int64 `protobuf:"varint,2,opt,name=stime,proto3" json:"stime,omitempty"`
 	Etime int64 `protobuf:"varint,3,opt,name=etime,proto3" json:"etime,omitempty"`
 }
@@ -1726,9 +1726,9 @@ type WhitelistValidTimeReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsWhite bool  `protobuf:"varint,1,opt,name=is_white,json=isWhite,proto3" json:"is_white,omitempty"`
-	Stime   int64 `protobuf:"varint,2,opt,name=stime,proto3" json:"stime,omitempty"`
-	Etime   int64 `protobuf:"varint,3,opt,name=etime,proto3" json:"etime,omitempty"`
+	IsWhite bool `protobuf:"varint,1,opt,name=is_white,json=isWhite,proto3" json:"is_white,omitempty"`
+	Stime int64 `protobuf:"varint,2,opt,name=stime,proto3" json:"stime,omitempty"`
+	Etime int64 `protobuf:"varint,3,opt,name=etime,proto3" json:"etime,omitempty"`
 }
 
 func (x *WhitelistValidTimeReply) Reset() {

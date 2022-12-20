@@ -104,13 +104,13 @@ type FrameOption struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	VegaId    int64       `protobuf:"varint,1,opt,name=vega_id,json=vegaId,proto3" json:"vega_id,omitempty"`
-	ReqId     string      `protobuf:"bytes,2,opt,name=req_id,json=reqId,proto3" json:"req_id,omitempty"`
-	Sequence  int64       `protobuf:"varint,3,opt,name=sequence,proto3" json:"sequence,omitempty"`
-	IsAck     bool        `protobuf:"varint,4,opt,name=is_ack,json=isAck,proto3" json:"is_ack,omitempty"`
-	Status    *rpc.Status `protobuf:"bytes,5,opt,name=status,proto3" json:"status,omitempty"`
-	AckOrigin string      `protobuf:"bytes,6,opt,name=ack_origin,json=ackOrigin,proto3" json:"ack_origin,omitempty"`
-	Mid       int64       `protobuf:"varint,7,opt,name=mid,proto3" json:"mid,omitempty"`
+	VegaId int64 `protobuf:"varint,1,opt,name=vega_id,json=vegaId,proto3" json:"vega_id,omitempty"`
+	ReqId string `protobuf:"bytes,2,opt,name=req_id,json=reqId,proto3" json:"req_id,omitempty"`
+	Sequence int64 `protobuf:"varint,3,opt,name=sequence,proto3" json:"sequence,omitempty"`
+	IsAck bool `protobuf:"varint,4,opt,name=is_ack,json=isAck,proto3" json:"is_ack,omitempty"`
+	Status *rpc.Status `protobuf:"bytes,5,opt,name=status,proto3" json:"status,omitempty"`
+	AckOrigin string `protobuf:"bytes,6,opt,name=ack_origin,json=ackOrigin,proto3" json:"ack_origin,omitempty"`
+	Mid int64 `protobuf:"varint,7,opt,name=mid,proto3" json:"mid,omitempty"`
 }
 
 func (x *FrameOption) Reset() {
@@ -275,9 +275,9 @@ type MessageAckReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	VegaId     string `protobuf:"bytes,1,opt,name=vega_id,json=vegaId,proto3" json:"vega_id,omitempty"`
-	ReqId      string `protobuf:"bytes,2,opt,name=req_id,json=reqId,proto3" json:"req_id,omitempty"`
-	Origin     string `protobuf:"bytes,3,opt,name=origin,proto3" json:"origin,omitempty"`
+	VegaId string `protobuf:"bytes,1,opt,name=vega_id,json=vegaId,proto3" json:"vega_id,omitempty"`
+	ReqId string `protobuf:"bytes,2,opt,name=req_id,json=reqId,proto3" json:"req_id,omitempty"`
+	Origin string `protobuf:"bytes,3,opt,name=origin,proto3" json:"origin,omitempty"`
 	TargetPath string `protobuf:"bytes,4,opt,name=target_path,json=targetPath,proto3" json:"target_path,omitempty"`
 }
 
@@ -393,7 +393,7 @@ type TargetPath struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Key  string     `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
+	Key string `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
 	Subs *anypb.Any `protobuf:"bytes,2,opt,name=subs,proto3" json:"subs,omitempty"`
 }
 
@@ -448,10 +448,10 @@ type VegaFrame struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Options   *FrameOption `protobuf:"bytes,1,opt,name=options,proto3" json:"options,omitempty"`
-	RoutePath string       `protobuf:"bytes,2,opt,name=route_path,json=routePath,proto3" json:"route_path,omitempty"`
-	Body      *anypb.Any   `protobuf:"bytes,3,opt,name=body,proto3" json:"body,omitempty"`
-	SubBiz    *anypb.Any   `protobuf:"bytes,4,opt,name=sub_biz,json=subBiz,proto3" json:"sub_biz,omitempty"`
+	Options *FrameOption `protobuf:"bytes,1,opt,name=options,proto3" json:"options,omitempty"`
+	RoutePath string `protobuf:"bytes,2,opt,name=route_path,json=routePath,proto3" json:"route_path,omitempty"`
+	Body *anypb.Any `protobuf:"bytes,3,opt,name=body,proto3" json:"body,omitempty"`
+	SubBiz *anypb.Any `protobuf:"bytes,4,opt,name=sub_biz,json=subBiz,proto3" json:"sub_biz,omitempty"`
 }
 
 func (x *VegaFrame) Reset() {

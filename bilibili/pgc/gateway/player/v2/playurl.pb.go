@@ -386,7 +386,7 @@ type BadgeInfo struct {
 	// 角标色值-夜间模式
 	BgColorNight string `protobuf:"bytes,3,opt,name=bg_color_night,json=bgColorNight,proto3" json:"bg_color_night,omitempty"`
 	// 文案色值
-	TextColor       string         `protobuf:"bytes,4,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
+	TextColor string `protobuf:"bytes,4,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
 	BgGradientColor *GradientColor `protobuf:"bytes,5,opt,name=bg_gradient_color,json=bgGradientColor,proto3" json:"bg_gradient_color,omitempty"`
 }
 
@@ -463,7 +463,7 @@ type BottomDisplay struct {
 	unknownFields protoimpl.UnknownFields
 
 	Title *TextInfo `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Icon  string    `protobuf:"bytes,2,opt,name=icon,proto3" json:"icon,omitempty"`
+	Icon string `protobuf:"bytes,2,opt,name=icon,proto3" json:"icon,omitempty"`
 }
 
 func (x *BottomDisplay) Reset() {
@@ -543,9 +543,9 @@ type ButtonInfo struct {
 	// 缩略按钮背景色值
 	SimpleBgColor string `protobuf:"bytes,12,opt,name=simple_bg_color,json=simpleBgColor,proto3" json:"simple_bg_color,omitempty"`
 	// 缩略按钮字体色值-夜间模式
-	SimpleBgColorNight string            `protobuf:"bytes,13,opt,name=simple_bg_color_night,json=simpleBgColorNight,proto3" json:"simple_bg_color_night,omitempty"`
-	BgGradientColor    *GradientColor    `protobuf:"bytes,14,opt,name=bg_gradient_color,json=bgGradientColor,proto3" json:"bg_gradient_color,omitempty"`
-	OrderReportParams  map[string]string `protobuf:"bytes,15,rep,name=order_report_params,json=orderReportParams,proto3" json:"order_report_params,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	SimpleBgColorNight string `protobuf:"bytes,13,opt,name=simple_bg_color_night,json=simpleBgColorNight,proto3" json:"simple_bg_color_night,omitempty"`
+	BgGradientColor *GradientColor `protobuf:"bytes,14,opt,name=bg_gradient_color,json=bgGradientColor,proto3" json:"bg_gradient_color,omitempty"`
+	OrderReportParams map[string]string `protobuf:"bytes,15,rep,name=order_report_params,json=orderReportParams,proto3" json:"order_report_params,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
 func (x *ButtonInfo) Reset() {
@@ -690,7 +690,7 @@ type CastTips struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code    int32  `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	Code int32 `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
@@ -745,12 +745,12 @@ type ClipInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MaterialNo int64      `protobuf:"varint,1,opt,name=material_no,json=materialNo,proto3" json:"material_no,omitempty"`
-	Start      int32      `protobuf:"varint,2,opt,name=start,proto3" json:"start,omitempty"`
-	End        int32      `protobuf:"varint,3,opt,name=end,proto3" json:"end,omitempty"`
-	ClipType   ClipType   `protobuf:"varint,4,opt,name=clip_type,json=clipType,proto3,enum=bilibili.pgc.gateway.player.v2.ClipType" json:"clip_type,omitempty"`
-	ToastText  string     `protobuf:"bytes,5,opt,name=toast_text,json=toastText,proto3" json:"toast_text,omitempty"`
-	MultiView  *MultiView `protobuf:"bytes,6,opt,name=multi_view,json=multiView,proto3" json:"multi_view,omitempty"`
+	MaterialNo int64 `protobuf:"varint,1,opt,name=material_no,json=materialNo,proto3" json:"material_no,omitempty"`
+	Start int32 `protobuf:"varint,2,opt,name=start,proto3" json:"start,omitempty"`
+	End int32 `protobuf:"varint,3,opt,name=end,proto3" json:"end,omitempty"`
+	ClipType ClipType `protobuf:"varint,4,opt,name=clip_type,json=clipType,proto3,enum=bilibili.pgc.gateway.player.v2.ClipType" json:"clip_type,omitempty"`
+	ToastText string `protobuf:"bytes,5,opt,name=toast_text,json=toastText,proto3" json:"toast_text,omitempty"`
+	MultiView *MultiView `protobuf:"bytes,6,opt,name=multi_view,json=multiView,proto3" json:"multi_view,omitempty"`
 }
 
 func (x *ClipInfo) Reset() {
@@ -1461,8 +1461,8 @@ type Dialog struct {
 	// 倒计时 秒
 	CountDownSec int32 `protobuf:"varint,12,opt,name=count_down_sec,json=countDownSec,proto3" json:"count_down_sec,omitempty"`
 	// 右下描述
-	RightBottomDesc *TextInfo        `protobuf:"bytes,13,opt,name=right_bottom_desc,json=rightBottomDesc,proto3" json:"right_bottom_desc,omitempty"`
-	BottomDisplay   []*BottomDisplay `protobuf:"bytes,14,rep,name=bottom_display,json=bottomDisplay,proto3" json:"bottom_display,omitempty"`
+	RightBottomDesc *TextInfo `protobuf:"bytes,13,opt,name=right_bottom_desc,json=rightBottomDesc,proto3" json:"right_bottom_desc,omitempty"`
+	BottomDisplay []*BottomDisplay `protobuf:"bytes,14,rep,name=bottom_display,json=bottomDisplay,proto3" json:"bottom_display,omitempty"`
 }
 
 func (x *Dialog) Reset() {
@@ -1676,7 +1676,7 @@ type Dimension struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Width  int32 `protobuf:"varint,1,opt,name=width,proto3" json:"width,omitempty"`
+	Width int32 `protobuf:"varint,1,opt,name=width,proto3" json:"width,omitempty"`
 	Height int32 `protobuf:"varint,2,opt,name=height,proto3" json:"height,omitempty"`
 	Rotate int32 `protobuf:"varint,3,opt,name=rotate,proto3" json:"rotate,omitempty"`
 }
@@ -1904,12 +1904,12 @@ type FreyaConfig struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Desc             string `protobuf:"bytes,1,opt,name=desc,proto3" json:"desc,omitempty"`
-	Type             int32  `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
-	IssuedCnt        int32  `protobuf:"varint,3,opt,name=issued_cnt,json=issuedCnt,proto3" json:"issued_cnt,omitempty"`
-	IsAlwaysShow     bool   `protobuf:"varint,4,opt,name=is_always_show,json=isAlwaysShow,proto3" json:"is_always_show,omitempty"`
-	ScreenNumber     int32  `protobuf:"varint,5,opt,name=screen_number,json=screenNumber,proto3" json:"screen_number,omitempty"`
-	FullScreenNumber int32  `protobuf:"varint,6,opt,name=full_screen_number,json=fullScreenNumber,proto3" json:"full_screen_number,omitempty"`
+	Desc string `protobuf:"bytes,1,opt,name=desc,proto3" json:"desc,omitempty"`
+	Type int32 `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
+	IssuedCnt int32 `protobuf:"varint,3,opt,name=issued_cnt,json=issuedCnt,proto3" json:"issued_cnt,omitempty"`
+	IsAlwaysShow bool `protobuf:"varint,4,opt,name=is_always_show,json=isAlwaysShow,proto3" json:"is_always_show,omitempty"`
+	ScreenNumber int32 `protobuf:"varint,5,opt,name=screen_number,json=screenNumber,proto3" json:"screen_number,omitempty"`
+	FullScreenNumber int32 `protobuf:"varint,6,opt,name=full_screen_number,json=fullScreenNumber,proto3" json:"full_screen_number,omitempty"`
 }
 
 func (x *FreyaConfig) Reset() {
@@ -1992,7 +1992,7 @@ type GradientColor struct {
 	unknownFields protoimpl.UnknownFields
 
 	StartColor string `protobuf:"bytes,1,opt,name=start_color,json=startColor,proto3" json:"start_color,omitempty"`
-	EndColor   string `protobuf:"bytes,2,opt,name=end_color,json=endColor,proto3" json:"end_color,omitempty"`
+	EndColor string `protobuf:"bytes,2,opt,name=end_color,json=endColor,proto3" json:"end_color,omitempty"`
 }
 
 func (x *GradientColor) Reset() {
@@ -2046,15 +2046,15 @@ type HighDefinitionTrialInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TrialAble         bool        `protobuf:"varint,1,opt,name=trial_able,json=trialAble,proto3" json:"trial_able,omitempty"`
-	RemainingTimes    int32       `protobuf:"varint,2,opt,name=remaining_times,json=remainingTimes,proto3" json:"remaining_times,omitempty"`
-	Start             int32       `protobuf:"varint,3,opt,name=start,proto3" json:"start,omitempty"`
-	TimeLength        int32       `protobuf:"varint,4,opt,name=time_length,json=timeLength,proto3" json:"time_length,omitempty"`
-	StartToast        *Toast      `protobuf:"bytes,5,opt,name=start_toast,json=startToast,proto3" json:"start_toast,omitempty"`
-	EndToast          *Toast      `protobuf:"bytes,6,opt,name=end_toast,json=endToast,proto3" json:"end_toast,omitempty"`
-	Report            *Report     `protobuf:"bytes,7,opt,name=report,proto3" json:"report,omitempty"`
+	TrialAble bool `protobuf:"varint,1,opt,name=trial_able,json=trialAble,proto3" json:"trial_able,omitempty"`
+	RemainingTimes int32 `protobuf:"varint,2,opt,name=remaining_times,json=remainingTimes,proto3" json:"remaining_times,omitempty"`
+	Start int32 `protobuf:"varint,3,opt,name=start,proto3" json:"start,omitempty"`
+	TimeLength int32 `protobuf:"varint,4,opt,name=time_length,json=timeLength,proto3" json:"time_length,omitempty"`
+	StartToast *Toast `protobuf:"bytes,5,opt,name=start_toast,json=startToast,proto3" json:"start_toast,omitempty"`
+	EndToast *Toast `protobuf:"bytes,6,opt,name=end_toast,json=endToast,proto3" json:"end_toast,omitempty"`
+	Report *Report `protobuf:"bytes,7,opt,name=report,proto3" json:"report,omitempty"`
 	QualityOpenTipBtn *ButtonInfo `protobuf:"bytes,8,opt,name=quality_open_tip_btn,json=qualityOpenTipBtn,proto3" json:"quality_open_tip_btn,omitempty"`
-	NoLongerTrialBtn  *ButtonInfo `protobuf:"bytes,9,opt,name=no_longer_trial_btn,json=noLongerTrialBtn,proto3" json:"no_longer_trial_btn,omitempty"`
+	NoLongerTrialBtn *ButtonInfo `protobuf:"bytes,9,opt,name=no_longer_trial_btn,json=noLongerTrialBtn,proto3" json:"no_longer_trial_btn,omitempty"`
 }
 
 func (x *HighDefinitionTrialInfo) Reset() {
@@ -2207,9 +2207,9 @@ type MultiView struct {
 	unknownFields protoimpl.UnknownFields
 
 	ButtonMaterial string `protobuf:"bytes,1,opt,name=button_material,json=buttonMaterial,proto3" json:"button_material,omitempty"`
-	EpId           int64  `protobuf:"varint,2,opt,name=ep_id,json=epId,proto3" json:"ep_id,omitempty"`
-	Cid            int64  `protobuf:"varint,3,opt,name=cid,proto3" json:"cid,omitempty"`
-	Avid           int64  `protobuf:"varint,4,opt,name=avid,proto3" json:"avid,omitempty"`
+	EpId int64 `protobuf:"varint,2,opt,name=ep_id,json=epId,proto3" json:"ep_id,omitempty"`
+	Cid int64 `protobuf:"varint,3,opt,name=cid,proto3" json:"cid,omitempty"`
+	Avid int64 `protobuf:"varint,4,opt,name=avid,proto3" json:"avid,omitempty"`
 }
 
 func (x *MultiView) Reset() {
@@ -2277,24 +2277,24 @@ type PayTip struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title             string            `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Url               string            `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
-	Icon              string            `protobuf:"bytes,3,opt,name=icon,proto3" json:"icon,omitempty"`
-	Type              int32             `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
-	ShowType          int32             `protobuf:"varint,5,opt,name=show_type,json=showType,proto3" json:"show_type,omitempty"`
-	Img               string            `protobuf:"bytes,6,opt,name=img,proto3" json:"img,omitempty"`
-	BgDayColor        string            `protobuf:"bytes,7,opt,name=bg_day_color,json=bgDayColor,proto3" json:"bg_day_color,omitempty"`
-	BgNightColor      string            `protobuf:"bytes,8,opt,name=bg_night_color,json=bgNightColor,proto3" json:"bg_night_color,omitempty"`
-	BgLineColor       string            `protobuf:"bytes,9,opt,name=bg_line_color,json=bgLineColor,proto3" json:"bg_line_color,omitempty"`
-	BgNightLineColor  string            `protobuf:"bytes,10,opt,name=bg_night_line_color,json=bgNightLineColor,proto3" json:"bg_night_line_color,omitempty"`
-	TextColor         string            `protobuf:"bytes,11,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
-	TextNightColor    string            `protobuf:"bytes,12,opt,name=text_night_color,json=textNightColor,proto3" json:"text_night_color,omitempty"`
-	ViewStartTime     int64             `protobuf:"varint,13,opt,name=view_start_time,json=viewStartTime,proto3" json:"view_start_time,omitempty"`
-	Button            []*ButtonInfo     `protobuf:"bytes,14,rep,name=button,proto3" json:"button,omitempty"`
-	UrlOpenType       int32             `protobuf:"varint,15,opt,name=url_open_type,json=urlOpenType,proto3" json:"url_open_type,omitempty"`
-	Report            *Report           `protobuf:"bytes,16,opt,name=report,proto3" json:"report,omitempty"`
-	AngleStyle        int32             `protobuf:"varint,17,opt,name=angle_style,json=angleStyle,proto3" json:"angle_style,omitempty"`
-	ReportType        int32             `protobuf:"varint,18,opt,name=report_type,json=reportType,proto3" json:"report_type,omitempty"`
+	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	Icon string `protobuf:"bytes,3,opt,name=icon,proto3" json:"icon,omitempty"`
+	Type int32 `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
+	ShowType int32 `protobuf:"varint,5,opt,name=show_type,json=showType,proto3" json:"show_type,omitempty"`
+	Img string `protobuf:"bytes,6,opt,name=img,proto3" json:"img,omitempty"`
+	BgDayColor string `protobuf:"bytes,7,opt,name=bg_day_color,json=bgDayColor,proto3" json:"bg_day_color,omitempty"`
+	BgNightColor string `protobuf:"bytes,8,opt,name=bg_night_color,json=bgNightColor,proto3" json:"bg_night_color,omitempty"`
+	BgLineColor string `protobuf:"bytes,9,opt,name=bg_line_color,json=bgLineColor,proto3" json:"bg_line_color,omitempty"`
+	BgNightLineColor string `protobuf:"bytes,10,opt,name=bg_night_line_color,json=bgNightLineColor,proto3" json:"bg_night_line_color,omitempty"`
+	TextColor string `protobuf:"bytes,11,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
+	TextNightColor string `protobuf:"bytes,12,opt,name=text_night_color,json=textNightColor,proto3" json:"text_night_color,omitempty"`
+	ViewStartTime int64 `protobuf:"varint,13,opt,name=view_start_time,json=viewStartTime,proto3" json:"view_start_time,omitempty"`
+	Button []*ButtonInfo `protobuf:"bytes,14,rep,name=button,proto3" json:"button,omitempty"`
+	UrlOpenType int32 `protobuf:"varint,15,opt,name=url_open_type,json=urlOpenType,proto3" json:"url_open_type,omitempty"`
+	Report *Report `protobuf:"bytes,16,opt,name=report,proto3" json:"report,omitempty"`
+	AngleStyle int32 `protobuf:"varint,17,opt,name=angle_style,json=angleStyle,proto3" json:"angle_style,omitempty"`
+	ReportType int32 `protobuf:"varint,18,opt,name=report_type,json=reportType,proto3" json:"report_type,omitempty"`
 	OrderReportParams map[string]string `protobuf:"bytes,19,rep,name=order_report_params,json=orderReportParams,proto3" json:"order_report_params,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
@@ -2766,9 +2766,9 @@ type PlayAbilityExtConf struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 自定义配置扩展信息
-	AllowCloseSubtitle bool         `protobuf:"varint,1,opt,name=allow_close_subtitle,json=allowCloseSubtitle,proto3" json:"allow_close_subtitle,omitempty"`
-	FreyaConfig        *FreyaConfig `protobuf:"bytes,2,opt,name=freya_config,json=freyaConfig,proto3" json:"freya_config,omitempty"`
-	CastTips           *CastTips    `protobuf:"bytes,3,opt,name=cast_tips,json=castTips,proto3" json:"cast_tips,omitempty"`
+	AllowCloseSubtitle bool `protobuf:"varint,1,opt,name=allow_close_subtitle,json=allowCloseSubtitle,proto3" json:"allow_close_subtitle,omitempty"`
+	FreyaConfig *FreyaConfig `protobuf:"bytes,2,opt,name=freya_config,json=freyaConfig,proto3" json:"freya_config,omitempty"`
+	CastTips *CastTips `protobuf:"bytes,3,opt,name=cast_tips,json=castTips,proto3" json:"cast_tips,omitempty"`
 }
 
 func (x *PlayAbilityExtConf) Reset() {
@@ -2837,15 +2837,15 @@ type PlayViewBusinessInfo struct {
 	// drm使用
 	MarlinToken string `protobuf:"bytes,3,opt,name=marlin_token,json=marlinToken,proto3" json:"marlin_token,omitempty"`
 	// 倍速动效色值
-	PlaybackSpeedColor string                    `protobuf:"bytes,4,opt,name=playback_speed_color,json=playbackSpeedColor,proto3" json:"playback_speed_color,omitempty"`
-	ContinuePlayInfo   *ContinuePlayInfo         `protobuf:"bytes,5,opt,name=continue_play_info,json=continuePlayInfo,proto3" json:"continue_play_info,omitempty"`
-	ClipInfo           []*ClipInfo               `protobuf:"bytes,6,rep,name=clip_info,json=clipInfo,proto3" json:"clip_info,omitempty"`
-	InlineType         InlineType                `protobuf:"varint,7,opt,name=inline_type,json=inlineType,proto3,enum=bilibili.pgc.gateway.player.v2.InlineType" json:"inline_type,omitempty"`
-	EpWholeDuration    int32                     `protobuf:"varint,8,opt,name=ep_whole_duration,json=epWholeDuration,proto3" json:"ep_whole_duration,omitempty"`
-	Dimension          *Dimension                `protobuf:"bytes,9,opt,name=dimension,proto3" json:"dimension,omitempty"`
-	QualityExtMap      map[int32]*QualityExtInfo `protobuf:"bytes,10,rep,name=quality_ext_map,json=qualityExtMap,proto3" json:"quality_ext_map,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	ExpMap             map[string]int32          `protobuf:"bytes,11,rep,name=exp_map,json=expMap,proto3" json:"exp_map,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	DrmTechType        DrmTechType               `protobuf:"varint,12,opt,name=drm_tech_type,json=drmTechType,proto3,enum=bilibili.pgc.gateway.player.v2.DrmTechType" json:"drm_tech_type,omitempty"`
+	PlaybackSpeedColor string `protobuf:"bytes,4,opt,name=playback_speed_color,json=playbackSpeedColor,proto3" json:"playback_speed_color,omitempty"`
+	ContinuePlayInfo *ContinuePlayInfo `protobuf:"bytes,5,opt,name=continue_play_info,json=continuePlayInfo,proto3" json:"continue_play_info,omitempty"`
+	ClipInfo []*ClipInfo `protobuf:"bytes,6,rep,name=clip_info,json=clipInfo,proto3" json:"clip_info,omitempty"`
+	InlineType InlineType `protobuf:"varint,7,opt,name=inline_type,json=inlineType,proto3,enum=bilibili.pgc.gateway.player.v2.InlineType" json:"inline_type,omitempty"`
+	EpWholeDuration int32 `protobuf:"varint,8,opt,name=ep_whole_duration,json=epWholeDuration,proto3" json:"ep_whole_duration,omitempty"`
+	Dimension *Dimension `protobuf:"bytes,9,opt,name=dimension,proto3" json:"dimension,omitempty"`
+	QualityExtMap map[int32]*QualityExtInfo `protobuf:"bytes,10,rep,name=quality_ext_map,json=qualityExtMap,proto3" json:"quality_ext_map,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	ExpMap map[string]int32 `protobuf:"bytes,11,rep,name=exp_map,json=expMap,proto3" json:"exp_map,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	DrmTechType DrmTechType `protobuf:"varint,12,opt,name=drm_tech_type,json=drmTechType,proto3,enum=bilibili.pgc.gateway.player.v2.DrmTechType" json:"drm_tech_type,omitempty"`
 }
 
 func (x *PlayViewBusinessInfo) Reset() {
@@ -3098,8 +3098,8 @@ type PlayViewReq struct {
 	IsNeedViewInfo bool `protobuf:"varint,15,opt,name=is_need_view_info,json=isNeedViewInfo,proto3" json:"is_need_view_info,omitempty"`
 	// 场景控制
 	SceneControl *SceneControl `protobuf:"bytes,16,opt,name=scene_control,json=sceneControl,proto3" json:"scene_control,omitempty"`
-	InlineScene  InlineScene   `protobuf:"varint,17,opt,name=inline_scene,json=inlineScene,proto3,enum=bilibili.pgc.gateway.player.v2.InlineScene" json:"inline_scene,omitempty"`
-	MaterialNo   int64         `protobuf:"varint,18,opt,name=material_no,json=materialNo,proto3" json:"material_no,omitempty"`
+	InlineScene InlineScene `protobuf:"varint,17,opt,name=inline_scene,json=inlineScene,proto3,enum=bilibili.pgc.gateway.player.v2.InlineScene" json:"inline_scene,omitempty"`
+	MaterialNo int64 `protobuf:"varint,18,opt,name=material_no,json=materialNo,proto3" json:"material_no,omitempty"`
 }
 
 func (x *PlayViewReq) Reset() {
@@ -3386,14 +3386,14 @@ type PromptBar struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title                     *TextInfo      `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	SubTitle                  *TextInfo      `protobuf:"bytes,2,opt,name=sub_title,json=subTitle,proto3" json:"sub_title,omitempty"`
-	SubTitleIcon              string         `protobuf:"bytes,3,opt,name=sub_title_icon,json=subTitleIcon,proto3" json:"sub_title_icon,omitempty"`
-	BgImage                   string         `protobuf:"bytes,4,opt,name=bg_image,json=bgImage,proto3" json:"bg_image,omitempty"`
-	BgGradientColor           *GradientColor `protobuf:"bytes,5,opt,name=bg_gradient_color,json=bgGradientColor,proto3" json:"bg_gradient_color,omitempty"`
-	Button                    []*ButtonInfo  `protobuf:"bytes,6,rep,name=button,proto3" json:"button,omitempty"`
-	Report                    *Report        `protobuf:"bytes,7,opt,name=report,proto3" json:"report,omitempty"`
-	FullScreenIpIcon          string         `protobuf:"bytes,8,opt,name=full_screen_ip_icon,json=fullScreenIpIcon,proto3" json:"full_screen_ip_icon,omitempty"`
+	Title *TextInfo `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	SubTitle *TextInfo `protobuf:"bytes,2,opt,name=sub_title,json=subTitle,proto3" json:"sub_title,omitempty"`
+	SubTitleIcon string `protobuf:"bytes,3,opt,name=sub_title_icon,json=subTitleIcon,proto3" json:"sub_title_icon,omitempty"`
+	BgImage string `protobuf:"bytes,4,opt,name=bg_image,json=bgImage,proto3" json:"bg_image,omitempty"`
+	BgGradientColor *GradientColor `protobuf:"bytes,5,opt,name=bg_gradient_color,json=bgGradientColor,proto3" json:"bg_gradient_color,omitempty"`
+	Button []*ButtonInfo `protobuf:"bytes,6,rep,name=button,proto3" json:"button,omitempty"`
+	Report *Report `protobuf:"bytes,7,opt,name=report,proto3" json:"report,omitempty"`
+	FullScreenIpIcon string `protobuf:"bytes,8,opt,name=full_screen_ip_icon,json=fullScreenIpIcon,proto3" json:"full_screen_ip_icon,omitempty"`
 	FullScreenBgGradientColor *GradientColor `protobuf:"bytes,9,opt,name=full_screen_bg_gradient_color,json=fullScreenBgGradientColor,proto3" json:"full_screen_bg_gradient_color,omitempty"`
 }
 
@@ -3711,7 +3711,7 @@ type SceneControl struct {
 	// 是否小窗
 	SmallWindow bool `protobuf:"varint,2,opt,name=small_window,json=smallWindow,proto3" json:"small_window,omitempty"`
 	// 是否画中画
-	Pip         bool `protobuf:"varint,3,opt,name=pip,proto3" json:"pip,omitempty"`
+	Pip bool `protobuf:"varint,3,opt,name=pip,proto3" json:"pip,omitempty"`
 	WasHeInline bool `protobuf:"varint,4,opt,name=was_he_inline,json=wasHeInline,proto3" json:"was_he_inline,omitempty"`
 	IsNeedTrial bool `protobuf:"varint,5,opt,name=is_need_trial,json=isNeedTrial,proto3" json:"is_need_trial,omitempty"`
 }
@@ -4284,7 +4284,7 @@ type Toast struct {
 	// toast文案 新字段
 	ToastText *TextInfo `protobuf:"bytes,5,opt,name=toast_text,json=toastText,proto3" json:"toast_text,omitempty"`
 	// 埋点上报信息
-	Report            *Report           `protobuf:"bytes,6,opt,name=report,proto3" json:"report,omitempty"`
+	Report *Report `protobuf:"bytes,6,opt,name=report,proto3" json:"report,omitempty"`
 	OrderReportParams map[string]string `protobuf:"bytes,7,rep,name=order_report_params,json=orderReportParams,proto3" json:"order_report_params,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
@@ -4487,14 +4487,14 @@ type ViewInfo struct {
 	// 未购买的超前点播ep列表
 	DemandNoPayEpids []int64 `protobuf:"varint,4,rep,packed,name=demand_no_pay_epids,json=demandNoPayEpids,proto3" json:"demand_no_pay_epids,omitempty"`
 	// 播放结束页
-	EndPage   *EndPage        `protobuf:"bytes,5,opt,name=end_page,json=endPage,proto3" json:"end_page,omitempty"`
+	EndPage *EndPage `protobuf:"bytes,5,opt,name=end_page,json=endPage,proto3" json:"end_page,omitempty"`
 	ExpConfig map[string]bool `protobuf:"bytes,6,rep,name=exp_config,json=expConfig,proto3" json:"exp_config,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 	// 弹窗
-	PopWin                  *PopWin                  `protobuf:"bytes,7,opt,name=pop_win,json=popWin,proto3" json:"pop_win,omitempty"`
-	TryWatchPromptBar       *PromptBar               `protobuf:"bytes,8,opt,name=try_watch_prompt_bar,json=tryWatchPromptBar,proto3" json:"try_watch_prompt_bar,omitempty"`
-	PayTip                  *PayTip                  `protobuf:"bytes,9,opt,name=pay_tip,json=payTip,proto3" json:"pay_tip,omitempty"`
+	PopWin *PopWin `protobuf:"bytes,7,opt,name=pop_win,json=popWin,proto3" json:"pop_win,omitempty"`
+	TryWatchPromptBar *PromptBar `protobuf:"bytes,8,opt,name=try_watch_prompt_bar,json=tryWatchPromptBar,proto3" json:"try_watch_prompt_bar,omitempty"`
+	PayTip *PayTip `protobuf:"bytes,9,opt,name=pay_tip,json=payTip,proto3" json:"pay_tip,omitempty"`
 	HighDefinitionTrialInfo *HighDefinitionTrialInfo `protobuf:"bytes,10,opt,name=high_definition_trial_info,json=highDefinitionTrialInfo,proto3" json:"high_definition_trial_info,omitempty"`
-	ExtDialog               map[string]*Dialog       `protobuf:"bytes,11,rep,name=ext_dialog,json=extDialog,proto3" json:"ext_dialog,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	ExtDialog map[string]*Dialog `protobuf:"bytes,11,rep,name=ext_dialog,json=extDialog,proto3" json:"ext_dialog,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
 func (x *ViewInfo) Reset() {

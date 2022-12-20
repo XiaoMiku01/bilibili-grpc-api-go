@@ -1236,7 +1236,7 @@ type DetailListReply struct {
 	Root *ReplyInfo `protobuf:"bytes,3,opt,name=root,proto3" json:"root,omitempty"`
 	// 评论区的活动
 	Activity *Activity `protobuf:"bytes,4,opt,name=activity,proto3" json:"activity,omitempty"`
-	Likes    *LikeInfo `protobuf:"bytes,5,opt,name=likes,proto3" json:"likes,omitempty"`
+	Likes *LikeInfo `protobuf:"bytes,5,opt,name=likes,proto3" json:"likes,omitempty"`
 }
 
 func (x *DetailListReply) Reset() {
@@ -1619,13 +1619,13 @@ type Emote struct {
 	// 1:小 2:大
 	Size int64 `protobuf:"varint,1,opt,name=size,proto3" json:"size,omitempty"`
 	// 表情url
-	Url       string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
-	JumpUrl   string `protobuf:"bytes,3,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
+	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	JumpUrl string `protobuf:"bytes,3,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
 	JumpTitle string `protobuf:"bytes,4,opt,name=jump_title,json=jumpTitle,proto3" json:"jump_title,omitempty"`
-	Id        int64  `protobuf:"varint,5,opt,name=id,proto3" json:"id,omitempty"`
-	PackageId int64  `protobuf:"varint,6,opt,name=package_id,json=packageId,proto3" json:"package_id,omitempty"`
-	GifUrl    string `protobuf:"bytes,7,opt,name=gif_url,json=gifUrl,proto3" json:"gif_url,omitempty"`
-	Text      string `protobuf:"bytes,8,opt,name=text,proto3" json:"text,omitempty"`
+	Id int64 `protobuf:"varint,5,opt,name=id,proto3" json:"id,omitempty"`
+	PackageId int64 `protobuf:"varint,6,opt,name=package_id,json=packageId,proto3" json:"package_id,omitempty"`
+	GifUrl string `protobuf:"bytes,7,opt,name=gif_url,json=gifUrl,proto3" json:"gif_url,omitempty"`
+	Text string `protobuf:"bytes,8,opt,name=text,proto3" json:"text,omitempty"`
 }
 
 func (x *Emote) Reset() {
@@ -1816,7 +1816,7 @@ type LikeInfo struct {
 	unknownFields protoimpl.UnknownFields
 
 	Items []*LikeInfo_Item `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
-	Title string           `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Title string `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
 }
 
 func (x *LikeInfo) Reset() {
@@ -1880,8 +1880,8 @@ type Lottery struct {
 	LotteryMid int64 `protobuf:"varint,3,opt,name=lottery_mid,json=lotteryMid,proto3" json:"lottery_mid,omitempty"`
 	// 开奖时间
 	LotteryTime int64 `protobuf:"varint,4,opt,name=lottery_time,json=lotteryTime,proto3" json:"lottery_time,omitempty"`
-	Oid         int64 `protobuf:"varint,5,opt,name=oid,proto3" json:"oid,omitempty"`
-	Type        int64 `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
+	Oid int64 `protobuf:"varint,5,opt,name=oid,proto3" json:"oid,omitempty"`
+	Type int64 `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
 	// 发送时间
 	Ctime int64 `protobuf:"varint,7,opt,name=ctime,proto3" json:"ctime,omitempty"`
 	// 抽奖评论正文
@@ -2023,11 +2023,11 @@ type MainListReply struct {
 	// 广告
 	Cm *CM `protobuf:"bytes,11,opt,name=cm,proto3" json:"cm,omitempty"`
 	// 特效
-	Effects    *Effects         `protobuf:"bytes,12,opt,name=effects,proto3" json:"effects,omitempty"`
-	Operation  *Operation       `protobuf:"bytes,13,opt,name=operation,proto3" json:"operation,omitempty"`
-	TopReplies []*ReplyInfo     `protobuf:"bytes,14,rep,name=top_replies,json=topReplies,proto3" json:"top_replies,omitempty"`
-	Qoe        *QoeInfo         `protobuf:"bytes,15,opt,name=qoe,proto3" json:"qoe,omitempty"`
-	Callbacks  map[string]int32 `protobuf:"bytes,16,rep,name=callbacks,proto3" json:"callbacks,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	Effects *Effects `protobuf:"bytes,12,opt,name=effects,proto3" json:"effects,omitempty"`
+	Operation *Operation `protobuf:"bytes,13,opt,name=operation,proto3" json:"operation,omitempty"`
+	TopReplies []*ReplyInfo `protobuf:"bytes,14,rep,name=top_replies,json=topReplies,proto3" json:"top_replies,omitempty"`
+	Qoe *QoeInfo `protobuf:"bytes,15,opt,name=qoe,proto3" json:"qoe,omitempty"`
+	Callbacks map[string]int32 `protobuf:"bytes,16,rep,name=callbacks,proto3" json:"callbacks,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 }
 
 func (x *MainListReply) Reset() {
@@ -2191,7 +2191,7 @@ type MainListReq struct {
 	// 广告扩展
 	AdExtra string `protobuf:"bytes,5,opt,name=ad_extra,json=adExtra,proto3" json:"ad_extra,omitempty"`
 	// 目标评论rpid
-	Rpid     int64 `protobuf:"varint,6,opt,name=rpid,proto3" json:"rpid,omitempty"`
+	Rpid int64 `protobuf:"varint,6,opt,name=rpid,proto3" json:"rpid,omitempty"`
 	SeekRpid int64 `protobuf:"varint,7,opt,name=seek_rpid,json=seekRpid,proto3" json:"seek_rpid,omitempty"`
 	// 评论区筛选类型 取值可为: ["全部" "粉丝评论" "笔记长评"]
 	FilterTagName string `protobuf:"bytes,8,opt,name=filter_tag_name,json=filterTagName,proto3" json:"filter_tag_name,omitempty"`
@@ -2349,16 +2349,16 @@ type Member struct {
 	FansMedalColorName int64 `protobuf:"varint,27,opt,name=fans_medal_color_name,json=fansMedalColorName,proto3" json:"fans_medal_color_name,omitempty"`
 	// 粉丝勋章等级颜色
 	FansMedalColorLevel int64 `protobuf:"varint,28,opt,name=fans_medal_color_level,json=fansMedalColorLevel,proto3" json:"fans_medal_color_level,omitempty"`
-	FansGuardLevel      int64 `protobuf:"varint,29,opt,name=fans_guard_level,json=fansGuardLevel,proto3" json:"fans_guard_level,omitempty"`
-	FaceNft             int32 `protobuf:"varint,30,opt,name=face_nft,json=faceNft,proto3" json:"face_nft,omitempty"`
+	FansGuardLevel int64 `protobuf:"varint,29,opt,name=fans_guard_level,json=fansGuardLevel,proto3" json:"fans_guard_level,omitempty"`
+	FaceNft int32 `protobuf:"varint,30,opt,name=face_nft,json=faceNft,proto3" json:"face_nft,omitempty"`
 	// 是否NFT头像
 	FaceNftNew int32 `protobuf:"varint,31,opt,name=face_nft_new,json=faceNftNew,proto3" json:"face_nft_new,omitempty"`
 	// 是否为硬核会员
 	IsSeniorMember int32 `protobuf:"varint,32,opt,name=is_senior_member,json=isSeniorMember,proto3" json:"is_senior_member,omitempty"`
 	// NFT信息
 	NftInteraction *Member_NftInteraction `protobuf:"bytes,33,opt,name=nft_interaction,json=nftInteraction,proto3" json:"nft_interaction,omitempty"`
-	FansGuardIcon  string                 `protobuf:"bytes,34,opt,name=fans_guard_icon,json=fansGuardIcon,proto3" json:"fans_guard_icon,omitempty"`
-	FansHonorIcon  string                 `protobuf:"bytes,35,opt,name=fans_honor_icon,json=fansHonorIcon,proto3" json:"fans_honor_icon,omitempty"`
+	FansGuardIcon string `protobuf:"bytes,34,opt,name=fans_guard_icon,json=fansGuardIcon,proto3" json:"fans_guard_icon,omitempty"`
+	FansHonorIcon string `protobuf:"bytes,35,opt,name=fans_honor_icon,json=fansHonorIcon,proto3" json:"fans_honor_icon,omitempty"`
 }
 
 func (x *Member) Reset() {
@@ -2755,9 +2755,9 @@ type Notice struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id      int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Content string `protobuf:"bytes,2,opt,name=content,proto3" json:"content,omitempty"`
-	Link    string `protobuf:"bytes,3,opt,name=link,proto3" json:"link,omitempty"`
+	Link string `protobuf:"bytes,3,opt,name=link,proto3" json:"link,omitempty"`
 }
 
 func (x *Notice) Reset() {
@@ -2818,13 +2818,13 @@ type Operation struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type        int32           `protobuf:"varint,1,opt,name=type,proto3" json:"type,omitempty"`
-	Id          int64           `protobuf:"varint,2,opt,name=id,proto3" json:"id,omitempty"`
-	Title       *OperationTitle `protobuf:"bytes,3,opt,name=title,proto3" json:"title,omitempty"`
-	Subtitle    *OperationTitle `protobuf:"bytes,4,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
-	Link        string          `protobuf:"bytes,5,opt,name=link,proto3" json:"link,omitempty"`
-	ReportExtra string          `protobuf:"bytes,6,opt,name=report_extra,json=reportExtra,proto3" json:"report_extra,omitempty"`
-	Icon        string          `protobuf:"bytes,7,opt,name=icon,proto3" json:"icon,omitempty"`
+	Type int32 `protobuf:"varint,1,opt,name=type,proto3" json:"type,omitempty"`
+	Id int64 `protobuf:"varint,2,opt,name=id,proto3" json:"id,omitempty"`
+	Title *OperationTitle `protobuf:"bytes,3,opt,name=title,proto3" json:"title,omitempty"`
+	Subtitle *OperationTitle `protobuf:"bytes,4,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
+	Link string `protobuf:"bytes,5,opt,name=link,proto3" json:"link,omitempty"`
+	ReportExtra string `protobuf:"bytes,6,opt,name=report_extra,json=reportExtra,proto3" json:"report_extra,omitempty"`
+	Icon string `protobuf:"bytes,7,opt,name=icon,proto3" json:"icon,omitempty"`
 }
 
 func (x *Operation) Reset() {
@@ -2913,8 +2913,8 @@ type OperationTitle struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Content     string `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
-	IsHighlight bool   `protobuf:"varint,2,opt,name=is_highlight,json=isHighlight,proto3" json:"is_highlight,omitempty"`
+	Content string `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
+	IsHighlight bool `protobuf:"varint,2,opt,name=is_highlight,json=isHighlight,proto3" json:"is_highlight,omitempty"`
 }
 
 func (x *OperationTitle) Reset() {
@@ -3196,13 +3196,13 @@ type QoeInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id            int64           `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Type          int32           `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
-	Style         int32           `protobuf:"varint,3,opt,name=style,proto3" json:"style,omitempty"`
-	Title         string          `protobuf:"bytes,4,opt,name=title,proto3" json:"title,omitempty"`
-	FeedbackTitle string          `protobuf:"bytes,5,opt,name=feedback_title,json=feedbackTitle,proto3" json:"feedback_title,omitempty"`
-	ScoreItems    []*QoeScoreItem `protobuf:"bytes,6,rep,name=score_items,json=scoreItems,proto3" json:"score_items,omitempty"`
-	DisplayRank   int64           `protobuf:"varint,7,opt,name=display_rank,json=displayRank,proto3" json:"display_rank,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Type int32 `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
+	Style int32 `protobuf:"varint,3,opt,name=style,proto3" json:"style,omitempty"`
+	Title string `protobuf:"bytes,4,opt,name=title,proto3" json:"title,omitempty"`
+	FeedbackTitle string `protobuf:"bytes,5,opt,name=feedback_title,json=feedbackTitle,proto3" json:"feedback_title,omitempty"`
+	ScoreItems []*QoeScoreItem `protobuf:"bytes,6,rep,name=score_items,json=scoreItems,proto3" json:"score_items,omitempty"`
+	DisplayRank int64 `protobuf:"varint,7,opt,name=display_rank,json=displayRank,proto3" json:"display_rank,omitempty"`
 }
 
 func (x *QoeInfo) Reset() {
@@ -3291,8 +3291,8 @@ type QoeScoreItem struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string  `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Url   string  `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
 	Score float32 `protobuf:"fixed32,3,opt,name=score,proto3" json:"score,omitempty"`
 }
 
@@ -3365,7 +3365,7 @@ type ReplyCardLabel struct {
 	LabelColorDay string `protobuf:"bytes,4,opt,name=label_color_day,json=labelColorDay,proto3" json:"label_color_day,omitempty"`
 	// 标签颜色夜间
 	LabelColorNight string `protobuf:"bytes,5,opt,name=label_color_night,json=labelColorNight,proto3" json:"label_color_night,omitempty"`
-	Image           string `protobuf:"bytes,6,opt,name=image,proto3" json:"image,omitempty"`
+	Image string `protobuf:"bytes,6,opt,name=image,proto3" json:"image,omitempty"`
 	// 标签类型 0:UP主觉得很赞 1:妙评
 	Type int32 `protobuf:"varint,7,opt,name=type,proto3" json:"type,omitempty"`
 	// 背景url
@@ -3375,9 +3375,9 @@ type ReplyCardLabel struct {
 	// 背景高
 	BackgroundHeight float64 `protobuf:"fixed64,10,opt,name=background_height,json=backgroundHeight,proto3" json:"background_height,omitempty"`
 	// 点击跳转url
-	JumpUrl         string `protobuf:"bytes,11,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
-	Effect          int64  `protobuf:"varint,12,opt,name=effect,proto3" json:"effect,omitempty"`
-	EffectStartTime int64  `protobuf:"varint,13,opt,name=effect_start_time,json=effectStartTime,proto3" json:"effect_start_time,omitempty"`
+	JumpUrl string `protobuf:"bytes,11,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
+	Effect int64 `protobuf:"varint,12,opt,name=effect,proto3" json:"effect,omitempty"`
+	EffectStartTime int64 `protobuf:"varint,13,opt,name=effect_start_time,json=effectStartTime,proto3" json:"effect_start_time,omitempty"`
 }
 
 func (x *ReplyCardLabel) Reset() {
@@ -3773,10 +3773,10 @@ type ReplyExtra struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SeasonId   int64 `protobuf:"varint,1,opt,name=season_id,json=seasonId,proto3" json:"season_id,omitempty"`
+	SeasonId int64 `protobuf:"varint,1,opt,name=season_id,json=seasonId,proto3" json:"season_id,omitempty"`
 	SeasonType int64 `protobuf:"varint,2,opt,name=season_type,json=seasonType,proto3" json:"season_type,omitempty"`
-	EpId       int64 `protobuf:"varint,3,opt,name=ep_id,json=epId,proto3" json:"ep_id,omitempty"`
-	IsStory    bool  `protobuf:"varint,4,opt,name=is_story,json=isStory,proto3" json:"is_story,omitempty"`
+	EpId int64 `protobuf:"varint,3,opt,name=ep_id,json=epId,proto3" json:"ep_id,omitempty"`
+	IsStory bool `protobuf:"varint,4,opt,name=is_story,json=isStory,proto3" json:"is_story,omitempty"`
 }
 
 func (x *ReplyExtra) Reset() {
@@ -4070,7 +4070,7 @@ type ReplyInfoReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 评论rpid
-	Rpid  int64 `protobuf:"varint,1,opt,name=rpid,proto3" json:"rpid,omitempty"`
+	Rpid int64 `protobuf:"varint,1,opt,name=rpid,proto3" json:"rpid,omitempty"`
 	Scene int32 `protobuf:"varint,2,opt,name=scene,proto3" json:"scene,omitempty"`
 }
 
@@ -4892,9 +4892,9 @@ type ShareRepliesInfoResp struct {
 	// logo url
 	SloganPic string `protobuf:"bytes,6,opt,name=slogan_pic,json=sloganPic,proto3" json:"slogan_pic,omitempty"`
 	// 标语
-	SloganText string                           `protobuf:"bytes,7,opt,name=slogan_text,json=sloganText,proto3" json:"slogan_text,omitempty"`
-	Topic      *ShareReplyTopic                 `protobuf:"bytes,8,opt,name=topic,proto3" json:"topic,omitempty"`
-	Extra      *ShareRepliesInfoResp_ShareExtra `protobuf:"bytes,9,opt,name=extra,proto3" json:"extra,omitempty"`
+	SloganText string `protobuf:"bytes,7,opt,name=slogan_text,json=sloganText,proto3" json:"slogan_text,omitempty"`
+	Topic *ShareReplyTopic `protobuf:"bytes,8,opt,name=topic,proto3" json:"topic,omitempty"`
+	Extra *ShareRepliesInfoResp_ShareExtra `protobuf:"bytes,9,opt,name=extra,proto3" json:"extra,omitempty"`
 }
 
 func (x *ShareRepliesInfoResp) Reset() {
@@ -5008,7 +5008,7 @@ type ShareReplyInfo struct {
 	SubTitle string `protobuf:"bytes,4,opt,name=sub_title,json=subTitle,proto3" json:"sub_title,omitempty"`
 	// 荣誉信息文案 "获得了up主点赞"
 	AchievementText string `protobuf:"bytes,5,opt,name=achievement_text,json=achievementText,proto3" json:"achievement_text,omitempty"`
-	LabelUrl        string `protobuf:"bytes,6,opt,name=label_url,json=labelUrl,proto3" json:"label_url,omitempty"`
+	LabelUrl string `protobuf:"bytes,6,opt,name=label_url,json=labelUrl,proto3" json:"label_url,omitempty"`
 }
 
 func (x *ShareReplyInfo) Reset() {
@@ -5090,7 +5090,7 @@ type ShareReplyTopic struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Topic      *Topic `protobuf:"bytes,1,opt,name=topic,proto3" json:"topic,omitempty"`
+	Topic *Topic `protobuf:"bytes,1,opt,name=topic,proto3" json:"topic,omitempty"`
 	OriginText string `protobuf:"bytes,2,opt,name=origin_text,json=originText,proto3" json:"origin_text,omitempty"`
 }
 
@@ -5183,11 +5183,11 @@ type SubjectControl struct {
 	// 离开态输入框的文案
 	GiveupText string `protobuf:"bytes,18,opt,name=giveup_text,json=giveupText,proto3" json:"giveup_text,omitempty"`
 	// 是否允许笔记
-	HasNoteAccess                bool   `protobuf:"varint,19,opt,name=has_note_access,json=hasNoteAccess,proto3" json:"has_note_access,omitempty"`
-	DisableJumpEmote             bool   `protobuf:"varint,20,opt,name=disable_jump_emote,json=disableJumpEmote,proto3" json:"disable_jump_emote,omitempty"`
-	EmptyBackgroundTextPlain     string `protobuf:"bytes,21,opt,name=empty_background_text_plain,json=emptyBackgroundTextPlain,proto3" json:"empty_background_text_plain,omitempty"`
+	HasNoteAccess bool `protobuf:"varint,19,opt,name=has_note_access,json=hasNoteAccess,proto3" json:"has_note_access,omitempty"`
+	DisableJumpEmote bool `protobuf:"varint,20,opt,name=disable_jump_emote,json=disableJumpEmote,proto3" json:"disable_jump_emote,omitempty"`
+	EmptyBackgroundTextPlain string `protobuf:"bytes,21,opt,name=empty_background_text_plain,json=emptyBackgroundTextPlain,proto3" json:"empty_background_text_plain,omitempty"`
 	EmptyBackgroundTextHighlight string `protobuf:"bytes,22,opt,name=empty_background_text_highlight,json=emptyBackgroundTextHighlight,proto3" json:"empty_background_text_highlight,omitempty"`
-	EmptyBackgroundUri           string `protobuf:"bytes,23,opt,name=empty_background_uri,json=emptyBackgroundUri,proto3" json:"empty_background_uri,omitempty"`
+	EmptyBackgroundUri string `protobuf:"bytes,23,opt,name=empty_background_uri,json=emptyBackgroundUri,proto3" json:"empty_background_uri,omitempty"`
 	// 评论区筛选类型列表
 	SupportFilterTags []*SubjectControl_FilterTag `protobuf:"bytes,24,rep,name=support_filter_tags,json=supportFilterTags,proto3" json:"support_filter_tags,omitempty"`
 }
@@ -5699,12 +5699,12 @@ type Url struct {
 
 	// 标题
 	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	State int64  `protobuf:"varint,2,opt,name=state,proto3" json:"state,omitempty"`
+	State int64 `protobuf:"varint,2,opt,name=state,proto3" json:"state,omitempty"`
 	// 图标url
 	PrefixIcon string `protobuf:"bytes,3,opt,name=prefix_icon,json=prefixIcon,proto3" json:"prefix_icon,omitempty"`
 	// 客户端内跳转uri
-	AppUrlSchema   string `protobuf:"bytes,4,opt,name=app_url_schema,json=appUrlSchema,proto3" json:"app_url_schema,omitempty"`
-	AppName        string `protobuf:"bytes,5,opt,name=app_name,json=appName,proto3" json:"app_name,omitempty"`
+	AppUrlSchema string `protobuf:"bytes,4,opt,name=app_url_schema,json=appUrlSchema,proto3" json:"app_url_schema,omitempty"`
+	AppName string `protobuf:"bytes,5,opt,name=app_name,json=appName,proto3" json:"app_name,omitempty"`
 	AppPackageName string `protobuf:"bytes,6,opt,name=app_package_name,json=appPackageName,proto3" json:"app_package_name,omitempty"`
 	// 点击上报数据
 	ClickReport string `protobuf:"bytes,7,opt,name=click_report,json=clickReport,proto3" json:"click_report,omitempty"`
@@ -5718,8 +5718,8 @@ type Url struct {
 	Underline bool `protobuf:"varint,11,opt,name=underline,proto3" json:"underline,omitempty"`
 	MatchOnce bool `protobuf:"varint,12,opt,name=match_once,json=matchOnce,proto3" json:"match_once,omitempty"`
 	// 网页url
-	PcUrl        string `protobuf:"bytes,13,opt,name=pc_url,json=pcUrl,proto3" json:"pc_url,omitempty"`
-	IconPosition int32  `protobuf:"varint,14,opt,name=icon_position,json=iconPosition,proto3" json:"icon_position,omitempty"`
+	PcUrl string `protobuf:"bytes,13,opt,name=pc_url,json=pcUrl,proto3" json:"pc_url,omitempty"`
+	IconPosition int32 `protobuf:"varint,14,opt,name=icon_position,json=iconPosition,proto3" json:"icon_position,omitempty"`
 }
 
 func (x *Url) Reset() {
@@ -5898,8 +5898,8 @@ type UserCallbackReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 用户mid
-	Mid    int64              `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
-	Scene  UserCallbackScene  `protobuf:"varint,2,opt,name=scene,proto3,enum=bilibili.main.community.reply.v1.UserCallbackScene" json:"scene,omitempty"`
+	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Scene UserCallbackScene `protobuf:"varint,2,opt,name=scene,proto3,enum=bilibili.main.community.reply.v1.UserCallbackScene" json:"scene,omitempty"`
 	Action UserCallbackAction `protobuf:"varint,3,opt,name=action,proto3,enum=bilibili.main.community.reply.v1.UserCallbackAction" json:"action,omitempty"`
 	// 目标评论区id
 	Oid int64 `protobuf:"varint,4,opt,name=oid,proto3" json:"oid,omitempty"`
@@ -6189,7 +6189,7 @@ type Member_Region struct {
 	// 地区类型
 	Type Member_RegionType `protobuf:"varint,1,opt,name=type,proto3,enum=bilibili.main.community.reply.v1.Member_RegionType" json:"type,omitempty"`
 	// 角标url
-	Icon       string            `protobuf:"bytes,2,opt,name=icon,proto3" json:"icon,omitempty"`
+	Icon string `protobuf:"bytes,2,opt,name=icon,proto3" json:"icon,omitempty"`
 	ShowStatus Member_ShowStatus `protobuf:"varint,3,opt,name=show_status,json=showStatus,proto3,enum=bilibili.main.community.reply.v1.Member_ShowStatus" json:"show_status,omitempty"`
 }
 
@@ -6252,9 +6252,9 @@ type Member_NftInteraction struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Itype       string `protobuf:"bytes,1,opt,name=itype,proto3" json:"itype,omitempty"`
+	Itype string `protobuf:"bytes,1,opt,name=itype,proto3" json:"itype,omitempty"`
 	MetadataUrl string `protobuf:"bytes,2,opt,name=metadata_url,json=metadataUrl,proto3" json:"metadata_url,omitempty"`
-	NftId       string `protobuf:"bytes,3,opt,name=nft_id,json=nftId,proto3" json:"nft_id,omitempty"`
+	NftId string `protobuf:"bytes,3,opt,name=nft_id,json=nftId,proto3" json:"nft_id,omitempty"`
 	// NFT地区
 	Region *Member_Region `protobuf:"bytes,4,opt,name=region,proto3" json:"region,omitempty"`
 }
@@ -6467,11 +6467,11 @@ type MemberV2_Vip struct {
 	// 会员样式
 	ThemeType int64 `protobuf:"varint,3,opt,name=theme_type,json=themeType,proto3" json:"theme_type,omitempty"`
 	// 会员铭牌样式url
-	LabelPath       string `protobuf:"bytes,4,opt,name=label_path,json=labelPath,proto3" json:"label_path,omitempty"`
-	NicknameColor   string `protobuf:"bytes,5,opt,name=nickname_color,json=nicknameColor,proto3" json:"nickname_color,omitempty"`
-	AvatarSubscript int32  `protobuf:"varint,6,opt,name=avatar_subscript,json=avatarSubscript,proto3" json:"avatar_subscript,omitempty"`
-	LabelText       string `protobuf:"bytes,7,opt,name=label_text,json=labelText,proto3" json:"label_text,omitempty"`
-	VipLabelTheme   string `protobuf:"bytes,8,opt,name=vip_label_theme,json=vipLabelTheme,proto3" json:"vip_label_theme,omitempty"`
+	LabelPath string `protobuf:"bytes,4,opt,name=label_path,json=labelPath,proto3" json:"label_path,omitempty"`
+	NicknameColor string `protobuf:"bytes,5,opt,name=nickname_color,json=nicknameColor,proto3" json:"nickname_color,omitempty"`
+	AvatarSubscript int32 `protobuf:"varint,6,opt,name=avatar_subscript,json=avatarSubscript,proto3" json:"avatar_subscript,omitempty"`
+	LabelText string `protobuf:"bytes,7,opt,name=label_text,json=labelText,proto3" json:"label_text,omitempty"`
+	VipLabelTheme string `protobuf:"bytes,8,opt,name=vip_label_theme,json=vipLabelTheme,proto3" json:"vip_label_theme,omitempty"`
 }
 
 func (x *MemberV2_Vip) Reset() {
@@ -6684,10 +6684,10 @@ type MemberV2_Medal struct {
 	// 粉丝勋章名颜色
 	ColorName int64 `protobuf:"varint,6,opt,name=color_name,json=colorName,proto3" json:"color_name,omitempty"`
 	// 粉丝勋章等级颜色
-	ColorLevel   int64  `protobuf:"varint,7,opt,name=color_level,json=colorLevel,proto3" json:"color_level,omitempty"`
-	GuardLevel   int64  `protobuf:"varint,8,opt,name=guard_level,json=guardLevel,proto3" json:"guard_level,omitempty"`
-	FirstIcon    string `protobuf:"bytes,9,opt,name=first_icon,json=firstIcon,proto3" json:"first_icon,omitempty"`
-	LevelBgColor int64  `protobuf:"varint,11,opt,name=level_bg_color,json=levelBgColor,proto3" json:"level_bg_color,omitempty"`
+	ColorLevel int64 `protobuf:"varint,7,opt,name=color_level,json=colorLevel,proto3" json:"color_level,omitempty"`
+	GuardLevel int64 `protobuf:"varint,8,opt,name=guard_level,json=guardLevel,proto3" json:"guard_level,omitempty"`
+	FirstIcon string `protobuf:"bytes,9,opt,name=first_icon,json=firstIcon,proto3" json:"first_icon,omitempty"`
+	LevelBgColor int64 `protobuf:"varint,11,opt,name=level_bg_color,json=levelBgColor,proto3" json:"level_bg_color,omitempty"`
 }
 
 func (x *MemberV2_Medal) Reset() {
@@ -6801,7 +6801,7 @@ type MemberV2_Region struct {
 	// 地区类型
 	Type MemberV2_RegionType `protobuf:"varint,1,opt,name=type,proto3,enum=bilibili.main.community.reply.v1.MemberV2_RegionType" json:"type,omitempty"`
 	// 角标url
-	Icon       string              `protobuf:"bytes,2,opt,name=icon,proto3" json:"icon,omitempty"`
+	Icon string `protobuf:"bytes,2,opt,name=icon,proto3" json:"icon,omitempty"`
 	ShowStatus MemberV2_ShowStatus `protobuf:"varint,3,opt,name=show_status,json=showStatus,proto3,enum=bilibili.main.community.reply.v1.MemberV2_ShowStatus" json:"show_status,omitempty"`
 }
 
@@ -6864,9 +6864,9 @@ type MemberV2_Interaction struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Itype       string `protobuf:"bytes,1,opt,name=itype,proto3" json:"itype,omitempty"`
+	Itype string `protobuf:"bytes,1,opt,name=itype,proto3" json:"itype,omitempty"`
 	MetadataUrl string `protobuf:"bytes,2,opt,name=metadata_url,json=metadataUrl,proto3" json:"metadata_url,omitempty"`
-	NftId       string `protobuf:"bytes,3,opt,name=nft_id,json=nftId,proto3" json:"nft_id,omitempty"`
+	NftId string `protobuf:"bytes,3,opt,name=nft_id,json=nftId,proto3" json:"nft_id,omitempty"`
 	// NFT地区
 	Region *MemberV2_Region `protobuf:"bytes,4,opt,name=region,proto3" json:"region,omitempty"`
 }
@@ -6937,7 +6937,7 @@ type MemberV2_Nft struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Face        int32                 `protobuf:"varint,1,opt,name=face,proto3" json:"face,omitempty"`
+	Face int32 `protobuf:"varint,1,opt,name=face,proto3" json:"face,omitempty"`
 	Interaction *MemberV2_Interaction `protobuf:"bytes,2,opt,name=interaction,proto3" json:"interaction,omitempty"`
 }
 
@@ -7148,7 +7148,7 @@ type SubjectControl_FilterTag struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 类型名
-	Name    string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	EventId string `protobuf:"bytes,2,opt,name=event_id,json=eventId,proto3" json:"event_id,omitempty"`
 }
 
@@ -7204,11 +7204,11 @@ type Url_Extra struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	GoodsItemId          int64  `protobuf:"varint,1,opt,name=goods_item_id,json=goodsItemId,proto3" json:"goods_item_id,omitempty"`
+	GoodsItemId int64 `protobuf:"varint,1,opt,name=goods_item_id,json=goodsItemId,proto3" json:"goods_item_id,omitempty"`
 	GoodsPrefetchedCache string `protobuf:"bytes,2,opt,name=goods_prefetched_cache,json=goodsPrefetchedCache,proto3" json:"goods_prefetched_cache,omitempty"`
-	GoodsShowType        int32  `protobuf:"varint,3,opt,name=goods_show_type,json=goodsShowType,proto3" json:"goods_show_type,omitempty"`
+	GoodsShowType int32 `protobuf:"varint,3,opt,name=goods_show_type,json=goodsShowType,proto3" json:"goods_show_type,omitempty"`
 	// 热词搜索
-	IsWordSearch   bool  `protobuf:"varint,4,opt,name=is_word_search,json=isWordSearch,proto3" json:"is_word_search,omitempty"`
+	IsWordSearch bool `protobuf:"varint,4,opt,name=is_word_search,json=isWordSearch,proto3" json:"is_word_search,omitempty"`
 	GoodsCmControl int64 `protobuf:"varint,5,opt,name=goods_cm_control,json=goodsCmControl,proto3" json:"goods_cm_control,omitempty"`
 }
 

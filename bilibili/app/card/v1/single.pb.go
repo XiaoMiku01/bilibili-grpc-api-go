@@ -26,9 +26,9 @@ type SmallCoverV5 struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base     *Base  `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
 	CoverGif string `protobuf:"bytes,2,opt,name=cover_gif,json=coverGif,proto3" json:"cover_gif,omitempty"`
-	Up       *Up    `protobuf:"bytes,3,opt,name=up,proto3" json:"up,omitempty"`
+	Up *Up `protobuf:"bytes,3,opt,name=up,proto3" json:"up,omitempty"`
 	// 封面右下角标文案
 	CoverRightText_1 string `protobuf:"bytes,4,opt,name=cover_right_text_1,json=coverRightText1,proto3" json:"cover_right_text_1,omitempty"`
 	// 右侧文案1
@@ -36,7 +36,7 @@ type SmallCoverV5 struct {
 	// 右侧文案2
 	RightDesc_2 string `protobuf:"bytes,6,opt,name=right_desc_2,json=rightDesc2,proto3" json:"right_desc_2,omitempty"`
 	// 右侧推荐原因标签框
-	RcmdReasonStyle *ReasonStyle     `protobuf:"bytes,7,opt,name=rcmd_reason_style,json=rcmdReasonStyle,proto3" json:"rcmd_reason_style,omitempty"`
+	RcmdReasonStyle *ReasonStyle `protobuf:"bytes,7,opt,name=rcmd_reason_style,json=rcmdReasonStyle,proto3" json:"rcmd_reason_style,omitempty"`
 	HotwordEntrance *HotwordEntrance `protobuf:"bytes,8,opt,name=hotword_entrance,json=hotwordEntrance,proto3" json:"hotword_entrance,omitempty"`
 	// 直播小卡的角标
 	CornerMarkStyle *ReasonStyle `protobuf:"bytes,9,opt,name=corner_mark_style,json=cornerMarkStyle,proto3" json:"corner_mark_style,omitempty"`
@@ -45,9 +45,9 @@ type SmallCoverV5 struct {
 	// 右侧文案2图标id
 	RightIcon_2 int32 `protobuf:"varint,11,opt,name=right_icon_2,json=rightIcon2,proto3" json:"right_icon_2,omitempty"`
 	// 左上角角标
-	LeftCornerMarkStyle              *ReasonStyle `protobuf:"bytes,12,opt,name=left_corner_mark_style,json=leftCornerMarkStyle,proto3" json:"left_corner_mark_style,omitempty"`
-	CoverRightTextContentDescription string       `protobuf:"bytes,13,opt,name=cover_right_text_content_description,json=coverRightTextContentDescription,proto3" json:"cover_right_text_content_description,omitempty"`
-	RightDesc1ContentDescription     string       `protobuf:"bytes,14,opt,name=right_desc1_content_description,json=rightDesc1ContentDescription,proto3" json:"right_desc1_content_description,omitempty"`
+	LeftCornerMarkStyle *ReasonStyle `protobuf:"bytes,12,opt,name=left_corner_mark_style,json=leftCornerMarkStyle,proto3" json:"left_corner_mark_style,omitempty"`
+	CoverRightTextContentDescription string `protobuf:"bytes,13,opt,name=cover_right_text_content_description,json=coverRightTextContentDescription,proto3" json:"cover_right_text_content_description,omitempty"`
+	RightDesc1ContentDescription string `protobuf:"bytes,14,opt,name=right_desc1_content_description,json=rightDesc1ContentDescription,proto3" json:"right_desc1_content_description,omitempty"`
 }
 
 func (x *SmallCoverV5) Reset() {
@@ -185,20 +185,20 @@ type SmallCoverV5Ad struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Base                             *Base            `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	CoverGif                         string           `protobuf:"bytes,2,opt,name=cover_gif,json=coverGif,proto3" json:"cover_gif,omitempty"`
-	Up                               *Up              `protobuf:"bytes,3,opt,name=up,proto3" json:"up,omitempty"`
-	CoverRightText1                  string           `protobuf:"bytes,4,opt,name=cover_right_text1,json=coverRightText1,proto3" json:"cover_right_text1,omitempty"`
-	RightDesc1                       string           `protobuf:"bytes,5,opt,name=right_desc1,json=rightDesc1,proto3" json:"right_desc1,omitempty"`
-	RightDesc2                       string           `protobuf:"bytes,6,opt,name=right_desc2,json=rightDesc2,proto3" json:"right_desc2,omitempty"`
-	RcmdReasonStyle                  *ReasonStyle     `protobuf:"bytes,7,opt,name=rcmd_reason_style,json=rcmdReasonStyle,proto3" json:"rcmd_reason_style,omitempty"`
-	HotwordEntrance                  *HotwordEntrance `protobuf:"bytes,8,opt,name=hotword_entrance,json=hotwordEntrance,proto3" json:"hotword_entrance,omitempty"`
-	CornerMarkStyle                  *ReasonStyle     `protobuf:"bytes,9,opt,name=corner_mark_style,json=cornerMarkStyle,proto3" json:"corner_mark_style,omitempty"`
-	RightIcon1                       int32            `protobuf:"varint,10,opt,name=right_icon1,json=rightIcon1,proto3" json:"right_icon1,omitempty"`
-	RightIcon2                       int32            `protobuf:"varint,11,opt,name=right_icon2,json=rightIcon2,proto3" json:"right_icon2,omitempty"`
-	LeftCornerMarkStyle              *ReasonStyle     `protobuf:"bytes,12,opt,name=left_corner_mark_style,json=leftCornerMarkStyle,proto3" json:"left_corner_mark_style,omitempty"`
-	CoverRightTextContentDescription string           `protobuf:"bytes,13,opt,name=cover_right_text_content_description,json=coverRightTextContentDescription,proto3" json:"cover_right_text_content_description,omitempty"`
-	RightDesc1ContentDescription     string           `protobuf:"bytes,14,opt,name=right_desc1_content_description,json=rightDesc1ContentDescription,proto3" json:"right_desc1_content_description,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	CoverGif string `protobuf:"bytes,2,opt,name=cover_gif,json=coverGif,proto3" json:"cover_gif,omitempty"`
+	Up *Up `protobuf:"bytes,3,opt,name=up,proto3" json:"up,omitempty"`
+	CoverRightText1 string `protobuf:"bytes,4,opt,name=cover_right_text1,json=coverRightText1,proto3" json:"cover_right_text1,omitempty"`
+	RightDesc1 string `protobuf:"bytes,5,opt,name=right_desc1,json=rightDesc1,proto3" json:"right_desc1,omitempty"`
+	RightDesc2 string `protobuf:"bytes,6,opt,name=right_desc2,json=rightDesc2,proto3" json:"right_desc2,omitempty"`
+	RcmdReasonStyle *ReasonStyle `protobuf:"bytes,7,opt,name=rcmd_reason_style,json=rcmdReasonStyle,proto3" json:"rcmd_reason_style,omitempty"`
+	HotwordEntrance *HotwordEntrance `protobuf:"bytes,8,opt,name=hotword_entrance,json=hotwordEntrance,proto3" json:"hotword_entrance,omitempty"`
+	CornerMarkStyle *ReasonStyle `protobuf:"bytes,9,opt,name=corner_mark_style,json=cornerMarkStyle,proto3" json:"corner_mark_style,omitempty"`
+	RightIcon1 int32 `protobuf:"varint,10,opt,name=right_icon1,json=rightIcon1,proto3" json:"right_icon1,omitempty"`
+	RightIcon2 int32 `protobuf:"varint,11,opt,name=right_icon2,json=rightIcon2,proto3" json:"right_icon2,omitempty"`
+	LeftCornerMarkStyle *ReasonStyle `protobuf:"bytes,12,opt,name=left_corner_mark_style,json=leftCornerMarkStyle,proto3" json:"left_corner_mark_style,omitempty"`
+	CoverRightTextContentDescription string `protobuf:"bytes,13,opt,name=cover_right_text_content_description,json=coverRightTextContentDescription,proto3" json:"cover_right_text_content_description,omitempty"`
+	RightDesc1ContentDescription string `protobuf:"bytes,14,opt,name=right_desc1_content_description,json=rightDesc1ContentDescription,proto3" json:"right_desc1_content_description,omitempty"`
 }
 
 func (x *SmallCoverV5Ad) Reset() {
@@ -336,10 +336,10 @@ type HotwordEntrance struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	HotwordId int64  `protobuf:"varint,1,opt,name=hotword_id,json=hotwordId,proto3" json:"hotword_id,omitempty"`
-	HotText   string `protobuf:"bytes,2,opt,name=hot_text,json=hotText,proto3" json:"hot_text,omitempty"`
-	H5Url     string `protobuf:"bytes,3,opt,name=h5_url,json=h5Url,proto3" json:"h5_url,omitempty"`
-	Icon      string `protobuf:"bytes,4,opt,name=icon,proto3" json:"icon,omitempty"`
+	HotwordId int64 `protobuf:"varint,1,opt,name=hotword_id,json=hotwordId,proto3" json:"hotword_id,omitempty"`
+	HotText string `protobuf:"bytes,2,opt,name=hot_text,json=hotText,proto3" json:"hot_text,omitempty"`
+	H5Url string `protobuf:"bytes,3,opt,name=h5_url,json=h5Url,proto3" json:"h5_url,omitempty"`
+	Icon string `protobuf:"bytes,4,opt,name=icon,proto3" json:"icon,omitempty"`
 }
 
 func (x *HotwordEntrance) Reset() {
@@ -408,27 +408,27 @@ type LargeCoverV1 struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base                  *Base        `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	CoverGif              string       `protobuf:"bytes,2,opt,name=cover_gif,json=coverGif,proto3" json:"cover_gif,omitempty"`
-	Avatar                *Avatar      `protobuf:"bytes,3,opt,name=avatar,proto3" json:"avatar,omitempty"`
-	CoverLeftText_1       string       `protobuf:"bytes,4,opt,name=cover_left_text_1,json=coverLeftText1,proto3" json:"cover_left_text_1,omitempty"`
-	CoverLeftText_2       string       `protobuf:"bytes,5,opt,name=cover_left_text_2,json=coverLeftText2,proto3" json:"cover_left_text_2,omitempty"`
-	CoverLeftText_3       string       `protobuf:"bytes,6,opt,name=cover_left_text_3,json=coverLeftText3,proto3" json:"cover_left_text_3,omitempty"`
-	CoverBadge            string       `protobuf:"bytes,7,opt,name=cover_badge,json=coverBadge,proto3" json:"cover_badge,omitempty"`
-	TopRcmdReason         string       `protobuf:"bytes,8,opt,name=top_rcmd_reason,json=topRcmdReason,proto3" json:"top_rcmd_reason,omitempty"`
-	BottomRcmdReason      string       `protobuf:"bytes,9,opt,name=bottom_rcmd_reason,json=bottomRcmdReason,proto3" json:"bottom_rcmd_reason,omitempty"`
-	Desc                  string       `protobuf:"bytes,10,opt,name=desc,proto3" json:"desc,omitempty"`
-	OfficialIcon          int32        `protobuf:"varint,11,opt,name=official_icon,json=officialIcon,proto3" json:"official_icon,omitempty"`
-	CanPlay               int32        `protobuf:"varint,12,opt,name=can_play,json=canPlay,proto3" json:"can_play,omitempty"`
-	TopRcmdReasonStyle    *ReasonStyle `protobuf:"bytes,13,opt,name=top_rcmd_reason_style,json=topRcmdReasonStyle,proto3" json:"top_rcmd_reason_style,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	CoverGif string `protobuf:"bytes,2,opt,name=cover_gif,json=coverGif,proto3" json:"cover_gif,omitempty"`
+	Avatar *Avatar `protobuf:"bytes,3,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	CoverLeftText_1 string `protobuf:"bytes,4,opt,name=cover_left_text_1,json=coverLeftText1,proto3" json:"cover_left_text_1,omitempty"`
+	CoverLeftText_2 string `protobuf:"bytes,5,opt,name=cover_left_text_2,json=coverLeftText2,proto3" json:"cover_left_text_2,omitempty"`
+	CoverLeftText_3 string `protobuf:"bytes,6,opt,name=cover_left_text_3,json=coverLeftText3,proto3" json:"cover_left_text_3,omitempty"`
+	CoverBadge string `protobuf:"bytes,7,opt,name=cover_badge,json=coverBadge,proto3" json:"cover_badge,omitempty"`
+	TopRcmdReason string `protobuf:"bytes,8,opt,name=top_rcmd_reason,json=topRcmdReason,proto3" json:"top_rcmd_reason,omitempty"`
+	BottomRcmdReason string `protobuf:"bytes,9,opt,name=bottom_rcmd_reason,json=bottomRcmdReason,proto3" json:"bottom_rcmd_reason,omitempty"`
+	Desc string `protobuf:"bytes,10,opt,name=desc,proto3" json:"desc,omitempty"`
+	OfficialIcon int32 `protobuf:"varint,11,opt,name=official_icon,json=officialIcon,proto3" json:"official_icon,omitempty"`
+	CanPlay int32 `protobuf:"varint,12,opt,name=can_play,json=canPlay,proto3" json:"can_play,omitempty"`
+	TopRcmdReasonStyle *ReasonStyle `protobuf:"bytes,13,opt,name=top_rcmd_reason_style,json=topRcmdReasonStyle,proto3" json:"top_rcmd_reason_style,omitempty"`
 	BottomRcmdReasonStyle *ReasonStyle `protobuf:"bytes,14,opt,name=bottom_rcmd_reason_style,json=bottomRcmdReasonStyle,proto3" json:"bottom_rcmd_reason_style,omitempty"`
-	RcmdReasonStyleV2     *ReasonStyle `protobuf:"bytes,15,opt,name=rcmd_reason_style_v2,json=rcmdReasonStyleV2,proto3" json:"rcmd_reason_style_v2,omitempty"`
-	LeftCoverBadgeStyle   *ReasonStyle `protobuf:"bytes,16,opt,name=left_cover_badge_style,json=leftCoverBadgeStyle,proto3" json:"left_cover_badge_style,omitempty"`
-	RightCoverBadgeStyle  *ReasonStyle `protobuf:"bytes,17,opt,name=right_cover_badge_style,json=rightCoverBadgeStyle,proto3" json:"right_cover_badge_style,omitempty"`
-	CoverBadge_2          string       `protobuf:"bytes,18,opt,name=cover_badge_2,json=coverBadge2,proto3" json:"cover_badge_2,omitempty"`
-	LikeButton            *LikeButton  `protobuf:"bytes,19,opt,name=like_button,json=likeButton,proto3" json:"like_button,omitempty"`
-	TitleSingleLine       int32        `protobuf:"varint,20,opt,name=title_single_line,json=titleSingleLine,proto3" json:"title_single_line,omitempty"`
-	CoverRightText        string       `protobuf:"bytes,21,opt,name=cover_right_text,json=coverRightText,proto3" json:"cover_right_text,omitempty"`
+	RcmdReasonStyleV2 *ReasonStyle `protobuf:"bytes,15,opt,name=rcmd_reason_style_v2,json=rcmdReasonStyleV2,proto3" json:"rcmd_reason_style_v2,omitempty"`
+	LeftCoverBadgeStyle *ReasonStyle `protobuf:"bytes,16,opt,name=left_cover_badge_style,json=leftCoverBadgeStyle,proto3" json:"left_cover_badge_style,omitempty"`
+	RightCoverBadgeStyle *ReasonStyle `protobuf:"bytes,17,opt,name=right_cover_badge_style,json=rightCoverBadgeStyle,proto3" json:"right_cover_badge_style,omitempty"`
+	CoverBadge_2 string `protobuf:"bytes,18,opt,name=cover_badge_2,json=coverBadge2,proto3" json:"cover_badge_2,omitempty"`
+	LikeButton *LikeButton `protobuf:"bytes,19,opt,name=like_button,json=likeButton,proto3" json:"like_button,omitempty"`
+	TitleSingleLine int32 `protobuf:"varint,20,opt,name=title_single_line,json=titleSingleLine,proto3" json:"title_single_line,omitempty"`
+	CoverRightText string `protobuf:"bytes,21,opt,name=cover_right_text,json=coverRightText,proto3" json:"cover_right_text,omitempty"`
 }
 
 func (x *LargeCoverV1) Reset() {
@@ -616,9 +616,9 @@ type ThreeItemAllV2 struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base               *Base             `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	TopRcmdReasonStyle *ReasonStyle      `protobuf:"bytes,2,opt,name=top_rcmd_reason_style,json=topRcmdReasonStyle,proto3" json:"top_rcmd_reason_style,omitempty"`
-	Item               []*TwoItemHV1Item `protobuf:"bytes,3,rep,name=item,proto3" json:"item,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	TopRcmdReasonStyle *ReasonStyle `protobuf:"bytes,2,opt,name=top_rcmd_reason_style,json=topRcmdReasonStyle,proto3" json:"top_rcmd_reason_style,omitempty"`
+	Item []*TwoItemHV1Item `protobuf:"bytes,3,rep,name=item,proto3" json:"item,omitempty"`
 }
 
 func (x *ThreeItemAllV2) Reset() {
@@ -679,15 +679,15 @@ type TwoItemHV1Item struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title           string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Cover           string `protobuf:"bytes,2,opt,name=cover,proto3" json:"cover,omitempty"`
-	Uri             string `protobuf:"bytes,3,opt,name=uri,proto3" json:"uri,omitempty"`
-	Param           string `protobuf:"bytes,4,opt,name=param,proto3" json:"param,omitempty"`
-	Args            *Args  `protobuf:"bytes,5,opt,name=args,proto3" json:"args,omitempty"`
-	Goto            string `protobuf:"bytes,6,opt,name=goto,proto3" json:"goto,omitempty"`
+	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Cover string `protobuf:"bytes,2,opt,name=cover,proto3" json:"cover,omitempty"`
+	Uri string `protobuf:"bytes,3,opt,name=uri,proto3" json:"uri,omitempty"`
+	Param string `protobuf:"bytes,4,opt,name=param,proto3" json:"param,omitempty"`
+	Args *Args `protobuf:"bytes,5,opt,name=args,proto3" json:"args,omitempty"`
+	Goto string `protobuf:"bytes,6,opt,name=goto,proto3" json:"goto,omitempty"`
 	CoverLeftText_1 string `protobuf:"bytes,7,opt,name=cover_left_text_1,json=coverLeftText1,proto3" json:"cover_left_text_1,omitempty"`
-	CoverLeftIcon_1 int32  `protobuf:"varint,8,opt,name=cover_left_icon_1,json=coverLeftIcon1,proto3" json:"cover_left_icon_1,omitempty"`
-	CoverRightText  string `protobuf:"bytes,9,opt,name=cover_right_text,json=coverRightText,proto3" json:"cover_right_text,omitempty"`
+	CoverLeftIcon_1 int32 `protobuf:"varint,8,opt,name=cover_left_icon_1,json=coverLeftIcon1,proto3" json:"cover_left_icon_1,omitempty"`
+	CoverRightText string `protobuf:"bytes,9,opt,name=cover_right_text,json=coverRightText,proto3" json:"cover_right_text,omitempty"`
 }
 
 func (x *TwoItemHV1Item) Reset() {
@@ -875,13 +875,13 @@ type SmallCoverRcmdItem struct {
 	RightDesc1 string `protobuf:"bytes,7,opt,name=rightDesc1,proto3" json:"rightDesc1,omitempty"`
 	// 右侧文案2
 	RightDesc2 string `protobuf:"bytes,8,opt,name=rightDesc2,proto3" json:"rightDesc2,omitempty"`
-	CoverGif   string `protobuf:"bytes,9,opt,name=coverGif,proto3" json:"coverGif,omitempty"`
+	CoverGif string `protobuf:"bytes,9,opt,name=coverGif,proto3" json:"coverGif,omitempty"`
 	// 右侧文案1图标id
 	RightIcon1 int32 `protobuf:"varint,10,opt,name=rightIcon1,proto3" json:"rightIcon1,omitempty"`
 	// 右侧文案2图标id
-	RightIcon2                       int32  `protobuf:"varint,11,opt,name=rightIcon2,proto3" json:"rightIcon2,omitempty"`
+	RightIcon2 int32 `protobuf:"varint,11,opt,name=rightIcon2,proto3" json:"rightIcon2,omitempty"`
 	CoverRightTextContentDescription string `protobuf:"bytes,12,opt,name=cover_right_text_content_description,json=coverRightTextContentDescription,proto3" json:"cover_right_text_content_description,omitempty"`
-	RightDesc1ContentDescription     string `protobuf:"bytes,13,opt,name=right_desc1_content_description,json=rightDesc1ContentDescription,proto3" json:"right_desc1_content_description,omitempty"`
+	RightDesc1ContentDescription string `protobuf:"bytes,13,opt,name=right_desc1_content_description,json=rightDesc1ContentDescription,proto3" json:"right_desc1_content_description,omitempty"`
 }
 
 func (x *SmallCoverRcmdItem) Reset() {
@@ -1013,11 +1013,11 @@ type ThreeItemV1 struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base      *Base              `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	TitleIcon int32              `protobuf:"varint,2,opt,name=titleIcon,proto3" json:"titleIcon,omitempty"`
-	MoreUri   string             `protobuf:"bytes,3,opt,name=moreUri,proto3" json:"moreUri,omitempty"`
-	MoreText  string             `protobuf:"bytes,4,opt,name=moreText,proto3" json:"moreText,omitempty"`
-	Items     []*ThreeItemV1Item `protobuf:"bytes,5,rep,name=items,proto3" json:"items,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	TitleIcon int32 `protobuf:"varint,2,opt,name=titleIcon,proto3" json:"titleIcon,omitempty"`
+	MoreUri string `protobuf:"bytes,3,opt,name=moreUri,proto3" json:"moreUri,omitempty"`
+	MoreText string `protobuf:"bytes,4,opt,name=moreText,proto3" json:"moreText,omitempty"`
+	Items []*ThreeItemV1Item `protobuf:"bytes,5,rep,name=items,proto3" json:"items,omitempty"`
 }
 
 func (x *ThreeItemV1) Reset() {
@@ -1093,12 +1093,12 @@ type ThreeItemV1Item struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base          *Base  `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
 	CoverLeftText string `protobuf:"bytes,2,opt,name=coverLeftText,proto3" json:"coverLeftText,omitempty"`
-	CoverLeftIcon int32  `protobuf:"varint,3,opt,name=coverLeftIcon,proto3" json:"coverLeftIcon,omitempty"`
-	Desc1         string `protobuf:"bytes,4,opt,name=desc1,proto3" json:"desc1,omitempty"`
-	Desc2         string `protobuf:"bytes,5,opt,name=desc2,proto3" json:"desc2,omitempty"`
-	Badge         string `protobuf:"bytes,6,opt,name=badge,proto3" json:"badge,omitempty"`
+	CoverLeftIcon int32 `protobuf:"varint,3,opt,name=coverLeftIcon,proto3" json:"coverLeftIcon,omitempty"`
+	Desc1 string `protobuf:"bytes,4,opt,name=desc1,proto3" json:"desc1,omitempty"`
+	Desc2 string `protobuf:"bytes,5,opt,name=desc2,proto3" json:"desc2,omitempty"`
+	Badge string `protobuf:"bytes,6,opt,name=badge,proto3" json:"badge,omitempty"`
 }
 
 func (x *ThreeItemV1Item) Reset() {
@@ -1181,9 +1181,9 @@ type HotTopicItem struct {
 	unknownFields protoimpl.UnknownFields
 
 	Cover string `protobuf:"bytes,1,opt,name=cover,proto3" json:"cover,omitempty"`
-	Uri   string `protobuf:"bytes,2,opt,name=uri,proto3" json:"uri,omitempty"`
+	Uri string `protobuf:"bytes,2,opt,name=uri,proto3" json:"uri,omitempty"`
 	Param string `protobuf:"bytes,3,opt,name=param,proto3" json:"param,omitempty"`
-	Name  string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
 }
 
 func (x *HotTopicItem) Reset() {
@@ -1252,8 +1252,8 @@ type HotTopic struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base  *Base           `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	Desc  string          `protobuf:"bytes,2,opt,name=desc,proto3" json:"desc,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	Desc string `protobuf:"bytes,2,opt,name=desc,proto3" json:"desc,omitempty"`
 	Items []*HotTopicItem `protobuf:"bytes,3,rep,name=items,proto3" json:"items,omitempty"`
 }
 
@@ -1316,14 +1316,14 @@ type DynamicHot struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base               *Base        `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	TopLeftTitle       string       `protobuf:"bytes,2,opt,name=top_left_title,json=topLeftTitle,proto3" json:"top_left_title,omitempty"`
-	Desc1              string       `protobuf:"bytes,3,opt,name=desc1,proto3" json:"desc1,omitempty"`
-	Desc2              string       `protobuf:"bytes,4,opt,name=desc2,proto3" json:"desc2,omitempty"`
-	MoreUri            string       `protobuf:"bytes,5,opt,name=more_uri,json=moreUri,proto3" json:"more_uri,omitempty"`
-	MoreText           string       `protobuf:"bytes,6,opt,name=more_text,json=moreText,proto3" json:"more_text,omitempty"`
-	Covers             []string     `protobuf:"bytes,7,rep,name=covers,proto3" json:"covers,omitempty"`
-	CoverRightText     string       `protobuf:"bytes,8,opt,name=cover_right_text,json=coverRightText,proto3" json:"cover_right_text,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	TopLeftTitle string `protobuf:"bytes,2,opt,name=top_left_title,json=topLeftTitle,proto3" json:"top_left_title,omitempty"`
+	Desc1 string `protobuf:"bytes,3,opt,name=desc1,proto3" json:"desc1,omitempty"`
+	Desc2 string `protobuf:"bytes,4,opt,name=desc2,proto3" json:"desc2,omitempty"`
+	MoreUri string `protobuf:"bytes,5,opt,name=more_uri,json=moreUri,proto3" json:"more_uri,omitempty"`
+	MoreText string `protobuf:"bytes,6,opt,name=more_text,json=moreText,proto3" json:"more_text,omitempty"`
+	Covers []string `protobuf:"bytes,7,rep,name=covers,proto3" json:"covers,omitempty"`
+	CoverRightText string `protobuf:"bytes,8,opt,name=cover_right_text,json=coverRightText,proto3" json:"cover_right_text,omitempty"`
 	TopRcmdReasonStyle *ReasonStyle `protobuf:"bytes,9,opt,name=top_rcmd_reason_style,json=topRcmdReasonStyle,proto3" json:"top_rcmd_reason_style,omitempty"`
 }
 
@@ -1428,9 +1428,9 @@ type MiddleCoverV3 struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base            *Base        `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
-	Desc1           string       `protobuf:"bytes,2,opt,name=desc1,proto3" json:"desc1,omitempty"`
-	Desc2           string       `protobuf:"bytes,3,opt,name=desc2,proto3" json:"desc2,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	Desc1 string `protobuf:"bytes,2,opt,name=desc1,proto3" json:"desc1,omitempty"`
+	Desc2 string `protobuf:"bytes,3,opt,name=desc2,proto3" json:"desc2,omitempty"`
 	CoverBadgeStyle *ReasonStyle `protobuf:"bytes,4,opt,name=cover_badge_style,json=coverBadgeStyle,proto3" json:"cover_badge_style,omitempty"`
 }
 
@@ -1500,18 +1500,18 @@ type LargeCoverV4 struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 条目基本信息
-	Base            *Base  `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
+	Base *Base `protobuf:"bytes,1,opt,name=base,proto3" json:"base,omitempty"`
 	CoverLeftText_1 string `protobuf:"bytes,2,opt,name=cover_left_text_1,json=coverLeftText1,proto3" json:"cover_left_text_1,omitempty"`
 	CoverLeftText_2 string `protobuf:"bytes,3,opt,name=cover_left_text_2,json=coverLeftText2,proto3" json:"cover_left_text_2,omitempty"`
 	CoverLeftText_3 string `protobuf:"bytes,4,opt,name=cover_left_text_3,json=coverLeftText3,proto3" json:"cover_left_text_3,omitempty"`
-	CoverBadge      string `protobuf:"bytes,5,opt,name=cover_badge,json=coverBadge,proto3" json:"cover_badge,omitempty"`
-	CanPlay         int32  `protobuf:"varint,6,opt,name=can_play,json=canPlay,proto3" json:"can_play,omitempty"`
-	Up              *Up    `protobuf:"bytes,7,opt,name=up,proto3" json:"up,omitempty"`
-	ShortLink       string `protobuf:"bytes,8,opt,name=short_link,json=shortLink,proto3" json:"short_link,omitempty"`
-	ShareSubtitle   string `protobuf:"bytes,9,opt,name=share_subtitle,json=shareSubtitle,proto3" json:"share_subtitle,omitempty"`
-	PlayNumber      string `protobuf:"bytes,10,opt,name=play_number,json=playNumber,proto3" json:"play_number,omitempty"`
-	Bvid            string `protobuf:"bytes,11,opt,name=bvid,proto3" json:"bvid,omitempty"`
-	SubParam        string `protobuf:"bytes,12,opt,name=sub_param,json=subParam,proto3" json:"sub_param,omitempty"`
+	CoverBadge string `protobuf:"bytes,5,opt,name=cover_badge,json=coverBadge,proto3" json:"cover_badge,omitempty"`
+	CanPlay int32 `protobuf:"varint,6,opt,name=can_play,json=canPlay,proto3" json:"can_play,omitempty"`
+	Up *Up `protobuf:"bytes,7,opt,name=up,proto3" json:"up,omitempty"`
+	ShortLink string `protobuf:"bytes,8,opt,name=short_link,json=shortLink,proto3" json:"short_link,omitempty"`
+	ShareSubtitle string `protobuf:"bytes,9,opt,name=share_subtitle,json=shareSubtitle,proto3" json:"share_subtitle,omitempty"`
+	PlayNumber string `protobuf:"bytes,10,opt,name=play_number,json=playNumber,proto3" json:"play_number,omitempty"`
+	Bvid string `protobuf:"bytes,11,opt,name=bvid,proto3" json:"bvid,omitempty"`
+	SubParam string `protobuf:"bytes,12,opt,name=sub_param,json=subParam,proto3" json:"sub_param,omitempty"`
 }
 
 func (x *LargeCoverV4) Reset() {

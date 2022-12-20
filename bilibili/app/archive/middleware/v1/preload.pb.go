@@ -34,7 +34,7 @@ type PlayerArgs struct {
 	Fnval int64 `protobuf:"varint,3,opt,name=fnval,proto3" json:"fnval,omitempty"`
 	// 返回url是否强制使用域名
 	// 0:不强制使用域名 1:http域名 2:https域名
-	ForceHost    int64 `protobuf:"varint,4,opt,name=force_host,json=forceHost,proto3" json:"force_host,omitempty"`
+	ForceHost int64 `protobuf:"varint,4,opt,name=force_host,json=forceHost,proto3" json:"force_host,omitempty"`
 	VoiceBalance int64 `protobuf:"varint,5,opt,name=voice_balance,json=voiceBalance,proto3" json:"voice_balance,omitempty"`
 }
 

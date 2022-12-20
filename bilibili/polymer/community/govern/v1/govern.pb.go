@@ -141,9 +141,9 @@ type AntiHarassmentInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Limit                 int32 `protobuf:"varint,1,opt,name=limit,proto3" json:"limit,omitempty"`
+	Limit int32 `protobuf:"varint,1,opt,name=limit,proto3" json:"limit,omitempty"`
 	FollowTimeLimitSecond int32 `protobuf:"varint,2,opt,name=follow_time_limit_second,json=followTimeLimitSecond,proto3" json:"follow_time_limit_second,omitempty"`
-	ExpireTime            int64 `protobuf:"varint,3,opt,name=expire_time,json=expireTime,proto3" json:"expire_time,omitempty"`
+	ExpireTime int64 `protobuf:"varint,3,opt,name=expire_time,json=expireTime,proto3" json:"expire_time,omitempty"`
 }
 
 func (x *AntiHarassmentInfo) Reset() {
@@ -204,15 +204,15 @@ type AntiHarassmentSetting struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid                 int64               `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
-	AutoLimit           bool                `protobuf:"varint,2,opt,name=auto_limit,json=autoLimit,proto3" json:"auto_limit,omitempty"`
-	Im                  *AntiHarassmentInfo `protobuf:"bytes,3,opt,name=im,proto3" json:"im,omitempty"`
-	Reply               *AntiHarassmentInfo `protobuf:"bytes,4,opt,name=reply,proto3" json:"reply,omitempty"`
-	Dm                  *AntiHarassmentInfo `protobuf:"bytes,5,opt,name=dm,proto3" json:"dm,omitempty"`
-	ReplyMe             *AntiHarassmentInfo `protobuf:"bytes,6,opt,name=reply_me,json=replyMe,proto3" json:"reply_me,omitempty"`
-	LikeMe              *AntiHarassmentInfo `protobuf:"bytes,7,opt,name=like_me,json=likeMe,proto3" json:"like_me,omitempty"`
-	AtMe                *AntiHarassmentInfo `protobuf:"bytes,8,opt,name=at_me,json=atMe,proto3" json:"at_me,omitempty"`
-	AutoLimitExpireTime int64               `protobuf:"varint,9,opt,name=auto_limit_expire_time,json=autoLimitExpireTime,proto3" json:"auto_limit_expire_time,omitempty"`
+	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	AutoLimit bool `protobuf:"varint,2,opt,name=auto_limit,json=autoLimit,proto3" json:"auto_limit,omitempty"`
+	Im *AntiHarassmentInfo `protobuf:"bytes,3,opt,name=im,proto3" json:"im,omitempty"`
+	Reply *AntiHarassmentInfo `protobuf:"bytes,4,opt,name=reply,proto3" json:"reply,omitempty"`
+	Dm *AntiHarassmentInfo `protobuf:"bytes,5,opt,name=dm,proto3" json:"dm,omitempty"`
+	ReplyMe *AntiHarassmentInfo `protobuf:"bytes,6,opt,name=reply_me,json=replyMe,proto3" json:"reply_me,omitempty"`
+	LikeMe *AntiHarassmentInfo `protobuf:"bytes,7,opt,name=like_me,json=likeMe,proto3" json:"like_me,omitempty"`
+	AtMe *AntiHarassmentInfo `protobuf:"bytes,8,opt,name=at_me,json=atMe,proto3" json:"at_me,omitempty"`
+	AutoLimitExpireTime int64 `protobuf:"varint,9,opt,name=auto_limit_expire_time,json=autoLimitExpireTime,proto3" json:"auto_limit_expire_time,omitempty"`
 }
 
 func (x *AntiHarassmentSetting) Reset() {
@@ -378,9 +378,9 @@ type LoadAntiHarassmentSettingsRsp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AntiHarassmentRet     bool                   `protobuf:"varint,1,opt,name=anti_harassment_ret,json=antiHarassmentRet,proto3" json:"anti_harassment_ret,omitempty"`
+	AntiHarassmentRet bool `protobuf:"varint,1,opt,name=anti_harassment_ret,json=antiHarassmentRet,proto3" json:"anti_harassment_ret,omitempty"`
 	AntiHarassmentSetting *AntiHarassmentSetting `protobuf:"bytes,2,opt,name=anti_harassment_setting,json=antiHarassmentSetting,proto3" json:"anti_harassment_setting,omitempty"`
-	ShowWindow            int32                  `protobuf:"varint,3,opt,name=show_window,json=showWindow,proto3" json:"show_window,omitempty"`
+	ShowWindow int32 `protobuf:"varint,3,opt,name=show_window,json=showWindow,proto3" json:"show_window,omitempty"`
 }
 
 func (x *LoadAntiHarassmentSettingsRsp) Reset() {
@@ -441,8 +441,8 @@ type StoreAntiHarassmentSettingsReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	BizType               int32                  `protobuf:"varint,1,opt,name=biz_type,json=bizType,proto3" json:"biz_type,omitempty"`
-	Mid                   int64                  `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
+	BizType int32 `protobuf:"varint,1,opt,name=biz_type,json=bizType,proto3" json:"biz_type,omitempty"`
+	Mid int64 `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
 	AntiHarassmentSetting *AntiHarassmentSetting `protobuf:"bytes,3,opt,name=anti_harassment_setting,json=antiHarassmentSetting,proto3" json:"anti_harassment_setting,omitempty"`
 }
 

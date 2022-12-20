@@ -26,7 +26,7 @@ type ErrorRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Error int32 `protobuf:"varint,2,opt,name=error,proto3" json:"error,omitempty"`
-	Time  int64 `protobuf:"varint,1,opt,name=time,proto3" json:"time,omitempty"`
+	Time int64 `protobuf:"varint,1,opt,name=time,proto3" json:"time,omitempty"`
 	Delay int64 `protobuf:"varint,3,opt,name=delay,proto3" json:"delay,omitempty"`
 }
 
@@ -89,7 +89,7 @@ type ErrorResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	Host string `protobuf:"bytes,1,opt,name=host,proto3" json:"host,omitempty"`
-	Time int64  `protobuf:"varint,3,opt,name=time,proto3" json:"time,omitempty"`
+	Time int64 `protobuf:"varint,3,opt,name=time,proto3" json:"time,omitempty"`
 }
 
 func (x *ErrorResponse) Reset() {
@@ -191,7 +191,7 @@ type PingResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	Host string `protobuf:"bytes,1,opt,name=host,proto3" json:"host,omitempty"`
-	Time int64  `protobuf:"varint,3,opt,name=time,proto3" json:"time,omitempty"`
+	Time int64 `protobuf:"varint,3,opt,name=time,proto3" json:"time,omitempty"`
 }
 
 func (x *PingResponse) Reset() {
@@ -292,9 +292,9 @@ type SayResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Host    string `protobuf:"bytes,1,opt,name=host,proto3" json:"host,omitempty"`
+	Host string `protobuf:"bytes,1,opt,name=host,proto3" json:"host,omitempty"`
 	Content string `protobuf:"bytes,2,opt,name=content,proto3" json:"content,omitempty"`
-	Time    int64  `protobuf:"varint,3,opt,name=time,proto3" json:"time,omitempty"`
+	Time int64 `protobuf:"varint,3,opt,name=time,proto3" json:"time,omitempty"`
 }
 
 func (x *SayResponse) Reset() {

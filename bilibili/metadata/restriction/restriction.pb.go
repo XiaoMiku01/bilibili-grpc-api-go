@@ -83,7 +83,7 @@ type Restriction struct {
 	// 模式类型(旧版)
 	Mode ModeType `protobuf:"varint,3,opt,name=mode,proto3,enum=bilibili.metadata.restriction.ModeType" json:"mode,omitempty"`
 	// app 审核review状态
-	Review      bool `protobuf:"varint,4,opt,name=review,proto3" json:"review,omitempty"`
+	Review bool `protobuf:"varint,4,opt,name=review,proto3" json:"review,omitempty"`
 	DisableRcmd bool `protobuf:"varint,5,opt,name=disable_rcmd,json=disableRcmd,proto3" json:"disable_rcmd,omitempty"`
 }
 

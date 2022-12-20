@@ -26,12 +26,12 @@ type ModResourceResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Atcion        int32  `protobuf:"varint,1,opt,name=atcion,proto3" json:"atcion,omitempty"`
-	AppKey        string `protobuf:"bytes,2,opt,name=app_key,json=appKey,proto3" json:"app_key,omitempty"`
-	PoolName      string `protobuf:"bytes,3,opt,name=pool_name,json=poolName,proto3" json:"pool_name,omitempty"`
-	ModuleName    string `protobuf:"bytes,4,opt,name=module_name,json=moduleName,proto3" json:"module_name,omitempty"`
-	ModuleVersion int64  `protobuf:"varint,5,opt,name=module_version,json=moduleVersion,proto3" json:"module_version,omitempty"`
-	ListVersion   int64  `protobuf:"varint,6,opt,name=list_version,json=listVersion,proto3" json:"list_version,omitempty"`
+	Atcion int32 `protobuf:"varint,1,opt,name=atcion,proto3" json:"atcion,omitempty"`
+	AppKey string `protobuf:"bytes,2,opt,name=app_key,json=appKey,proto3" json:"app_key,omitempty"`
+	PoolName string `protobuf:"bytes,3,opt,name=pool_name,json=poolName,proto3" json:"pool_name,omitempty"`
+	ModuleName string `protobuf:"bytes,4,opt,name=module_name,json=moduleName,proto3" json:"module_name,omitempty"`
+	ModuleVersion int64 `protobuf:"varint,5,opt,name=module_version,json=moduleVersion,proto3" json:"module_version,omitempty"`
+	ListVersion int64 `protobuf:"varint,6,opt,name=list_version,json=listVersion,proto3" json:"list_version,omitempty"`
 }
 
 func (x *ModResourceResp) Reset() {
