@@ -101,7 +101,7 @@ type DynamicClient interface {
 	LikeList(ctx context.Context, in *LikeListReq, opts ...grpc.CallOption) (*LikeListReply, error)
 	// 转发列表
 	RepostList(ctx context.Context, in *RepostListReq, opts ...grpc.CallOption) (*RepostListRsp, error)
-	// 新版动态转发点赞列表
+	// 新版动态转发点赞列表 需要登录
 	ReactionList(ctx context.Context, in *ReactionListReq, opts ...grpc.CallOption) (*ReactionListReply, error)
 	// 空间页动态
 	DynSpace(ctx context.Context, in *DynSpaceReq, opts ...grpc.CallOption) (*DynSpaceRsp, error)
@@ -555,7 +555,7 @@ type DynamicServer interface {
 	LikeList(context.Context, *LikeListReq) (*LikeListReply, error)
 	// 转发列表
 	RepostList(context.Context, *RepostListReq) (*RepostListRsp, error)
-	// 新版动态转发点赞列表
+	// 新版动态转发点赞列表 需要登录
 	ReactionList(context.Context, *ReactionListReq) (*ReactionListReply, error)
 	// 空间页动态
 	DynSpace(context.Context, *DynSpaceReq) (*DynSpaceRsp, error)

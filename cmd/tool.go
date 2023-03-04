@@ -66,7 +66,7 @@ func main() {
 		cmd := exec.Command("protoc", "--go_out=paths=source_relative:.", "--go-grpc_out=paths=source_relative:.", "--proto_path=.", file)
 		e := cmd.Run()
 		if e != nil {
-			fmt.Println(cmd.String())
+			fmt.Println("err:", cmd.String(), e.Error())
 			//fmt.Println(e)
 			//break
 		}
