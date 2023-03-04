@@ -116,6 +116,7 @@ message Content {
     // 评论图片
     repeated  Picture pictures = 9;
 }
+
 // 图片信息
 message Picture {
     // 图片URL
@@ -127,6 +128,7 @@ message Picture {
     // 图片大小，单位KB
     double img_size = 4;
 }
+
 // 页面游标回复
 message CursorReply {
     // 下页数据
