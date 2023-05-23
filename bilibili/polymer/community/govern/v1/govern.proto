@@ -94,4 +94,3 @@ message StoreAntiHarassmentSettingsReq {
 
 //
 message StoreAntiHarassmentSettingsRsp {}
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/polymer/community/govern/v1";

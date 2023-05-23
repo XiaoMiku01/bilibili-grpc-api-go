@@ -14,5 +14,3 @@ message Status {
   // 扩展信息嵌套(相当于该messasge的套娃)
   repeated google.protobuf.Any details = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/rpc";

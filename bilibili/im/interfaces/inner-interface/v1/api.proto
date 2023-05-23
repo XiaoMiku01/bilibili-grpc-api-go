@@ -32,5 +32,3 @@ message RspOpBlacklist {
     //
     repeated uint64 failed_users = 1;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/im/interfaces/inner-interface/v1";

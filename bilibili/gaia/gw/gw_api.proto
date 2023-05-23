@@ -110,5 +110,3 @@ message UploadAppListReply {
     // 上报响应id
     string trace_id = 1;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/gaia/gw";

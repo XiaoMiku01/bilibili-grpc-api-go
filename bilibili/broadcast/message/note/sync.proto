@@ -9,5 +9,3 @@ message Sync {
     // 唯一标示
     string hash = 2;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/note";

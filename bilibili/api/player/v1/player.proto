@@ -73,5 +73,3 @@ message HeartbeatReq {
     //
     int64 detail_play_time = 28;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/api/player/v1";

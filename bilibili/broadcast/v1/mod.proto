@@ -25,5 +25,3 @@ message ModResourceResp {
     //
     int64 list_version = 6;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/v1";

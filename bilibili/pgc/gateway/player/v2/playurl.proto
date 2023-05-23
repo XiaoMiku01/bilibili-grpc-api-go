@@ -783,4 +783,3 @@ message ViewInfo {
     //
     map<string, Dialog> ext_dialog = 11;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/pgc/gateway/player/v2";

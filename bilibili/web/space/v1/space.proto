@@ -280,5 +280,3 @@ message WhitelistValidTimeReply {
     //
     int64 etime = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/web/space/v1";

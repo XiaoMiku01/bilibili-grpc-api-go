@@ -104,5 +104,3 @@ message Tab {
     //
     string uri = 2;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/interfaces/v1";

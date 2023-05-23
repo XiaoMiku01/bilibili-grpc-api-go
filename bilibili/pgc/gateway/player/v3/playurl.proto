@@ -30,4 +30,3 @@ message PlayViewReply {
     bilibili.playershared.QnTrialInfo qn_trial_info = 5;
     bilibili.playershared.Event event = 6;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/pgc/gateway/player/v3";

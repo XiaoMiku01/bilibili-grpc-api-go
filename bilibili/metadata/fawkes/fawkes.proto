@@ -19,5 +19,3 @@ message FawkesReq {
     // 启动id
     string session_id = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/fawkes";

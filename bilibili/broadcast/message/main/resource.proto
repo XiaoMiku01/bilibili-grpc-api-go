@@ -59,5 +59,3 @@ message RedDot {
     // 如果是数字红点 显示的数字
     int32 number = 2;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main";

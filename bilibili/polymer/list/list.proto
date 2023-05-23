@@ -42,5 +42,3 @@ message FavoriteTabReply {
 
 //
 message FavoriteTabReq {}
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/polymer/list";

@@ -263,5 +263,3 @@ message Shake {
     // 文件地址
     string file = 1;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/pgc/gateway/player/v1";
