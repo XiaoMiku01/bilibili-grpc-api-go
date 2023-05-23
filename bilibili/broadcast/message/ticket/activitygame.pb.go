@@ -79,8 +79,8 @@ type RoomEvent struct {
 	unknownFields protoimpl.UnknownFields
 
 	// RoomStatus 类型
-	RoomStatus RoomStatus `protobuf:"varint,1,opt,name=room_status,json=roomStatus,proto3,enum=bilibili.broadcast.message.ticket.RoomStatus" json:"room_status,omitempty"`
-	RoomMessage string `protobuf:"bytes,2,opt,name=room_message,json=roomMessage,proto3" json:"room_message,omitempty"`
+	RoomStatus  RoomStatus `protobuf:"varint,1,opt,name=room_status,json=roomStatus,proto3,enum=bilibili.broadcast.message.ticket.RoomStatus" json:"room_status,omitempty"`
+	RoomMessage string     `protobuf:"bytes,2,opt,name=room_message,json=roomMessage,proto3" json:"room_message,omitempty"`
 }
 
 func (x *RoomEvent) Reset() {
