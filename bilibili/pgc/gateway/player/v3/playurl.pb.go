@@ -35,8 +35,8 @@ type PlayViewReq struct {
 	// 上一页spm
 	FromSpmid string `protobuf:"bytes,3,opt,name=from_spmid,json=fromSpmid,proto3" json:"from_spmid,omitempty"`
 	// 青少年模式
-	TeenagersMode int32             `protobuf:"varint,4,opt,name=teenagers_mode,json=teenagersMode,proto3" json:"teenagers_mode,omitempty"`
-	ExtraContent  map[string]string `protobuf:"bytes,5,rep,name=extra_content,json=extraContent,proto3" json:"extra_content,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	TeenagersMode int32 `protobuf:"varint,4,opt,name=teenagers_mode,json=teenagersMode,proto3" json:"teenagers_mode,omitempty"`
+	ExtraContent map[string]string `protobuf:"bytes,5,rep,name=extra_content,json=extraContent,proto3" json:"extra_content,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
 func (x *PlayViewReq) Reset() {

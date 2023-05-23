@@ -150,8 +150,8 @@ type RoomMessageEvent struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	TargetPath string    `protobuf:"bytes,1,opt,name=target_path,json=targetPath,proto3" json:"target_path,omitempty"`
-	Body       *any1.Any `protobuf:"bytes,2,opt,name=body,proto3" json:"body,omitempty"`
+	TargetPath string `protobuf:"bytes,1,opt,name=target_path,json=targetPath,proto3" json:"target_path,omitempty"`
+	Body *any1.Any `protobuf:"bytes,2,opt,name=body,proto3" json:"body,omitempty"`
 }
 
 func (x *RoomMessageEvent) Reset() {
@@ -205,7 +205,7 @@ type RoomOnlineEvent struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Online    int32 `protobuf:"varint,1,opt,name=online,proto3" json:"online,omitempty"`
+	Online int32 `protobuf:"varint,1,opt,name=online,proto3" json:"online,omitempty"`
 	AllOnline int32 `protobuf:"varint,2,opt,name=all_online,json=allOnline,proto3" json:"all_online,omitempty"`
 }
 
