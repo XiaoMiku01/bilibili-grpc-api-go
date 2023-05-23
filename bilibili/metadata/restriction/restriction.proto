@@ -22,3 +22,5 @@ message Restriction {
     // 客户端是否选择关闭个性化推荐
     bool disable_rcmd = 5;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/restriction";

@@ -43,3 +43,5 @@ message RulesReply {
 
 
 
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/wall/v1";

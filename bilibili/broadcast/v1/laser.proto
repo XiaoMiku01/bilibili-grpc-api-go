@@ -17,3 +17,5 @@ message LaserLogUploadResp {
     // 下发时间
     string date = 2;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/v1";

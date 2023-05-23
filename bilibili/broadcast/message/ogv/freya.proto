@@ -226,3 +226,4 @@ message FreyaEventBody {
     // 消息序列号
     int64 sequence_id = 100;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/ogv";

@@ -374,3 +374,5 @@ message SearchReq {
     // archive:视频 live:直播 article:专栏 goods:商品 show:展演
     string business = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/interfaces/v1";

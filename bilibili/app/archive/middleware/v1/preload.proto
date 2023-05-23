@@ -16,3 +16,4 @@ message PlayerArgs {
     // 音量均衡
     int64 voice_balance = 5;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/archive/middleware/v1";

@@ -56,3 +56,5 @@ message SpecificPlayConfig {
     bilibili.app.distribution.v1.BoolValue enable_segmented_section = 1;
 }
 
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/distribution/setting";

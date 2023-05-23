@@ -20,3 +20,5 @@ message Metadata {
     // 平台类型
     string platform = 7;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata";

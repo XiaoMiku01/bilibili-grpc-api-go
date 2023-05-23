@@ -200,3 +200,4 @@ message Stat {
 	// 点踩数(前端不可见故恒为0)
 	int32 dislike = 11;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/archive/v1";

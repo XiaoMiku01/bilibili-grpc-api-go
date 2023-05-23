@@ -59,3 +59,5 @@ message SayResponse {
     //
     int64  time = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/main/common/arch/doll/v1";

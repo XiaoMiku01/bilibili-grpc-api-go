@@ -63,3 +63,5 @@ message CreativeContent {
     //
     string show_url = 11;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/card/v1";

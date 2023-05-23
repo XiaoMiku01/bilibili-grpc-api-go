@@ -119,3 +119,5 @@ message PlayAbilityConf {
 message ProjectReply {
     bilibili.app.playurl.v1.PlayURLReply project = 1;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/cheese/gateway/player/v1";

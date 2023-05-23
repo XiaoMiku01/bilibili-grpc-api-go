@@ -2653,3 +2653,5 @@ message VipLabel {
     //
     string label_theme = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/view/v1";

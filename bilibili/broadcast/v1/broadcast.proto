@@ -109,3 +109,5 @@ message TargetPath {
     // 需要订阅的target_paths
     repeated string target_paths = 1;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/v1";

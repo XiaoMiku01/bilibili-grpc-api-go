@@ -568,3 +568,5 @@ message SysMsgInterfaceLastMsgRsp {
     //
     int64 id = 4;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/im/interfaces/v1";

@@ -669,3 +669,4 @@ message VolumeInfo {
     //
     double target_tp = 7;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playurl/v1";

@@ -2750,3 +2750,5 @@ enum WeightType {
     weight_dislike = 1; // 不感兴趣
     weight_jump = 2;    // 跳链
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/dynamic/gw";

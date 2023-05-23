@@ -91,3 +91,5 @@ message VegaFrame {
     //
     google.protobuf.Any sub_biz = 4;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/pgc/gateway/vega/v1";

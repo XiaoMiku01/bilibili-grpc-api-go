@@ -28,3 +28,4 @@ message Notify {
     // patch内容
     string  op_content = 8;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/editor";

@@ -118,3 +118,4 @@ message Relation {
     // 是否粉丝
     int32 is_followed = 3;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/show/rank/v1";

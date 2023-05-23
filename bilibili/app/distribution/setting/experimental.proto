@@ -63,3 +63,5 @@ message TopLeft {
     // 
     bilibili.app.distribution.v1.StringValue badge = 13;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/distribution/setting";

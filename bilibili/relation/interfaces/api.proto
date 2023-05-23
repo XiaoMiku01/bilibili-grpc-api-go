@@ -35,3 +35,5 @@ message AtItem {
   int32 fans = 4;
   int32 official_verify_type = 5;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/relation/interfaces";

@@ -34,3 +34,5 @@ message EventItem {
     // 0:用户维度 1:规则维度
     int64 dimension = 6;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main";

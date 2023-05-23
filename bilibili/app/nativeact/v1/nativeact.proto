@@ -1798,3 +1798,5 @@ message VoteResp {
     //
     int64 can_vote_num = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/nativeact/v1";
