@@ -1,2 +1,32 @@
-// TODO
+syntax = "proto3";
+
+package bilibili.relation.interface.v1;
+
+service RelationInterface {
+    rpc AtSearch (AtSearchReq) returns (AtSearchReply);
+}
+
+message AtSearchReq {
+    int64 mid = 1;
+    string keyword = 2;
+}
+
+message AtSearchReply {
+    repeated AtGroup items = 1;
+}
+
+message AtGroup {
+    int32 group_type = 1;
+    string group_name = 2;
+    repeated AtItem items = 3;
+}
+
+message AtItem {
+  int64 mid = 1;
+  string name = 2;
+  string face = 3;
+  int32 fans = 4;
+  int32 official_verify_type = 5;
+}
+
 option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/relation/interfaces";
