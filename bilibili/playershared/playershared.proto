@@ -2,27 +2,17 @@ syntax = "proto3";
 
 package bilibili.playershared;
 
-// 
+
 message ArcConf {
     bool is_support = 1;
     bool disable = 2;
-    ExtraContent extra_content = 3;
+    ExtraContent extra_connent = 3;
     repeated int32 unsupport_scene = 4;
-}
-
-// 按钮组件
-message Button {
-    // 按钮文本
-    string text = 1;
-    // 按钮跳转链接
-    string link = 2;
-    // 埋点上报相关
-    map<string, string> report_params = 3;
 }
 
 // 视频编码
 enum CodeType {
-    NOCODE = 0; // 不指定
+    NOCODE = 0; // 
     CODE264 = 1; // H264
     CODE265 = 2; // H265
     CODEAV1 = 3; // AV1
@@ -69,17 +59,15 @@ enum ConfType {
     LISTEN = 36;
 }
 
-// 
 message ConfValue {
     oneof value {
-        // DASH流
+        // dash流
         int32 switch_val = 1;
         // 分段流
         int32 selected_val = 2;
     }
 }
 
-// 
 message DeviceConf {
     ConfValue conf_value = 1;
 }
@@ -106,22 +94,15 @@ message ExtraContent {
 
 // 播放历史
 message History {
+    // 播放进度
+    uint64 progress = 1;
     // 
-    HistoryInfo current_video = 1;
+    string toast = 2;
     // 
-    HistoryInfo related_video = 2;
+    uint64 last_play_cid = 3;
 }
 
-message HistoryInfo {
-    // 
-    int64 progress = 1;
-    // 
-    int64 last_play_cid = 2;
-}
-
-// 
 message PlayDeviceConf {
-    // 
     map<int32, DeviceConf> arc_confs = 1;
 }
 
@@ -137,9 +118,7 @@ message Scheme {
         UNKNOWN = 0;
         SHOW_TOAST = 1;
     }
-    // 
     ActionType action_type = 1;
-    // 
     string toast = 2;
 }
 
@@ -358,7 +337,7 @@ message DolbyItem {
     // 杜比类型
     Type type = 1;
     // 音频流
-    repeated DashItem audio = 2;
+    DashItem audio = 2;
 }
 
 // HIRES伴音流信息
@@ -391,19 +370,21 @@ message VolumeInfo {
 
 // 
 message PlayArc {
-    // 
     VideoType video_type = 1;
-    // 
     uint64 aid = 2;
-    // 
     uint64 cid = 3;
-    // 
     DrmTechType drm_tech_type = 4;
 }
 
 // 播放页信息-响应: PlayArcConf
 message PlayArcConf {
-    map<int32, ArcConf> arc_confs = 1;
+    map<int32, PlayArc> arc_confs = 1;
+}
+
+// 高画质试看信息: 按钮
+message QnTrialButton {
+    string text = 1;
+    string link = 2;
 }
 
 // 播放页信息-响应: 高画质试看信息
@@ -417,19 +398,19 @@ message QnTrialInfo {
     //
     int32 time_length = 4;
     //
-    Toast start_toast = 5;
+    QnTrialToast start_toast = 5;
     //
-    Toast end_toast = 6;
+    QnTrialToast end_toast = 6;
     //
-    Button quality_open_tip_btn = 8;
+    QnTrialButton quality_open_tip_btn = 8;
 }
 
-// Toast信息
-message Toast {
-    // toast文案
+// 高画质试看信息: Toast信息
+message QnTrialToast {
+    // toast文案 老字段
     string text = 1;
     // toast按钮
-    Button button = 2;
+    QnTrialButton button = 2;
 }
 
 // 事件

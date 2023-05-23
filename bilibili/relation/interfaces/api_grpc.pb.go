@@ -26,7 +26,6 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type RelationInterfaceClient interface {
-	// 评论区 At 用户列表 (无需登录鉴权)
 	AtSearch(ctx context.Context, in *AtSearchReq, opts ...grpc.CallOption) (*AtSearchReply, error)
 }
 
@@ -51,7 +50,6 @@ func (c *relationInterfaceClient) AtSearch(ctx context.Context, in *AtSearchReq,
 // All implementations must embed UnimplementedRelationInterfaceServer
 // for forward compatibility
 type RelationInterfaceServer interface {
-	// 评论区 At 用户列表 (无需登录鉴权)
 	AtSearch(context.Context, *AtSearchReq) (*AtSearchReply, error)
 	mustEmbedUnimplementedRelationInterfaceServer()
 }

@@ -25,9 +25,7 @@ type AtSearchReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// 可以为 1 , 但是不能为 0 或空 不知道有啥用
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
-	// 用户名搜索关键词
+	Mid     int64  `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	Keyword string `protobuf:"bytes,2,opt,name=keyword,proto3" json:"keyword,omitempty"`
 }
 
@@ -82,7 +80,6 @@ type AtSearchReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// 搜索结果分组
 	Items []*AtGroup `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
 }
 
@@ -130,12 +127,9 @@ type AtGroup struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// 分组类型  2: 我的关注 4:其他 ,其他自测
-	GroupType int32 `protobuf:"varint,1,opt,name=group_type,json=groupType,proto3" json:"group_type,omitempty"`
-	// 分组名称
-	GroupName string `protobuf:"bytes,2,opt,name=group_name,json=groupName,proto3" json:"group_name,omitempty"`
-	// 用户列表
-	Items []*AtItem `protobuf:"bytes,3,rep,name=items,proto3" json:"items,omitempty"`
+	GroupType int32     `protobuf:"varint,1,opt,name=group_type,json=groupType,proto3" json:"group_type,omitempty"`
+	GroupName string    `protobuf:"bytes,2,opt,name=group_name,json=groupName,proto3" json:"group_name,omitempty"`
+	Items     []*AtItem `protobuf:"bytes,3,rep,name=items,proto3" json:"items,omitempty"`
 }
 
 func (x *AtGroup) Reset() {
