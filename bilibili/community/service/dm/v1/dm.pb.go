@@ -605,8 +605,8 @@ type Avatar struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	Id         string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Url        string     `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
 	AvatarType AvatarType `protobuf:"varint,3,opt,name=avatar_type,json=avatarType,proto3,enum=bilibili.community.service.dm.v1.AvatarType" json:"avatar_type,omitempty"`
 }
 
@@ -669,7 +669,7 @@ type Bubble struct {
 	unknownFields protoimpl.UnknownFields
 
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	Url  string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
 }
 
 func (x *Bubble) Reset() {
@@ -723,10 +723,10 @@ type BubbleV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
-	BubbleType BubbleType `protobuf:"varint,3,opt,name=bubble_type,json=bubbleType,proto3,enum=bilibili.community.service.dm.v1.BubbleType" json:"bubble_type,omitempty"`
-	ExposureOnce bool `protobuf:"varint,4,opt,name=exposure_once,json=exposureOnce,proto3" json:"exposure_once,omitempty"`
+	Text         string       `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Url          string       `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	BubbleType   BubbleType   `protobuf:"varint,3,opt,name=bubble_type,json=bubbleType,proto3,enum=bilibili.community.service.dm.v1.BubbleType" json:"bubble_type,omitempty"`
+	ExposureOnce bool         `protobuf:"varint,4,opt,name=exposure_once,json=exposureOnce,proto3" json:"exposure_once,omitempty"`
 	ExposureType ExposureType `protobuf:"varint,5,opt,name=exposure_type,json=exposureType,proto3,enum=bilibili.community.service.dm.v1.ExposureType" json:"exposure_type,omitempty"`
 }
 
@@ -802,8 +802,8 @@ type Button struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Action int32 `protobuf:"varint,2,opt,name=action,proto3" json:"action,omitempty"`
+	Text   string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Action int32  `protobuf:"varint,2,opt,name=action,proto3" json:"action,omitempty"`
 }
 
 func (x *Button) Reset() {
@@ -904,12 +904,12 @@ type BuzzwordShowConfig struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Schema string `protobuf:"bytes,2,opt,name=schema,proto3" json:"schema,omitempty"`
-	Source int32 `protobuf:"varint,3,opt,name=source,proto3" json:"source,omitempty"`
-	Id int64 `protobuf:"varint,4,opt,name=id,proto3" json:"id,omitempty"`
-	BuzzwordId int64 `protobuf:"varint,5,opt,name=buzzword_id,json=buzzwordId,proto3" json:"buzzword_id,omitempty"`
-	SchemaType int32 `protobuf:"varint,6,opt,name=schema_type,json=schemaType,proto3" json:"schema_type,omitempty"`
+	Name       string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Schema     string `protobuf:"bytes,2,opt,name=schema,proto3" json:"schema,omitempty"`
+	Source     int32  `protobuf:"varint,3,opt,name=source,proto3" json:"source,omitempty"`
+	Id         int64  `protobuf:"varint,4,opt,name=id,proto3" json:"id,omitempty"`
+	BuzzwordId int64  `protobuf:"varint,5,opt,name=buzzword_id,json=buzzwordId,proto3" json:"buzzword_id,omitempty"`
+	SchemaType int32  `protobuf:"varint,6,opt,name=schema_type,json=schemaType,proto3" json:"schema_type,omitempty"`
 }
 
 func (x *BuzzwordShowConfig) Reset() {
@@ -991,10 +991,10 @@ type CheckBox struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Type CheckboxType `protobuf:"varint,2,opt,name=type,proto3,enum=bilibili.community.service.dm.v1.CheckboxType" json:"type,omitempty"`
-	DefaultValue bool `protobuf:"varint,3,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty"`
-	Show bool `protobuf:"varint,4,opt,name=show,proto3" json:"show,omitempty"`
+	Text         string       `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Type         CheckboxType `protobuf:"varint,2,opt,name=type,proto3,enum=bilibili.community.service.dm.v1.CheckboxType" json:"type,omitempty"`
+	DefaultValue bool         `protobuf:"varint,3,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty"`
+	Show         bool         `protobuf:"varint,4,opt,name=show,proto3" json:"show,omitempty"`
 }
 
 func (x *CheckBox) Reset() {
@@ -1062,9 +1062,9 @@ type CheckBoxV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Type int32 `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
-	DefaultValue bool `protobuf:"varint,3,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty"`
+	Text         string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Type         int32  `protobuf:"varint,2,opt,name=type,proto3" json:"type,omitempty"`
+	DefaultValue bool   `protobuf:"varint,3,opt,name=default_value,json=defaultValue,proto3" json:"default_value,omitempty"`
 }
 
 func (x *CheckBoxV2) Reset() {
@@ -1125,13 +1125,13 @@ type ClickButton struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PortraitText []string `protobuf:"bytes,1,rep,name=portrait_text,json=portraitText,proto3" json:"portrait_text,omitempty"`
-	LandscapeText []string `protobuf:"bytes,2,rep,name=landscape_text,json=landscapeText,proto3" json:"landscape_text,omitempty"`
-	PortraitTextFocus []string `protobuf:"bytes,3,rep,name=portrait_text_focus,json=portraitTextFocus,proto3" json:"portrait_text_focus,omitempty"`
-	LandscapeTextFocus []string `protobuf:"bytes,4,rep,name=landscape_text_focus,json=landscapeTextFocus,proto3" json:"landscape_text_focus,omitempty"`
-	RenderType RenderType `protobuf:"varint,5,opt,name=render_type,json=renderType,proto3,enum=bilibili.community.service.dm.v1.RenderType" json:"render_type,omitempty"`
-	Show bool `protobuf:"varint,6,opt,name=show,proto3" json:"show,omitempty"`
-	Bubble *Bubble `protobuf:"bytes,7,opt,name=bubble,proto3" json:"bubble,omitempty"`
+	PortraitText       []string   `protobuf:"bytes,1,rep,name=portrait_text,json=portraitText,proto3" json:"portrait_text,omitempty"`
+	LandscapeText      []string   `protobuf:"bytes,2,rep,name=landscape_text,json=landscapeText,proto3" json:"landscape_text,omitempty"`
+	PortraitTextFocus  []string   `protobuf:"bytes,3,rep,name=portrait_text_focus,json=portraitTextFocus,proto3" json:"portrait_text_focus,omitempty"`
+	LandscapeTextFocus []string   `protobuf:"bytes,4,rep,name=landscape_text_focus,json=landscapeTextFocus,proto3" json:"landscape_text_focus,omitempty"`
+	RenderType         RenderType `protobuf:"varint,5,opt,name=render_type,json=renderType,proto3,enum=bilibili.community.service.dm.v1.RenderType" json:"render_type,omitempty"`
+	Show               bool       `protobuf:"varint,6,opt,name=show,proto3" json:"show,omitempty"`
+	Bubble             *Bubble    `protobuf:"bytes,7,opt,name=bubble,proto3" json:"bubble,omitempty"`
 }
 
 func (x *ClickButton) Reset() {
@@ -1220,14 +1220,14 @@ type ClickButtonV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PortraitText []string `protobuf:"bytes,1,rep,name=portrait_text,json=portraitText,proto3" json:"portrait_text,omitempty"`
-	LandscapeText []string `protobuf:"bytes,2,rep,name=landscape_text,json=landscapeText,proto3" json:"landscape_text,omitempty"`
-	PortraitTextFocus []string `protobuf:"bytes,3,rep,name=portrait_text_focus,json=portraitTextFocus,proto3" json:"portrait_text_focus,omitempty"`
+	PortraitText       []string `protobuf:"bytes,1,rep,name=portrait_text,json=portraitText,proto3" json:"portrait_text,omitempty"`
+	LandscapeText      []string `protobuf:"bytes,2,rep,name=landscape_text,json=landscapeText,proto3" json:"landscape_text,omitempty"`
+	PortraitTextFocus  []string `protobuf:"bytes,3,rep,name=portrait_text_focus,json=portraitTextFocus,proto3" json:"portrait_text_focus,omitempty"`
 	LandscapeTextFocus []string `protobuf:"bytes,4,rep,name=landscape_text_focus,json=landscapeTextFocus,proto3" json:"landscape_text_focus,omitempty"`
-	RenderType int32 `protobuf:"varint,5,opt,name=render_type,json=renderType,proto3" json:"render_type,omitempty"`
-	TextInputPost bool `protobuf:"varint,6,opt,name=text_input_post,json=textInputPost,proto3" json:"text_input_post,omitempty"`
-	ExposureOnce bool `protobuf:"varint,7,opt,name=exposure_once,json=exposureOnce,proto3" json:"exposure_once,omitempty"`
-	ExposureType int32 `protobuf:"varint,8,opt,name=exposure_type,json=exposureType,proto3" json:"exposure_type,omitempty"`
+	RenderType         int32    `protobuf:"varint,5,opt,name=render_type,json=renderType,proto3" json:"render_type,omitempty"`
+	TextInputPost      bool     `protobuf:"varint,6,opt,name=text_input_post,json=textInputPost,proto3" json:"text_input_post,omitempty"`
+	ExposureOnce       bool     `protobuf:"varint,7,opt,name=exposure_once,json=exposureOnce,proto3" json:"exposure_once,omitempty"`
+	ExposureType       int32    `protobuf:"varint,8,opt,name=exposure_type,json=exposureType,proto3" json:"exposure_type,omitempty"`
 }
 
 func (x *ClickButtonV2) Reset() {
@@ -1529,7 +1529,7 @@ type DanmakuElem struct {
 	IdStr string `protobuf:"bytes,12,opt,name=idStr,proto3" json:"idStr,omitempty"`
 	// 弹幕属性位(bin求AND)
 	// bit0:保护 bit1:直播 bit2:高赞
-	Attr int32 `protobuf:"varint,13,opt,name=attr,proto3" json:"attr,omitempty"`
+	Attr      int32  `protobuf:"varint,13,opt,name=attr,proto3" json:"attr,omitempty"`
 	Animation string `protobuf:"bytes,22,opt,name=animation,proto3" json:"animation,omitempty"`
 }
 
@@ -2297,7 +2297,7 @@ type DanmuPlayerViewConfig struct {
 	DanmukuPlayerConfig *DanmuPlayerConfig `protobuf:"bytes,2,opt,name=danmuku_player_config,json=danmukuPlayerConfig,proto3" json:"danmuku_player_config,omitempty"`
 	// 弹幕显示区域自动配置列表
 	DanmukuPlayerDynamicConfig []*DanmuPlayerDynamicConfig `protobuf:"bytes,3,rep,name=danmuku_player_dynamic_config,json=danmukuPlayerDynamicConfig,proto3" json:"danmuku_player_dynamic_config,omitempty"`
-	DanmukuPlayerConfigPanel *DanmuPlayerConfigPanel `protobuf:"bytes,4,opt,name=danmuku_player_config_panel,json=danmukuPlayerConfigPanel,proto3" json:"danmuku_player_config_panel,omitempty"`
+	DanmukuPlayerConfigPanel   *DanmuPlayerConfigPanel     `protobuf:"bytes,4,opt,name=danmuku_player_config_panel,json=danmukuPlayerConfigPanel,proto3" json:"danmuku_player_config_panel,omitempty"`
 }
 
 func (x *DanmuPlayerViewConfig) Reset() {
@@ -2590,8 +2590,8 @@ type DmExpoReportReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	SessionId string `protobuf:"bytes,1,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
-	Oid int64 `protobuf:"varint,2,opt,name=oid,proto3" json:"oid,omitempty"`
-	Spmid string `protobuf:"bytes,4,opt,name=spmid,proto3" json:"spmid,omitempty"`
+	Oid       int64  `protobuf:"varint,2,opt,name=oid,proto3" json:"oid,omitempty"`
+	Spmid     string `protobuf:"bytes,4,opt,name=spmid,proto3" json:"spmid,omitempty"`
 }
 
 func (x *DmExpoReportReq) Reset() {
@@ -2891,7 +2891,7 @@ type DmSegConfig struct {
 	unknownFields protoimpl.UnknownFields
 
 	PageSize int64 `protobuf:"varint,1,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
-	Total int64 `protobuf:"varint,2,opt,name=total,proto3" json:"total,omitempty"`
+	Total    int64 `protobuf:"varint,2,opt,name=total,proto3" json:"total,omitempty"`
 }
 
 func (x *DmSegConfig) Reset() {
@@ -3025,10 +3025,10 @@ type DmSegMobileReq struct {
 	SegmentIndex int64 `protobuf:"varint,4,opt,name=segment_index,json=segmentIndex,proto3" json:"segment_index,omitempty"`
 	// 是否青少年模式
 	TeenagersMode int32 `protobuf:"varint,5,opt,name=teenagers_mode,json=teenagersMode,proto3" json:"teenagers_mode,omitempty"`
-	Ps int64 `protobuf:"varint,6,opt,name=ps,proto3" json:"ps,omitempty"`
-	Pe int64 `protobuf:"varint,7,opt,name=pe,proto3" json:"pe,omitempty"`
-	PullMode int32 `protobuf:"varint,8,opt,name=pull_mode,json=pullMode,proto3" json:"pull_mode,omitempty"`
-	FromScene int32 `protobuf:"varint,9,opt,name=from_scene,json=fromScene,proto3" json:"from_scene,omitempty"`
+	Ps            int64 `protobuf:"varint,6,opt,name=ps,proto3" json:"ps,omitempty"`
+	Pe            int64 `protobuf:"varint,7,opt,name=pe,proto3" json:"pe,omitempty"`
+	PullMode      int32 `protobuf:"varint,8,opt,name=pull_mode,json=pullMode,proto3" json:"pull_mode,omitempty"`
+	FromScene     int32 `protobuf:"varint,9,opt,name=from_scene,json=fromScene,proto3" json:"from_scene,omitempty"`
 }
 
 func (x *DmSegMobileReq) Reset() {
@@ -3430,13 +3430,13 @@ type DmViewReply struct {
 	// 弹幕输入框文案
 	InputPlaceholder string `protobuf:"bytes,12,opt,name=input_placeholder,json=inputPlaceholder,proto3" json:"input_placeholder,omitempty"`
 	// 用户举报弹幕 cid维度屏蔽的正则规则
-	ReportFilterContent []string `protobuf:"bytes,13,rep,name=report_filter_content,json=reportFilterContent,proto3" json:"report_filter_content,omitempty"`
-	ExpoReport *ExpoReport `protobuf:"bytes,14,opt,name=expo_report,json=expoReport,proto3" json:"expo_report,omitempty"`
-	BuzzwordConfig *BuzzwordConfig `protobuf:"bytes,15,opt,name=buzzword_config,json=buzzwordConfig,proto3" json:"buzzword_config,omitempty"`
-	Expressions []*Expressions `protobuf:"bytes,16,rep,name=expressions,proto3" json:"expressions,omitempty"`
-	PostPanel []*PostPanel `protobuf:"bytes,17,rep,name=post_panel,json=postPanel,proto3" json:"post_panel,omitempty"`
-	ActivityMeta []string `protobuf:"bytes,18,rep,name=activity_meta,json=activityMeta,proto3" json:"activity_meta,omitempty"`
-	PostPanel2 []*PostPanelV2 `protobuf:"bytes,19,rep,name=post_panel2,json=postPanel2,proto3" json:"post_panel2,omitempty"`
+	ReportFilterContent []string        `protobuf:"bytes,13,rep,name=report_filter_content,json=reportFilterContent,proto3" json:"report_filter_content,omitempty"`
+	ExpoReport          *ExpoReport     `protobuf:"bytes,14,opt,name=expo_report,json=expoReport,proto3" json:"expo_report,omitempty"`
+	BuzzwordConfig      *BuzzwordConfig `protobuf:"bytes,15,opt,name=buzzword_config,json=buzzwordConfig,proto3" json:"buzzword_config,omitempty"`
+	Expressions         []*Expressions  `protobuf:"bytes,16,rep,name=expressions,proto3" json:"expressions,omitempty"`
+	PostPanel           []*PostPanel    `protobuf:"bytes,17,rep,name=post_panel,json=postPanel,proto3" json:"post_panel,omitempty"`
+	ActivityMeta        []string        `protobuf:"bytes,18,rep,name=activity_meta,json=activityMeta,proto3" json:"activity_meta,omitempty"`
+	PostPanel2          []*PostPanelV2  `protobuf:"bytes,19,rep,name=post_panel2,json=postPanel2,proto3" json:"post_panel2,omitempty"`
 }
 
 func (x *DmViewReply) Reset() {
@@ -3699,8 +3699,8 @@ type DmWebViewReply struct {
 
 	// 是否已关闭弹幕
 	// 0:未关闭 1:已关闭
-	State int32 `protobuf:"varint,1,opt,name=state,proto3" json:"state,omitempty"`
-	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
+	State    int32  `protobuf:"varint,1,opt,name=state,proto3" json:"state,omitempty"`
+	Text     string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
 	TextSide string `protobuf:"bytes,3,opt,name=text_side,json=textSide,proto3" json:"text_side,omitempty"`
 	// 分段弹幕配置
 	DmSge *DmSegConfig `protobuf:"bytes,4,opt,name=dm_sge,json=dmSge,proto3" json:"dm_sge,omitempty"`
@@ -3717,10 +3717,10 @@ type DmWebViewReply struct {
 	// 用户弹幕配置
 	PlayerConfig *DanmuWebPlayerConfig `protobuf:"bytes,10,opt,name=player_config,json=playerConfig,proto3" json:"player_config,omitempty"`
 	// 用户举报弹幕 cid维度屏蔽
-	ReportFilterContent []string `protobuf:"bytes,11,rep,name=report_filter_content,json=reportFilterContent,proto3" json:"report_filter_content,omitempty"`
-	Expressions []*Expressions `protobuf:"bytes,12,rep,name=expressions,proto3" json:"expressions,omitempty"`
-	PostPanel []*PostPanel `protobuf:"bytes,13,rep,name=post_panel,json=postPanel,proto3" json:"post_panel,omitempty"`
-	ActivityMeta []string `protobuf:"bytes,14,rep,name=activity_meta,json=activityMeta,proto3" json:"activity_meta,omitempty"`
+	ReportFilterContent []string       `protobuf:"bytes,11,rep,name=report_filter_content,json=reportFilterContent,proto3" json:"report_filter_content,omitempty"`
+	Expressions         []*Expressions `protobuf:"bytes,12,rep,name=expressions,proto3" json:"expressions,omitempty"`
+	PostPanel           []*PostPanel   `protobuf:"bytes,13,rep,name=post_panel,json=postPanel,proto3" json:"post_panel,omitempty"`
+	ActivityMeta        []string       `protobuf:"bytes,14,rep,name=activity_meta,json=activityMeta,proto3" json:"activity_meta,omitempty"`
 }
 
 func (x *DmWebViewReply) Reset() {
@@ -3905,9 +3905,9 @@ type Expression struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword []string `protobuf:"bytes,1,rep,name=keyword,proto3" json:"keyword,omitempty"`
-	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
-	Period []*Period `protobuf:"bytes,3,rep,name=period,proto3" json:"period,omitempty"`
+	Keyword []string  `protobuf:"bytes,1,rep,name=keyword,proto3" json:"keyword,omitempty"`
+	Url     string    `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	Period  []*Period `protobuf:"bytes,3,rep,name=period,proto3" json:"period,omitempty"`
 }
 
 func (x *Expression) Reset() {
@@ -4063,7 +4063,7 @@ type Label struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Title   string   `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
 	Content []string `protobuf:"bytes,2,rep,name=content,proto3" json:"content,omitempty"`
 }
 
@@ -4118,10 +4118,10 @@ type LabelV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Content []string `protobuf:"bytes,2,rep,name=content,proto3" json:"content,omitempty"`
-	ExposureOnce bool `protobuf:"varint,3,opt,name=exposure_once,json=exposureOnce,proto3" json:"exposure_once,omitempty"`
-	ExposureType int32 `protobuf:"varint,4,opt,name=exposure_type,json=exposureType,proto3" json:"exposure_type,omitempty"`
+	Title        string   `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Content      []string `protobuf:"bytes,2,rep,name=content,proto3" json:"content,omitempty"`
+	ExposureOnce bool     `protobuf:"varint,3,opt,name=exposure_once,json=exposureOnce,proto3" json:"exposure_once,omitempty"`
+	ExposureType int32    `protobuf:"varint,4,opt,name=exposure_type,json=exposureType,proto3" json:"exposure_type,omitempty"`
 }
 
 func (x *LabelV2) Reset() {
@@ -4190,7 +4190,7 @@ type Period struct {
 	unknownFields protoimpl.UnknownFields
 
 	Start int64 `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
-	End int64 `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
+	End   int64 `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
 }
 
 func (x *Period) Reset() {
@@ -5098,15 +5098,15 @@ type PostPanel struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Start int64 `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
-	End int64 `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
-	Priority int64 `protobuf:"varint,3,opt,name=priority,proto3" json:"priority,omitempty"`
-	BizId int64 `protobuf:"varint,4,opt,name=biz_id,json=bizId,proto3" json:"biz_id,omitempty"`
-	BizType PostPanelBizType `protobuf:"varint,5,opt,name=biz_type,json=bizType,proto3,enum=bilibili.community.service.dm.v1.PostPanelBizType" json:"biz_type,omitempty"`
-	ClickButton *ClickButton `protobuf:"bytes,6,opt,name=click_button,json=clickButton,proto3" json:"click_button,omitempty"`
-	TextInput *TextInput `protobuf:"bytes,7,opt,name=text_input,json=textInput,proto3" json:"text_input,omitempty"`
-	CheckBox *CheckBox `protobuf:"bytes,8,opt,name=check_box,json=checkBox,proto3" json:"check_box,omitempty"`
-	Toast *Toast `protobuf:"bytes,9,opt,name=toast,proto3" json:"toast,omitempty"`
+	Start       int64            `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
+	End         int64            `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
+	Priority    int64            `protobuf:"varint,3,opt,name=priority,proto3" json:"priority,omitempty"`
+	BizId       int64            `protobuf:"varint,4,opt,name=biz_id,json=bizId,proto3" json:"biz_id,omitempty"`
+	BizType     PostPanelBizType `protobuf:"varint,5,opt,name=biz_type,json=bizType,proto3,enum=bilibili.community.service.dm.v1.PostPanelBizType" json:"biz_type,omitempty"`
+	ClickButton *ClickButton     `protobuf:"bytes,6,opt,name=click_button,json=clickButton,proto3" json:"click_button,omitempty"`
+	TextInput   *TextInput       `protobuf:"bytes,7,opt,name=text_input,json=textInput,proto3" json:"text_input,omitempty"`
+	CheckBox    *CheckBox        `protobuf:"bytes,8,opt,name=check_box,json=checkBox,proto3" json:"check_box,omitempty"`
+	Toast       *Toast           `protobuf:"bytes,9,opt,name=toast,proto3" json:"toast,omitempty"`
 }
 
 func (x *PostPanel) Reset() {
@@ -5209,16 +5209,16 @@ type PostPanelV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Start int64 `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
-	End int64 `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
-	BizType int32 `protobuf:"varint,3,opt,name=biz_type,json=bizType,proto3" json:"biz_type,omitempty"`
+	Start       int64          `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
+	End         int64          `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
+	BizType     int32          `protobuf:"varint,3,opt,name=biz_type,json=bizType,proto3" json:"biz_type,omitempty"`
 	ClickButton *ClickButtonV2 `protobuf:"bytes,4,opt,name=click_button,json=clickButton,proto3" json:"click_button,omitempty"`
-	TextInput *TextInputV2 `protobuf:"bytes,5,opt,name=text_input,json=textInput,proto3" json:"text_input,omitempty"`
-	CheckBox *CheckBoxV2 `protobuf:"bytes,6,opt,name=check_box,json=checkBox,proto3" json:"check_box,omitempty"`
-	Toast *ToastV2 `protobuf:"bytes,7,opt,name=toast,proto3" json:"toast,omitempty"`
-	Bubble *BubbleV2 `protobuf:"bytes,8,opt,name=bubble,proto3" json:"bubble,omitempty"`
-	Label *LabelV2 `protobuf:"bytes,9,opt,name=label,proto3" json:"label,omitempty"`
-	PostStatus int32 `protobuf:"varint,10,opt,name=post_status,json=postStatus,proto3" json:"post_status,omitempty"`
+	TextInput   *TextInputV2   `protobuf:"bytes,5,opt,name=text_input,json=textInput,proto3" json:"text_input,omitempty"`
+	CheckBox    *CheckBoxV2    `protobuf:"bytes,6,opt,name=check_box,json=checkBox,proto3" json:"check_box,omitempty"`
+	Toast       *ToastV2       `protobuf:"bytes,7,opt,name=toast,proto3" json:"toast,omitempty"`
+	Bubble      *BubbleV2      `protobuf:"bytes,8,opt,name=bubble,proto3" json:"bubble,omitempty"`
+	Label       *LabelV2       `protobuf:"bytes,9,opt,name=label,proto3" json:"label,omitempty"`
+	PostStatus  int32          `protobuf:"varint,10,opt,name=post_status,json=postStatus,proto3" json:"post_status,omitempty"`
 }
 
 func (x *PostPanelV2) Reset() {
@@ -5329,7 +5329,7 @@ type Response struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code int32 `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	Code    int32  `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
@@ -5398,10 +5398,10 @@ type SubtitleItem struct {
 	// 字幕作者信息
 	Author *UserInfo `protobuf:"bytes,6,opt,name=author,proto3" json:"author,omitempty"`
 	// 字幕类型
-	Type SubtitleType `protobuf:"varint,7,opt,name=type,proto3,enum=bilibili.community.service.dm.v1.SubtitleType" json:"type,omitempty"`
-	LanDocBrief string `protobuf:"bytes,8,opt,name=lan_doc_brief,json=lanDocBrief,proto3" json:"lan_doc_brief,omitempty"`
-	AiType SubtitleAiType `protobuf:"varint,9,opt,name=ai_type,json=aiType,proto3,enum=bilibili.community.service.dm.v1.SubtitleAiType" json:"ai_type,omitempty"`
-	AiStatus SubtitleAiStatus `protobuf:"varint,10,opt,name=ai_status,json=aiStatus,proto3,enum=bilibili.community.service.dm.v1.SubtitleAiStatus" json:"ai_status,omitempty"`
+	Type        SubtitleType     `protobuf:"varint,7,opt,name=type,proto3,enum=bilibili.community.service.dm.v1.SubtitleType" json:"type,omitempty"`
+	LanDocBrief string           `protobuf:"bytes,8,opt,name=lan_doc_brief,json=lanDocBrief,proto3" json:"lan_doc_brief,omitempty"`
+	AiType      SubtitleAiType   `protobuf:"varint,9,opt,name=ai_type,json=aiType,proto3,enum=bilibili.community.service.dm.v1.SubtitleAiType" json:"ai_type,omitempty"`
+	AiStatus    SubtitleAiStatus `protobuf:"varint,10,opt,name=ai_status,json=aiStatus,proto3,enum=bilibili.community.service.dm.v1.SubtitleAiStatus" json:"ai_status,omitempty"`
 }
 
 func (x *SubtitleItem) Reset() {
@@ -5511,14 +5511,14 @@ type TextInput struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PortraitPlaceholder []string `protobuf:"bytes,1,rep,name=portrait_placeholder,json=portraitPlaceholder,proto3" json:"portrait_placeholder,omitempty"`
-	LandscapePlaceholder []string `protobuf:"bytes,2,rep,name=landscape_placeholder,json=landscapePlaceholder,proto3" json:"landscape_placeholder,omitempty"`
-	RenderType RenderType `protobuf:"varint,3,opt,name=render_type,json=renderType,proto3,enum=bilibili.community.service.dm.v1.RenderType" json:"render_type,omitempty"`
-	PlaceholderPost bool `protobuf:"varint,4,opt,name=placeholder_post,json=placeholderPost,proto3" json:"placeholder_post,omitempty"`
-	Show bool `protobuf:"varint,5,opt,name=show,proto3" json:"show,omitempty"`
-	Avatar []*Avatar `protobuf:"bytes,6,rep,name=avatar,proto3" json:"avatar,omitempty"`
-	PostStatus PostStatus `protobuf:"varint,7,opt,name=post_status,json=postStatus,proto3,enum=bilibili.community.service.dm.v1.PostStatus" json:"post_status,omitempty"`
-	Label *Label `protobuf:"bytes,8,opt,name=label,proto3" json:"label,omitempty"`
+	PortraitPlaceholder  []string   `protobuf:"bytes,1,rep,name=portrait_placeholder,json=portraitPlaceholder,proto3" json:"portrait_placeholder,omitempty"`
+	LandscapePlaceholder []string   `protobuf:"bytes,2,rep,name=landscape_placeholder,json=landscapePlaceholder,proto3" json:"landscape_placeholder,omitempty"`
+	RenderType           RenderType `protobuf:"varint,3,opt,name=render_type,json=renderType,proto3,enum=bilibili.community.service.dm.v1.RenderType" json:"render_type,omitempty"`
+	PlaceholderPost      bool       `protobuf:"varint,4,opt,name=placeholder_post,json=placeholderPost,proto3" json:"placeholder_post,omitempty"`
+	Show                 bool       `protobuf:"varint,5,opt,name=show,proto3" json:"show,omitempty"`
+	Avatar               []*Avatar  `protobuf:"bytes,6,rep,name=avatar,proto3" json:"avatar,omitempty"`
+	PostStatus           PostStatus `protobuf:"varint,7,opt,name=post_status,json=postStatus,proto3,enum=bilibili.community.service.dm.v1.PostStatus" json:"post_status,omitempty"`
+	Label                *Label     `protobuf:"bytes,8,opt,name=label,proto3" json:"label,omitempty"`
 }
 
 func (x *TextInput) Reset() {
@@ -5614,12 +5614,12 @@ type TextInputV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PortraitPlaceholder []string `protobuf:"bytes,1,rep,name=portrait_placeholder,json=portraitPlaceholder,proto3" json:"portrait_placeholder,omitempty"`
-	LandscapePlaceholder []string `protobuf:"bytes,2,rep,name=landscape_placeholder,json=landscapePlaceholder,proto3" json:"landscape_placeholder,omitempty"`
-	RenderType RenderType `protobuf:"varint,3,opt,name=render_type,json=renderType,proto3,enum=bilibili.community.service.dm.v1.RenderType" json:"render_type,omitempty"`
-	PlaceholderPost bool `protobuf:"varint,4,opt,name=placeholder_post,json=placeholderPost,proto3" json:"placeholder_post,omitempty"`
-	Avatar []*Avatar `protobuf:"bytes,5,rep,name=avatar,proto3" json:"avatar,omitempty"`
-	TextInputLimit int32 `protobuf:"varint,6,opt,name=text_input_limit,json=textInputLimit,proto3" json:"text_input_limit,omitempty"`
+	PortraitPlaceholder  []string   `protobuf:"bytes,1,rep,name=portrait_placeholder,json=portraitPlaceholder,proto3" json:"portrait_placeholder,omitempty"`
+	LandscapePlaceholder []string   `protobuf:"bytes,2,rep,name=landscape_placeholder,json=landscapePlaceholder,proto3" json:"landscape_placeholder,omitempty"`
+	RenderType           RenderType `protobuf:"varint,3,opt,name=render_type,json=renderType,proto3,enum=bilibili.community.service.dm.v1.RenderType" json:"render_type,omitempty"`
+	PlaceholderPost      bool       `protobuf:"varint,4,opt,name=placeholder_post,json=placeholderPost,proto3" json:"placeholder_post,omitempty"`
+	Avatar               []*Avatar  `protobuf:"bytes,5,rep,name=avatar,proto3" json:"avatar,omitempty"`
+	TextInputLimit       int32      `protobuf:"varint,6,opt,name=text_input_limit,json=textInputLimit,proto3" json:"text_input_limit,omitempty"`
 }
 
 func (x *TextInputV2) Reset() {
@@ -5701,10 +5701,10 @@ type Toast struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Duration int32 `protobuf:"varint,2,opt,name=duration,proto3" json:"duration,omitempty"`
-	Show bool `protobuf:"varint,3,opt,name=show,proto3" json:"show,omitempty"`
-	Button *Button `protobuf:"bytes,4,opt,name=button,proto3" json:"button,omitempty"`
+	Text     string  `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Duration int32   `protobuf:"varint,2,opt,name=duration,proto3" json:"duration,omitempty"`
+	Show     bool    `protobuf:"varint,3,opt,name=show,proto3" json:"show,omitempty"`
+	Button   *Button `protobuf:"bytes,4,opt,name=button,proto3" json:"button,omitempty"`
 }
 
 func (x *Toast) Reset() {
@@ -5772,8 +5772,8 @@ type ToastButtonV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Action int32 `protobuf:"varint,2,opt,name=action,proto3" json:"action,omitempty"`
+	Text   string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Action int32  `protobuf:"varint,2,opt,name=action,proto3" json:"action,omitempty"`
 }
 
 func (x *ToastButtonV2) Reset() {
@@ -5827,8 +5827,8 @@ type ToastV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Duration int32 `protobuf:"varint,2,opt,name=duration,proto3" json:"duration,omitempty"`
+	Text          string         `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	Duration      int32          `protobuf:"varint,2,opt,name=duration,proto3" json:"duration,omitempty"`
 	ToastButtonV2 *ToastButtonV2 `protobuf:"bytes,3,opt,name=toast_button_v2,json=toastButtonV2,proto3" json:"toast_button_v2,omitempty"`
 }
 

@@ -34,7 +34,7 @@ type RuleInfo struct {
 	// 操作参数
 	A string `protobuf:"bytes,3,opt,name=a,proto3" json:"a,omitempty"`
 	// 匹配目标正则
-	P string `protobuf:"bytes,4,opt,name=p,proto3" json:"p,omitempty"`
+	P       string   `protobuf:"bytes,4,opt,name=p,proto3" json:"p,omitempty"`
 	ABackup []string `protobuf:"bytes,5,rep,name=a_backup,json=aBackup,proto3" json:"a_backup,omitempty"`
 }
 
@@ -202,7 +202,7 @@ type RulesReply struct {
 	// 各ISP的免流规则信息组
 	// ISP如: cu ct cm
 	RulesInfo map[string]*RulesInfo `protobuf:"bytes,1,rep,name=rulesInfo,proto3" json:"rulesInfo,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	HashValue string `protobuf:"bytes,2,opt,name=hash_value,json=hashValue,proto3" json:"hash_value,omitempty"`
+	HashValue string                `protobuf:"bytes,2,opt,name=hash_value,json=hashValue,proto3" json:"hash_value,omitempty"`
 }
 
 func (x *RulesReply) Reset() {

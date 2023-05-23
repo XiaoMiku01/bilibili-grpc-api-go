@@ -375,10 +375,10 @@ type PushMessageResp struct {
 	PageView []*PageView `protobuf:"bytes,13,rep,name=page_view,json=pageView,proto3" json:"page_view,omitempty"`
 	// 跳转资源
 	TargetResource *TargetResource `protobuf:"bytes,14,opt,name=target_resource,json=targetResource,proto3" json:"target_resource,omitempty"`
-	ImageFrame int32 `protobuf:"varint,15,opt,name=image_frame,json=imageFrame,proto3" json:"image_frame,omitempty"`
-	ImageMarker int32 `protobuf:"varint,16,opt,name=image_marker,json=imageMarker,proto3" json:"image_marker,omitempty"`
-	ImagePosition int32 `protobuf:"varint,17,opt,name=image_position,json=imagePosition,proto3" json:"image_position,omitempty"`
-	Job int64 `protobuf:"varint,18,opt,name=job,proto3" json:"job,omitempty"`
+	ImageFrame     int32           `protobuf:"varint,15,opt,name=image_frame,json=imageFrame,proto3" json:"image_frame,omitempty"`
+	ImageMarker    int32           `protobuf:"varint,16,opt,name=image_marker,json=imageMarker,proto3" json:"image_marker,omitempty"`
+	ImagePosition  int32           `protobuf:"varint,17,opt,name=image_position,json=imagePosition,proto3" json:"image_position,omitempty"`
+	Job            int64           `protobuf:"varint,18,opt,name=job,proto3" json:"job,omitempty"`
 }
 
 func (x *PushMessageResp) Reset() {
@@ -557,7 +557,7 @@ type TargetResource struct {
 	//
 	// Type: LINK_TYPE_LIVE (直播)
 	// Resource: {"roomid":"123"}
-	Type LinkType `protobuf:"varint,1,opt,name=Type,proto3,enum=bilibili.broadcast.v1.LinkType" json:"Type,omitempty"`
+	Type     LinkType          `protobuf:"varint,1,opt,name=Type,proto3,enum=bilibili.broadcast.v1.LinkType" json:"Type,omitempty"`
 	Resource map[string]string `protobuf:"bytes,2,rep,name=Resource,proto3" json:"Resource,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 

@@ -26,10 +26,10 @@ type AddContractReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AllowMessage bool `protobuf:"varint,1,opt,name=allow_message,json=allowMessage,proto3" json:"allow_message,omitempty"`
-	AllowReply bool `protobuf:"varint,2,opt,name=allow_reply,json=allowReply,proto3" json:"allow_reply,omitempty"`
-	InputText string `protobuf:"bytes,3,opt,name=input_text,json=inputText,proto3" json:"input_text,omitempty"`
-	InputTitle string `protobuf:"bytes,4,opt,name=input_title,json=inputTitle,proto3" json:"input_title,omitempty"`
+	AllowMessage bool   `protobuf:"varint,1,opt,name=allow_message,json=allowMessage,proto3" json:"allow_message,omitempty"`
+	AllowReply   bool   `protobuf:"varint,2,opt,name=allow_reply,json=allowReply,proto3" json:"allow_reply,omitempty"`
+	InputText    string `protobuf:"bytes,3,opt,name=input_text,json=inputText,proto3" json:"input_text,omitempty"`
+	InputTitle   string `protobuf:"bytes,4,opt,name=input_title,json=inputTitle,proto3" json:"input_title,omitempty"`
 }
 
 func (x *AddContractReply) Reset() {
@@ -98,10 +98,10 @@ type AddContractReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	Common *CommonReq `protobuf:"bytes,1,opt,name=common,proto3" json:"common,omitempty"`
-	Mid int64 `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
-	UpMid int64 `protobuf:"varint,3,opt,name=up_mid,json=upMid,proto3" json:"up_mid,omitempty"`
-	Aid int64 `protobuf:"varint,4,opt,name=aid,proto3" json:"aid,omitempty"`
-	Source int32 `protobuf:"varint,5,opt,name=source,proto3" json:"source,omitempty"`
+	Mid    int64      `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
+	UpMid  int64      `protobuf:"varint,3,opt,name=up_mid,json=upMid,proto3" json:"up_mid,omitempty"`
+	Aid    int64      `protobuf:"varint,4,opt,name=aid,proto3" json:"aid,omitempty"`
+	Source int32      `protobuf:"varint,5,opt,name=source,proto3" json:"source,omitempty"`
 }
 
 func (x *AddContractReq) Reset() {
@@ -177,12 +177,12 @@ type CommonReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	Platform string `protobuf:"bytes,1,opt,name=platform,proto3" json:"platform,omitempty"`
-	Build int32 `protobuf:"varint,2,opt,name=build,proto3" json:"build,omitempty"`
-	Buvid string `protobuf:"bytes,3,opt,name=buvid,proto3" json:"buvid,omitempty"`
-	MobiApp string `protobuf:"bytes,4,opt,name=mobi_app,json=mobiApp,proto3" json:"mobi_app,omitempty"`
-	Device string `protobuf:"bytes,5,opt,name=device,proto3" json:"device,omitempty"`
-	Ip string `protobuf:"bytes,6,opt,name=ip,proto3" json:"ip,omitempty"`
-	Spmid string `protobuf:"bytes,7,opt,name=spmid,proto3" json:"spmid,omitempty"`
+	Build    int32  `protobuf:"varint,2,opt,name=build,proto3" json:"build,omitempty"`
+	Buvid    string `protobuf:"bytes,3,opt,name=buvid,proto3" json:"buvid,omitempty"`
+	MobiApp  string `protobuf:"bytes,4,opt,name=mobi_app,json=mobiApp,proto3" json:"mobi_app,omitempty"`
+	Device   string `protobuf:"bytes,5,opt,name=device,proto3" json:"device,omitempty"`
+	Ip       string `protobuf:"bytes,6,opt,name=ip,proto3" json:"ip,omitempty"`
+	Spmid    string `protobuf:"bytes,7,opt,name=spmid,proto3" json:"spmid,omitempty"`
 }
 
 func (x *CommonReq) Reset() {
@@ -271,7 +271,7 @@ type ContractCard struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Title    string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
 	SubTitle string `protobuf:"bytes,2,opt,name=sub_title,json=subTitle,proto3" json:"sub_title,omitempty"`
 }
 
@@ -326,9 +326,9 @@ type ContractConfigReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsFollowDisplay int32 `protobuf:"varint,1,opt,name=is_follow_display,json=isFollowDisplay,proto3" json:"is_follow_display,omitempty"`
-	IsTripleDisplay int32 `protobuf:"varint,2,opt,name=is_triple_display,json=isTripleDisplay,proto3" json:"is_triple_display,omitempty"`
-	ContractCard *ContractCard `protobuf:"bytes,3,opt,name=contract_card,json=contractCard,proto3" json:"contract_card,omitempty"`
+	IsFollowDisplay int32         `protobuf:"varint,1,opt,name=is_follow_display,json=isFollowDisplay,proto3" json:"is_follow_display,omitempty"`
+	IsTripleDisplay int32         `protobuf:"varint,2,opt,name=is_triple_display,json=isTripleDisplay,proto3" json:"is_triple_display,omitempty"`
+	ContractCard    *ContractCard `protobuf:"bytes,3,opt,name=contract_card,json=contractCard,proto3" json:"contract_card,omitempty"`
 }
 
 func (x *ContractConfigReply) Reset() {
@@ -390,10 +390,10 @@ type ContractConfigReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	Common *CommonReq `protobuf:"bytes,1,opt,name=common,proto3" json:"common,omitempty"`
-	Mid int64 `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
-	UpMid int64 `protobuf:"varint,3,opt,name=up_mid,json=upMid,proto3" json:"up_mid,omitempty"`
-	Aid int64 `protobuf:"varint,4,opt,name=aid,proto3" json:"aid,omitempty"`
-	Source int32 `protobuf:"varint,5,opt,name=source,proto3" json:"source,omitempty"`
+	Mid    int64      `protobuf:"varint,2,opt,name=mid,proto3" json:"mid,omitempty"`
+	UpMid  int64      `protobuf:"varint,3,opt,name=up_mid,json=upMid,proto3" json:"up_mid,omitempty"`
+	Aid    int64      `protobuf:"varint,4,opt,name=aid,proto3" json:"aid,omitempty"`
+	Source int32      `protobuf:"varint,5,opt,name=source,proto3" json:"source,omitempty"`
 }
 
 func (x *ContractConfigReq) Reset() {

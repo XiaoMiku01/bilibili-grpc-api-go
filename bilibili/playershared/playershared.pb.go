@@ -230,8 +230,8 @@ type DrmTechType int32
 
 const (
 	DrmTechType_UNKNOWN_DRM DrmTechType = 0
-	DrmTechType_FAIR_PLAY DrmTechType = 1
-	DrmTechType_WIDE_VINE DrmTechType = 2
+	DrmTechType_FAIR_PLAY   DrmTechType = 1
+	DrmTechType_WIDE_VINE   DrmTechType = 2
 	// 哔哩哔哩自研DRM
 	DrmTechType_BILI_DRM DrmTechType = 3
 )
@@ -330,7 +330,7 @@ type UnsupportScene int32
 
 const (
 	UnsupportScene_UNKNOWN_SCENE UnsupportScene = 0
-	UnsupportScene_PREMIERE UnsupportScene = 1
+	UnsupportScene_PREMIERE      UnsupportScene = 1
 )
 
 // Enum value maps for UnsupportScene.
@@ -728,7 +728,7 @@ type ExtraContent struct {
 	unknownFields protoimpl.UnknownFields
 
 	DisableReason string `protobuf:"bytes,1,opt,name=disable_reason,json=disableReason,proto3" json:"disable_reason,omitempty"`
-	DisableCode uint64 `protobuf:"varint,2,opt,name=disable_code,json=disableCode,proto3" json:"disable_code,omitempty"`
+	DisableCode   uint64 `protobuf:"varint,2,opt,name=disable_code,json=disableCode,proto3" json:"disable_code,omitempty"`
 }
 
 func (x *ExtraContent) Reset() {
@@ -784,8 +784,8 @@ type History struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 播放进度
-	Progress uint64 `protobuf:"varint,1,opt,name=progress,proto3" json:"progress,omitempty"`
-	Toast string `protobuf:"bytes,2,opt,name=toast,proto3" json:"toast,omitempty"`
+	Progress    uint64 `protobuf:"varint,1,opt,name=progress,proto3" json:"progress,omitempty"`
+	Toast       string `protobuf:"bytes,2,opt,name=toast,proto3" json:"toast,omitempty"`
 	LastPlayCid uint64 `protobuf:"varint,3,opt,name=last_play_cid,json=lastPlayCid,proto3" json:"last_play_cid,omitempty"`
 }
 
@@ -1072,8 +1072,8 @@ type StreamInfo struct {
 	DisplayDesc string `protobuf:"bytes,12,opt,name=display_desc,json=displayDesc,proto3" json:"display_desc,omitempty"`
 	// 新版格式描述备注
 	Superscript string `protobuf:"bytes,13,opt,name=superscript,proto3" json:"superscript,omitempty"`
-	VipFree bool `protobuf:"varint,14,opt,name=vip_free,json=vipFree,proto3" json:"vip_free,omitempty"`
-	Subtitle string `protobuf:"bytes,15,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
+	VipFree     bool   `protobuf:"varint,14,opt,name=vip_free,json=vipFree,proto3" json:"vip_free,omitempty"`
+	Subtitle    string `protobuf:"bytes,15,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
 	// 方案
 	Scheme *Scheme `protobuf:"bytes,16,opt,name=scheme,proto3" json:"scheme,omitempty"`
 	// 支持drm
@@ -2428,12 +2428,12 @@ type QnTrialInfo struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 能否试看高画质
-	TrialAble bool `protobuf:"varint,1,opt,name=trial_able,json=trialAble,proto3" json:"trial_able,omitempty"`
-	RemainingTimes int32 `protobuf:"varint,2,opt,name=remaining_times,json=remainingTimes,proto3" json:"remaining_times,omitempty"`
-	Start int32 `protobuf:"varint,3,opt,name=start,proto3" json:"start,omitempty"`
-	TimeLength int32 `protobuf:"varint,4,opt,name=time_length,json=timeLength,proto3" json:"time_length,omitempty"`
-	StartToast *QnTrialToast `protobuf:"bytes,5,opt,name=start_toast,json=startToast,proto3" json:"start_toast,omitempty"`
-	EndToast *QnTrialToast `protobuf:"bytes,6,opt,name=end_toast,json=endToast,proto3" json:"end_toast,omitempty"`
+	TrialAble         bool           `protobuf:"varint,1,opt,name=trial_able,json=trialAble,proto3" json:"trial_able,omitempty"`
+	RemainingTimes    int32          `protobuf:"varint,2,opt,name=remaining_times,json=remainingTimes,proto3" json:"remaining_times,omitempty"`
+	Start             int32          `protobuf:"varint,3,opt,name=start,proto3" json:"start,omitempty"`
+	TimeLength        int32          `protobuf:"varint,4,opt,name=time_length,json=timeLength,proto3" json:"time_length,omitempty"`
+	StartToast        *QnTrialToast  `protobuf:"bytes,5,opt,name=start_toast,json=startToast,proto3" json:"start_toast,omitempty"`
+	EndToast          *QnTrialToast  `protobuf:"bytes,6,opt,name=end_toast,json=endToast,proto3" json:"end_toast,omitempty"`
 	QualityOpenTipBtn *QnTrialButton `protobuf:"bytes,8,opt,name=quality_open_tip_btn,json=qualityOpenTipBtn,proto3" json:"quality_open_tip_btn,omitempty"`
 }
 

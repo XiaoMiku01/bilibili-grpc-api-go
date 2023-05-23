@@ -25,10 +25,10 @@ type GetOnlineRankReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Ruid int64 `protobuf:"varint,1,opt,name=ruid,proto3" json:"ruid,omitempty"`
-	RoomId int64 `protobuf:"varint,2,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"`
-	Page int64 `protobuf:"varint,3,opt,name=page,proto3" json:"page,omitempty"`
-	PageSize int64 `protobuf:"varint,4,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
+	Ruid     int64  `protobuf:"varint,1,opt,name=ruid,proto3" json:"ruid,omitempty"`
+	RoomId   int64  `protobuf:"varint,2,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"`
+	Page     int64  `protobuf:"varint,3,opt,name=page,proto3" json:"page,omitempty"`
+	PageSize int64  `protobuf:"varint,4,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
 	Platform string `protobuf:"bytes,5,opt,name=platform,proto3" json:"platform,omitempty"`
 }
 
@@ -104,8 +104,8 @@ type GetOnlineRankResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Item *GetOnlineRankResp_OnlineRankItem `protobuf:"bytes,1,opt,name=item,proto3" json:"item,omitempty"`
-	OnlineNum int64 `protobuf:"varint,2,opt,name=online_num,json=onlineNum,proto3" json:"online_num,omitempty"`
+	Item      *GetOnlineRankResp_OnlineRankItem `protobuf:"bytes,1,opt,name=item,proto3" json:"item,omitempty"`
+	OnlineNum int64                             `protobuf:"varint,2,opt,name=online_num,json=onlineNum,proto3" json:"online_num,omitempty"`
 }
 
 func (x *GetOnlineRankResp) Reset() {
@@ -159,14 +159,14 @@ type MedalInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	GuardLevel int64 `protobuf:"varint,1,opt,name=guard_level,json=guardLevel,proto3" json:"guard_level,omitempty"`
-	MedalColorStart int64 `protobuf:"varint,2,opt,name=medal_color_start,json=medalColorStart,proto3" json:"medal_color_start,omitempty"`
-	MedalColorEnd int64 `protobuf:"varint,3,opt,name=medal_color_end,json=medalColorEnd,proto3" json:"medal_color_end,omitempty"`
-	MedalColorBorder int64 `protobuf:"varint,4,opt,name=medal_color_border,json=medalColorBorder,proto3" json:"medal_color_border,omitempty"`
-	MedalName string `protobuf:"bytes,5,opt,name=medal_name,json=medalName,proto3" json:"medal_name,omitempty"`
-	Level int64 `protobuf:"varint,6,opt,name=level,proto3" json:"level,omitempty"`
-	TargetId int64 `protobuf:"varint,7,opt,name=target_id,json=targetId,proto3" json:"target_id,omitempty"`
-	IsLight int64 `protobuf:"varint,8,opt,name=is_light,json=isLight,proto3" json:"is_light,omitempty"`
+	GuardLevel       int64  `protobuf:"varint,1,opt,name=guard_level,json=guardLevel,proto3" json:"guard_level,omitempty"`
+	MedalColorStart  int64  `protobuf:"varint,2,opt,name=medal_color_start,json=medalColorStart,proto3" json:"medal_color_start,omitempty"`
+	MedalColorEnd    int64  `protobuf:"varint,3,opt,name=medal_color_end,json=medalColorEnd,proto3" json:"medal_color_end,omitempty"`
+	MedalColorBorder int64  `protobuf:"varint,4,opt,name=medal_color_border,json=medalColorBorder,proto3" json:"medal_color_border,omitempty"`
+	MedalName        string `protobuf:"bytes,5,opt,name=medal_name,json=medalName,proto3" json:"medal_name,omitempty"`
+	Level            int64  `protobuf:"varint,6,opt,name=level,proto3" json:"level,omitempty"`
+	TargetId         int64  `protobuf:"varint,7,opt,name=target_id,json=targetId,proto3" json:"target_id,omitempty"`
+	IsLight          int64  `protobuf:"varint,8,opt,name=is_light,json=isLight,proto3" json:"is_light,omitempty"`
 }
 
 func (x *MedalInfo) Reset() {
@@ -262,12 +262,12 @@ type GetOnlineRankResp_OnlineRankItem struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uid int64 `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
-	Uname string `protobuf:"bytes,2,opt,name=uname,proto3" json:"uname,omitempty"`
-	Face string `protobuf:"bytes,3,opt,name=face,proto3" json:"face,omitempty"`
-	ContinueWatch int64 `protobuf:"varint,4,opt,name=continue_watch,json=continueWatch,proto3" json:"continue_watch,omitempty"`
-	MedalInfo *MedalInfo `protobuf:"bytes,5,opt,name=medal_info,json=medalInfo,proto3" json:"medal_info,omitempty"`
-	GuardLevel int64 `protobuf:"varint,6,opt,name=guard_level,json=guardLevel,proto3" json:"guard_level,omitempty"`
+	Uid           int64      `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Uname         string     `protobuf:"bytes,2,opt,name=uname,proto3" json:"uname,omitempty"`
+	Face          string     `protobuf:"bytes,3,opt,name=face,proto3" json:"face,omitempty"`
+	ContinueWatch int64      `protobuf:"varint,4,opt,name=continue_watch,json=continueWatch,proto3" json:"continue_watch,omitempty"`
+	MedalInfo     *MedalInfo `protobuf:"bytes,5,opt,name=medal_info,json=medalInfo,proto3" json:"medal_info,omitempty"`
+	GuardLevel    int64      `protobuf:"varint,6,opt,name=guard_level,json=guardLevel,proto3" json:"guard_level,omitempty"`
 }
 
 func (x *GetOnlineRankResp_OnlineRankItem) Reset() {

@@ -218,9 +218,9 @@ type ListReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Env string `protobuf:"bytes,1,opt,name=env,proto3" json:"env,omitempty"`
-	Pools []*PoolReply `protobuf:"bytes,2,rep,name=pools,proto3" json:"pools,omitempty"`
-	ListVersion int64 `protobuf:"varint,3,opt,name=list_version,json=listVersion,proto3" json:"list_version,omitempty"`
+	Env         string       `protobuf:"bytes,1,opt,name=env,proto3" json:"env,omitempty"`
+	Pools       []*PoolReply `protobuf:"bytes,2,rep,name=pools,proto3" json:"pools,omitempty"`
+	ListVersion int64        `protobuf:"varint,3,opt,name=list_version,json=listVersion,proto3" json:"list_version,omitempty"`
 }
 
 func (x *ListReply) Reset() {
@@ -281,14 +281,14 @@ type ListReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PoolName string `protobuf:"bytes,1,opt,name=pool_name,json=poolName,proto3" json:"pool_name,omitempty"`
-	ModuleName string `protobuf:"bytes,2,opt,name=module_name,json=moduleName,proto3" json:"module_name,omitempty"`
+	PoolName    string            `protobuf:"bytes,1,opt,name=pool_name,json=poolName,proto3" json:"pool_name,omitempty"`
+	ModuleName  string            `protobuf:"bytes,2,opt,name=module_name,json=moduleName,proto3" json:"module_name,omitempty"`
 	VersionList []*VersionListReq `protobuf:"bytes,3,rep,name=version_list,json=versionList,proto3" json:"version_list,omitempty"`
-	Env EnvType `protobuf:"varint,4,opt,name=env,proto3,enum=bilibili.app.resource.v1.EnvType" json:"env,omitempty"`
-	SysVer int32 `protobuf:"varint,5,opt,name=sys_ver,json=sysVer,proto3" json:"sys_ver,omitempty"`
-	Scale int32 `protobuf:"varint,6,opt,name=scale,proto3" json:"scale,omitempty"`
-	Arch int32 `protobuf:"varint,7,opt,name=arch,proto3" json:"arch,omitempty"`
-	ListVersion int64 `protobuf:"varint,8,opt,name=list_version,json=listVersion,proto3" json:"list_version,omitempty"`
+	Env         EnvType           `protobuf:"varint,4,opt,name=env,proto3,enum=bilibili.app.resource.v1.EnvType" json:"env,omitempty"`
+	SysVer      int32             `protobuf:"varint,5,opt,name=sys_ver,json=sysVer,proto3" json:"sys_ver,omitempty"`
+	Scale       int32             `protobuf:"varint,6,opt,name=scale,proto3" json:"scale,omitempty"`
+	Arch        int32             `protobuf:"varint,7,opt,name=arch,proto3" json:"arch,omitempty"`
+	ListVersion int64             `protobuf:"varint,8,opt,name=list_version,json=listVersion,proto3" json:"list_version,omitempty"`
 }
 
 func (x *ListReq) Reset() {
@@ -384,25 +384,25 @@ type ModuleReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Version int64 `protobuf:"varint,2,opt,name=version,proto3" json:"version,omitempty"`
-	Url string `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	Md5 string `protobuf:"bytes,4,opt,name=md5,proto3" json:"md5,omitempty"`
-	TotalMd5 string `protobuf:"bytes,5,opt,name=total_md5,json=totalMd5,proto3" json:"total_md5,omitempty"`
-	Increment IncrementType `protobuf:"varint,6,opt,name=increment,proto3,enum=bilibili.app.resource.v1.IncrementType" json:"increment,omitempty"`
-	IsWifi bool `protobuf:"varint,7,opt,name=is_wifi,json=isWifi,proto3" json:"is_wifi,omitempty"`
-	Level LevelType `protobuf:"varint,8,opt,name=level,proto3,enum=bilibili.app.resource.v1.LevelType" json:"level,omitempty"`
-	Filename string `protobuf:"bytes,9,opt,name=filename,proto3" json:"filename,omitempty"`
-	FileType string `protobuf:"bytes,10,opt,name=file_type,json=fileType,proto3" json:"file_type,omitempty"`
-	FileSize int64 `protobuf:"varint,11,opt,name=file_size,json=fileSize,proto3" json:"file_size,omitempty"`
-	Compress CompressType `protobuf:"varint,12,opt,name=compress,proto3,enum=bilibili.app.resource.v1.CompressType" json:"compress,omitempty"`
-	PublishTime int64 `protobuf:"varint,13,opt,name=publish_time,json=publishTime,proto3" json:"publish_time,omitempty"`
+	Name        string        `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Version     int64         `protobuf:"varint,2,opt,name=version,proto3" json:"version,omitempty"`
+	Url         string        `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
+	Md5         string        `protobuf:"bytes,4,opt,name=md5,proto3" json:"md5,omitempty"`
+	TotalMd5    string        `protobuf:"bytes,5,opt,name=total_md5,json=totalMd5,proto3" json:"total_md5,omitempty"`
+	Increment   IncrementType `protobuf:"varint,6,opt,name=increment,proto3,enum=bilibili.app.resource.v1.IncrementType" json:"increment,omitempty"`
+	IsWifi      bool          `protobuf:"varint,7,opt,name=is_wifi,json=isWifi,proto3" json:"is_wifi,omitempty"`
+	Level       LevelType     `protobuf:"varint,8,opt,name=level,proto3,enum=bilibili.app.resource.v1.LevelType" json:"level,omitempty"`
+	Filename    string        `protobuf:"bytes,9,opt,name=filename,proto3" json:"filename,omitempty"`
+	FileType    string        `protobuf:"bytes,10,opt,name=file_type,json=fileType,proto3" json:"file_type,omitempty"`
+	FileSize    int64         `protobuf:"varint,11,opt,name=file_size,json=fileSize,proto3" json:"file_size,omitempty"`
+	Compress    CompressType  `protobuf:"varint,12,opt,name=compress,proto3,enum=bilibili.app.resource.v1.CompressType" json:"compress,omitempty"`
+	PublishTime int64         `protobuf:"varint,13,opt,name=publish_time,json=publishTime,proto3" json:"publish_time,omitempty"`
 	// 上报使用
-	PoolId int64 `protobuf:"varint,14,opt,name=pool_id,json=poolId,proto3" json:"pool_id,omitempty"`
-	ModuleId int64 `protobuf:"varint,15,opt,name=module_id,json=moduleId,proto3" json:"module_id,omitempty"`
+	PoolId    int64 `protobuf:"varint,14,opt,name=pool_id,json=poolId,proto3" json:"pool_id,omitempty"`
+	ModuleId  int64 `protobuf:"varint,15,opt,name=module_id,json=moduleId,proto3" json:"module_id,omitempty"`
 	VersionId int64 `protobuf:"varint,16,opt,name=version_id,json=versionId,proto3" json:"version_id,omitempty"`
-	FileId int64 `protobuf:"varint,17,opt,name=file_id,json=fileId,proto3" json:"file_id,omitempty"`
-	ZipCheck bool `protobuf:"varint,18,opt,name=zip_check,json=zipCheck,proto3" json:"zip_check,omitempty"`
+	FileId    int64 `protobuf:"varint,17,opt,name=file_id,json=fileId,proto3" json:"file_id,omitempty"`
+	ZipCheck  bool  `protobuf:"varint,18,opt,name=zip_check,json=zipCheck,proto3" json:"zip_check,omitempty"`
 }
 
 func (x *ModuleReply) Reset() {
@@ -568,7 +568,7 @@ type PoolReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Name    string         `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	Modules []*ModuleReply `protobuf:"bytes,2,rep,name=modules,proto3" json:"modules,omitempty"`
 }
 
@@ -623,7 +623,7 @@ type VersionListReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PoolName string `protobuf:"bytes,1,opt,name=pool_name,json=poolName,proto3" json:"pool_name,omitempty"`
+	PoolName string        `protobuf:"bytes,1,opt,name=pool_name,json=poolName,proto3" json:"pool_name,omitempty"`
 	Versions []*VersionReq `protobuf:"bytes,2,rep,name=versions,proto3" json:"versions,omitempty"`
 }
 
@@ -679,7 +679,7 @@ type VersionReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	ModuleName string `protobuf:"bytes,1,opt,name=module_name,json=moduleName,proto3" json:"module_name,omitempty"`
-	Version int64 `protobuf:"varint,2,opt,name=version,proto3" json:"version,omitempty"`
+	Version    int64  `protobuf:"varint,2,opt,name=version,proto3" json:"version,omitempty"`
 }
 
 func (x *VersionReq) Reset() {

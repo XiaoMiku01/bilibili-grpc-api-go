@@ -80,17 +80,17 @@ type RegionInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Tid int32 `protobuf:"varint,1,opt,name=tid,proto3" json:"tid,omitempty"`
-	Reid int32 `protobuf:"varint,2,opt,name=reid,proto3" json:"reid,omitempty"`
-	Name string `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
-	Logo string `protobuf:"bytes,4,opt,name=logo,proto3" json:"logo,omitempty"`
-	Goto string `protobuf:"bytes,5,opt,name=goto,proto3" json:"goto,omitempty"`
-	Param string `protobuf:"bytes,6,opt,name=param,proto3" json:"param,omitempty"`
-	Uri string `protobuf:"bytes,7,opt,name=uri,proto3" json:"uri,omitempty"`
-	Type int32 `protobuf:"varint,8,opt,name=type,proto3" json:"type,omitempty"`
-	IsBangumi int32 `protobuf:"varint,9,opt,name=is_bangumi,json=isBangumi,proto3" json:"is_bangumi,omitempty"`
-	Children []*RegionInfo `protobuf:"bytes,10,rep,name=children,proto3" json:"children,omitempty"`
-	Config []*RegionConfig `protobuf:"bytes,11,rep,name=config,proto3" json:"config,omitempty"`
+	Tid       int32           `protobuf:"varint,1,opt,name=tid,proto3" json:"tid,omitempty"`
+	Reid      int32           `protobuf:"varint,2,opt,name=reid,proto3" json:"reid,omitempty"`
+	Name      string          `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
+	Logo      string          `protobuf:"bytes,4,opt,name=logo,proto3" json:"logo,omitempty"`
+	Goto      string          `protobuf:"bytes,5,opt,name=goto,proto3" json:"goto,omitempty"`
+	Param     string          `protobuf:"bytes,6,opt,name=param,proto3" json:"param,omitempty"`
+	Uri       string          `protobuf:"bytes,7,opt,name=uri,proto3" json:"uri,omitempty"`
+	Type      int32           `protobuf:"varint,8,opt,name=type,proto3" json:"type,omitempty"`
+	IsBangumi int32           `protobuf:"varint,9,opt,name=is_bangumi,json=isBangumi,proto3" json:"is_bangumi,omitempty"`
+	Children  []*RegionInfo   `protobuf:"bytes,10,rep,name=children,proto3" json:"children,omitempty"`
+	Config    []*RegionConfig `protobuf:"bytes,11,rep,name=config,proto3" json:"config,omitempty"`
 }
 
 func (x *RegionInfo) Reset() {

@@ -200,11 +200,11 @@ type PrivacyConfigItem struct {
 
 	// 隐私开关类型
 	PrivacyConfigType PrivacyConfigType `protobuf:"varint,1,opt,name=privacy_config_type,json=privacyConfigType,proto3,enum=bilibili.app.resource.privacy.v1.PrivacyConfigType" json:"privacy_config_type,omitempty"`
-	Title string `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Title             string            `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
 	// 隐私开关状态
-	State PrivacyConfigState `protobuf:"varint,3,opt,name=state,proto3,enum=bilibili.app.resource.privacy.v1.PrivacyConfigState" json:"state,omitempty"`
-	SubTitle string `protobuf:"bytes,4,opt,name=sub_title,json=subTitle,proto3" json:"sub_title,omitempty"`
-	SubTitleUri string `protobuf:"bytes,5,opt,name=sub_title_uri,json=subTitleUri,proto3" json:"sub_title_uri,omitempty"`
+	State       PrivacyConfigState `protobuf:"varint,3,opt,name=state,proto3,enum=bilibili.app.resource.privacy.v1.PrivacyConfigState" json:"state,omitempty"`
+	SubTitle    string             `protobuf:"bytes,4,opt,name=sub_title,json=subTitle,proto3" json:"sub_title,omitempty"`
+	SubTitleUri string             `protobuf:"bytes,5,opt,name=sub_title_uri,json=subTitleUri,proto3" json:"sub_title_uri,omitempty"`
 }
 
 func (x *PrivacyConfigItem) Reset() {

@@ -74,7 +74,7 @@ const (
 	CmdId_EN_CMD_ID_INVALID CmdId = 0
 	// 服务端主动发起
 	CmdId_EN_CMD_ID_MSG_NOTIFY CmdId = 1
-	CmdId_EN_CMD_ID_KICK_OUT CmdId = 2
+	CmdId_EN_CMD_ID_KICK_OUT   CmdId = 2
 )
 
 // Enum value maps for CmdId.
@@ -125,8 +125,8 @@ type NotifyRsp struct {
 
 	Uid uint64 `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
 	// 命令id
-	Cmd uint64 `protobuf:"varint,2,opt,name=cmd,proto3" json:"cmd,omitempty"`
-	Payload []byte `protobuf:"bytes,3,opt,name=payload,proto3" json:"payload,omitempty"`
+	Cmd         uint64 `protobuf:"varint,2,opt,name=cmd,proto3" json:"cmd,omitempty"`
+	Payload     []byte `protobuf:"bytes,3,opt,name=payload,proto3" json:"payload,omitempty"`
 	PayloadType PLType `protobuf:"varint,4,opt,name=payload_type,json=payloadType,proto3,enum=bilibili.broadcast.message.im.PLType" json:"payload_type,omitempty"`
 }
 
@@ -387,8 +387,8 @@ type NotifyInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MsgType uint32 `protobuf:"varint,1,opt,name=msg_type,json=msgType,proto3" json:"msg_type,omitempty"`
-	TalkerId uint64 `protobuf:"varint,2,opt,name=talker_id,json=talkerId,proto3" json:"talker_id,omitempty"`
+	MsgType     uint32 `protobuf:"varint,1,opt,name=msg_type,json=msgType,proto3" json:"msg_type,omitempty"`
+	TalkerId    uint64 `protobuf:"varint,2,opt,name=talker_id,json=talkerId,proto3" json:"talker_id,omitempty"`
 	SessionType uint32 `protobuf:"varint,3,opt,name=session_type,json=sessionType,proto3" json:"session_type,omitempty"`
 }
 
@@ -453,7 +453,7 @@ type ReqServerNotify struct {
 	// 最新序列号
 	LastestSeqno uint64 `protobuf:"varint,1,opt,name=lastest_seqno,json=lastestSeqno,proto3" json:"lastest_seqno,omitempty"`
 	// 即时消息 该类消息主要用于系统通知 当客户端sync msg时 不会sync到此类消息
-	InstantMsg *Msg `protobuf:"bytes,2,opt,name=instant_msg,json=instantMsg,proto3" json:"instant_msg,omitempty"`
+	InstantMsg *Msg        `protobuf:"bytes,2,opt,name=instant_msg,json=instantMsg,proto3" json:"instant_msg,omitempty"`
 	NotifyInfo *NotifyInfo `protobuf:"bytes,3,opt,name=notify_info,json=notifyInfo,proto3" json:"notify_info,omitempty"`
 }
 

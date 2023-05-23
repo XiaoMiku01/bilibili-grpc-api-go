@@ -3987,7 +3987,7 @@ type AdditionalButtonInteractive struct {
 	Confirm string `protobuf:"bytes,2,opt,name=confirm,proto3" json:"confirm,omitempty"`
 	// 弹窗取消文案
 	Cancel string `protobuf:"bytes,3,opt,name=cancel,proto3" json:"cancel,omitempty"`
-	Desc string `protobuf:"bytes,4,opt,name=desc,proto3" json:"desc,omitempty"`
+	Desc   string `protobuf:"bytes,4,opt,name=desc,proto3" json:"desc,omitempty"`
 }
 
 func (x *AdditionalButtonInteractive) Reset() {
@@ -4904,7 +4904,7 @@ type Dimension struct {
 	unknownFields protoimpl.UnknownFields
 
 	Height int64 `protobuf:"varint,1,opt,name=height,proto3" json:"height,omitempty"`
-	Width int64 `protobuf:"varint,2,opt,name=width,proto3" json:"width,omitempty"`
+	Width  int64 `protobuf:"varint,2,opt,name=width,proto3" json:"width,omitempty"`
 	Rotate int64 `protobuf:"varint,3,opt,name=rotate,proto3" json:"rotate,omitempty"`
 }
 
@@ -5015,9 +5015,9 @@ type DynAdditionCommonFollowReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Status AdditionalButtonStatus `protobuf:"varint,1,opt,name=status,proto3,enum=bilibili.dynamic.gateway.AdditionalButtonStatus" json:"status,omitempty"`
-	DynId string `protobuf:"bytes,2,opt,name=dyn_id,json=dynId,proto3" json:"dyn_id,omitempty"`
-	CardType string `protobuf:"bytes,3,opt,name=card_type,json=cardType,proto3" json:"card_type,omitempty"`
+	Status   AdditionalButtonStatus `protobuf:"varint,1,opt,name=status,proto3,enum=bilibili.dynamic.gateway.AdditionalButtonStatus" json:"status,omitempty"`
+	DynId    string                 `protobuf:"bytes,2,opt,name=dyn_id,json=dynId,proto3" json:"dyn_id,omitempty"`
+	CardType string                 `protobuf:"bytes,3,opt,name=card_type,json=cardType,proto3" json:"card_type,omitempty"`
 }
 
 func (x *DynAdditionCommonFollowReq) Reset() {
@@ -5799,8 +5799,8 @@ type DynMixUpListViewMoreReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Items []*MixUpListItem `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
-	SearchDefaultText string `protobuf:"bytes,2,opt,name=search_default_text,json=searchDefaultText,proto3" json:"search_default_text,omitempty"`
+	Items             []*MixUpListItem `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
+	SearchDefaultText string           `protobuf:"bytes,2,opt,name=search_default_text,json=searchDefaultText,proto3" json:"search_default_text,omitempty"`
 	// 排序类型列表
 	SortTypes []*SortType `protobuf:"bytes,3,rep,name=sort_types,json=sortTypes,proto3" json:"sort_types,omitempty"`
 	// 是否展示更多的排序策略
@@ -14045,9 +14045,9 @@ type PlayerArgs struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Qn int64 `protobuf:"varint,1,opt,name=qn,proto3" json:"qn,omitempty"`
-	Fnver int64 `protobuf:"varint,2,opt,name=fnver,proto3" json:"fnver,omitempty"`
-	Fnval int64 `protobuf:"varint,3,opt,name=fnval,proto3" json:"fnval,omitempty"`
+	Qn        int64 `protobuf:"varint,1,opt,name=qn,proto3" json:"qn,omitempty"`
+	Fnver     int64 `protobuf:"varint,2,opt,name=fnver,proto3" json:"fnver,omitempty"`
+	Fnval     int64 `protobuf:"varint,3,opt,name=fnval,proto3" json:"fnval,omitempty"`
 	ForceHost int64 `protobuf:"varint,4,opt,name=force_host,json=forceHost,proto3" json:"force_host,omitempty"`
 }
 
@@ -16061,10 +16061,10 @@ type UserItemStyle struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RectText string `protobuf:"bytes,1,opt,name=rect_text,json=rectText,proto3" json:"rect_text,omitempty"`
-	RectTextColor string `protobuf:"bytes,2,opt,name=rect_text_color,json=rectTextColor,proto3" json:"rect_text_color,omitempty"`
-	RectIcon string `protobuf:"bytes,3,opt,name=rect_icon,json=rectIcon,proto3" json:"rect_icon,omitempty"`
-	RectBgColor string `protobuf:"bytes,4,opt,name=rect_bg_color,json=rectBgColor,proto3" json:"rect_bg_color,omitempty"`
+	RectText       string `protobuf:"bytes,1,opt,name=rect_text,json=rectText,proto3" json:"rect_text,omitempty"`
+	RectTextColor  string `protobuf:"bytes,2,opt,name=rect_text_color,json=rectTextColor,proto3" json:"rect_text_color,omitempty"`
+	RectIcon       string `protobuf:"bytes,3,opt,name=rect_icon,json=rectIcon,proto3" json:"rect_icon,omitempty"`
+	RectBgColor    string `protobuf:"bytes,4,opt,name=rect_bg_color,json=rectBgColor,proto3" json:"rect_bg_color,omitempty"`
 	OuterAnimation string `protobuf:"bytes,5,opt,name=outer_animation,json=outerAnimation,proto3" json:"outer_animation,omitempty"`
 }
 

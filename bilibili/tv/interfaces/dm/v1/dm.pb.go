@@ -25,7 +25,7 @@ type Chronos struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Md5 string `protobuf:"bytes,1,opt,name=md5,proto3" json:"md5,omitempty"`
+	Md5  string `protobuf:"bytes,1,opt,name=md5,proto3" json:"md5,omitempty"`
 	File string `protobuf:"bytes,2,opt,name=file,proto3" json:"file,omitempty"`
 	Sign string `protobuf:"bytes,3,opt,name=sign,proto3" json:"sign,omitempty"`
 }
@@ -108,8 +108,8 @@ type CommandDm struct {
 	// 扩展json数据
 	Extra string `protobuf:"bytes,9,opt,name=extra,proto3" json:"extra,omitempty"`
 	// 弹幕id str类型
-	IdStr string `protobuf:"bytes,10,opt,name=idStr,proto3" json:"idStr,omitempty"`
-	Display int64 `protobuf:"varint,11,opt,name=display,proto3" json:"display,omitempty"`
+	IdStr   string `protobuf:"bytes,10,opt,name=idStr,proto3" json:"idStr,omitempty"`
+	Display int64  `protobuf:"varint,11,opt,name=display,proto3" json:"display,omitempty"`
 }
 
 func (x *CommandDm) Reset() {
@@ -232,13 +232,13 @@ type CommandDmOtt struct {
 	// 对象视频cid
 	Oid int64 `protobuf:"varint,2,opt,name=oid,proto3" json:"oid,omitempty"`
 	// 发送者mid
-	Mid int64 `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid  int64 `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
 	Type int32 `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
 	// 互动弹幕指令
 	Command string `protobuf:"bytes,5,opt,name=command,proto3" json:"command,omitempty"`
 	// 互动弹幕正文
 	Content string `protobuf:"bytes,6,opt,name=content,proto3" json:"content,omitempty"`
-	State int32 `protobuf:"varint,7,opt,name=state,proto3" json:"state,omitempty"`
+	State   int32  `protobuf:"varint,7,opt,name=state,proto3" json:"state,omitempty"`
 	// 出现时间
 	Progress int32 `protobuf:"varint,8,opt,name=progress,proto3" json:"progress,omitempty"`
 	// 创建时间
@@ -1371,7 +1371,7 @@ type DmSegMobileReq struct {
 	SegmentIndex int64 `protobuf:"varint,4,opt,name=segment_index,json=segmentIndex,proto3" json:"segment_index,omitempty"`
 	// 是否青少年模式
 	TeenagersMode int32 `protobuf:"varint,5,opt,name=teenagers_mode,json=teenagersMode,proto3" json:"teenagers_mode,omitempty"`
-	From int64 `protobuf:"varint,6,opt,name=from,proto3" json:"from,omitempty"`
+	From          int64 `protobuf:"varint,6,opt,name=from,proto3" json:"from,omitempty"`
 }
 
 func (x *DmSegMobileReq) Reset() {
@@ -1479,7 +1479,7 @@ type DmViewReply struct {
 	TextPlaceholder string `protobuf:"bytes,11,opt,name=text_placeholder,json=textPlaceholder,proto3" json:"text_placeholder,omitempty"`
 	// 弹幕输入框文案
 	InputPlaceholder string `protobuf:"bytes,12,opt,name=input_placeholder,json=inputPlaceholder,proto3" json:"input_placeholder,omitempty"`
-	CommandClose bool `protobuf:"varint,13,opt,name=command_close,json=commandClose,proto3" json:"command_close,omitempty"`
+	CommandClose     bool   `protobuf:"varint,13,opt,name=command_close,json=commandClose,proto3" json:"command_close,omitempty"`
 }
 
 func (x *DmViewReply) Reset() {
@@ -1622,7 +1622,7 @@ type DmViewReq struct {
 	Spmid string `protobuf:"bytes,4,opt,name=spmid,proto3" json:"spmid,omitempty"`
 	// 是否冷启
 	IsHardBoot int32 `protobuf:"varint,5,opt,name=is_hard_boot,json=isHardBoot,proto3" json:"is_hard_boot,omitempty"`
-	From int64 `protobuf:"varint,6,opt,name=from,proto3" json:"from,omitempty"`
+	From       int64 `protobuf:"varint,6,opt,name=from,proto3" json:"from,omitempty"`
 }
 
 func (x *DmViewReq) Reset() {
@@ -1799,7 +1799,7 @@ type TvViewProgressReply struct {
 	unknownFields protoimpl.UnknownFields
 
 	VideoGuide *VideoGuide `protobuf:"bytes,1,opt,name=video_guide,json=videoGuide,proto3" json:"video_guide,omitempty"`
-	Chronos *Chronos `protobuf:"bytes,2,opt,name=chronos,proto3" json:"chronos,omitempty"`
+	Chronos    *Chronos    `protobuf:"bytes,2,opt,name=chronos,proto3" json:"chronos,omitempty"`
 }
 
 func (x *TvViewProgressReply) Reset() {
@@ -1853,17 +1853,17 @@ type TvViewProgressReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Aid int64 `protobuf:"varint,1,opt,name=aid,proto3" json:"aid,omitempty"`
-	Cid int64 `protobuf:"varint,2,opt,name=cid,proto3" json:"cid,omitempty"`
-	UpMid int64 `protobuf:"varint,3,opt,name=up_mid,json=upMid,proto3" json:"up_mid,omitempty"`
-	EngineVersion string `protobuf:"bytes,4,opt,name=engine_version,json=engineVersion,proto3" json:"engine_version,omitempty"`
+	Aid             int64  `protobuf:"varint,1,opt,name=aid,proto3" json:"aid,omitempty"`
+	Cid             int64  `protobuf:"varint,2,opt,name=cid,proto3" json:"cid,omitempty"`
+	UpMid           int64  `protobuf:"varint,3,opt,name=up_mid,json=upMid,proto3" json:"up_mid,omitempty"`
+	EngineVersion   string `protobuf:"bytes,4,opt,name=engine_version,json=engineVersion,proto3" json:"engine_version,omitempty"`
 	MessageProtocol string `protobuf:"bytes,5,opt,name=message_protocol,json=messageProtocol,proto3" json:"message_protocol,omitempty"`
-	ServiceKey string `protobuf:"bytes,6,opt,name=service_key,json=serviceKey,proto3" json:"service_key,omitempty"`
-	Sid int64 `protobuf:"varint,7,opt,name=sid,proto3" json:"sid,omitempty"`
-	Pid int64 `protobuf:"varint,8,opt,name=pid,proto3" json:"pid,omitempty"`
-	From int64 `protobuf:"varint,9,opt,name=from,proto3" json:"from,omitempty"`
-	GuestAccessKey string `protobuf:"bytes,10,opt,name=guest_access_key,json=guestAccessKey,proto3" json:"guest_access_key,omitempty"`
-	Epid int64 `protobuf:"varint,11,opt,name=epid,proto3" json:"epid,omitempty"`
+	ServiceKey      string `protobuf:"bytes,6,opt,name=service_key,json=serviceKey,proto3" json:"service_key,omitempty"`
+	Sid             int64  `protobuf:"varint,7,opt,name=sid,proto3" json:"sid,omitempty"`
+	Pid             int64  `protobuf:"varint,8,opt,name=pid,proto3" json:"pid,omitempty"`
+	From            int64  `protobuf:"varint,9,opt,name=from,proto3" json:"from,omitempty"`
+	GuestAccessKey  string `protobuf:"bytes,10,opt,name=guest_access_key,json=guestAccessKey,proto3" json:"guest_access_key,omitempty"`
+	Epid            int64  `protobuf:"varint,11,opt,name=epid,proto3" json:"epid,omitempty"`
 }
 
 func (x *TvViewProgressReq) Reset() {

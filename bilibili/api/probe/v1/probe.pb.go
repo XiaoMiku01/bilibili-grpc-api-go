@@ -255,16 +255,16 @@ type Embedded struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	BoolVal bool `protobuf:"varint,1,opt,name=bool_val,json=boolVal,proto3" json:"bool_val,omitempty"`
-	Int32Val int32 `protobuf:"varint,2,opt,name=int32_val,json=int32Val,proto3" json:"int32_val,omitempty"`
-	Int64Val int64 `protobuf:"varint,3,opt,name=int64_val,json=int64Val,proto3" json:"int64_val,omitempty"`
-	FloatVal float32 `protobuf:"fixed32,4,opt,name=float_val,json=floatVal,proto3" json:"float_val,omitempty"`
-	DoubleVal float64 `protobuf:"fixed64,5,opt,name=double_val,json=doubleVal,proto3" json:"double_val,omitempty"`
-	StringVal string `protobuf:"bytes,6,opt,name=string_val,json=stringVal,proto3" json:"string_val,omitempty"`
-	RepeatedInt32Val []int32 `protobuf:"varint,8,rep,packed,name=repeated_int32_val,json=repeatedInt32Val,proto3" json:"repeated_int32_val,omitempty"`
-	RepeatedStringVal []string `protobuf:"bytes,12,rep,name=repeated_string_val,json=repeatedStringVal,proto3" json:"repeated_string_val,omitempty"`
-	MapStringVal map[string]string `protobuf:"bytes,13,rep,name=map_string_val,json=mapStringVal,proto3" json:"map_string_val,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	MapErrorVal map[string]*ErrorMessage `protobuf:"bytes,14,rep,name=map_error_val,json=mapErrorVal,proto3" json:"map_error_val,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	BoolVal           bool                     `protobuf:"varint,1,opt,name=bool_val,json=boolVal,proto3" json:"bool_val,omitempty"`
+	Int32Val          int32                    `protobuf:"varint,2,opt,name=int32_val,json=int32Val,proto3" json:"int32_val,omitempty"`
+	Int64Val          int64                    `protobuf:"varint,3,opt,name=int64_val,json=int64Val,proto3" json:"int64_val,omitempty"`
+	FloatVal          float32                  `protobuf:"fixed32,4,opt,name=float_val,json=floatVal,proto3" json:"float_val,omitempty"`
+	DoubleVal         float64                  `protobuf:"fixed64,5,opt,name=double_val,json=doubleVal,proto3" json:"double_val,omitempty"`
+	StringVal         string                   `protobuf:"bytes,6,opt,name=string_val,json=stringVal,proto3" json:"string_val,omitempty"`
+	RepeatedInt32Val  []int32                  `protobuf:"varint,8,rep,packed,name=repeated_int32_val,json=repeatedInt32Val,proto3" json:"repeated_int32_val,omitempty"`
+	RepeatedStringVal []string                 `protobuf:"bytes,12,rep,name=repeated_string_val,json=repeatedStringVal,proto3" json:"repeated_string_val,omitempty"`
+	MapStringVal      map[string]string        `protobuf:"bytes,13,rep,name=map_string_val,json=mapStringVal,proto3" json:"map_string_val,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MapErrorVal       map[string]*ErrorMessage `protobuf:"bytes,14,rep,name=map_error_val,json=mapErrorVal,proto3" json:"map_error_val,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
 func (x *Embedded) Reset() {
@@ -374,8 +374,8 @@ type ErrorMessage struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code int64 `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
-	Reason string `protobuf:"bytes,2,opt,name=reason,proto3" json:"reason,omitempty"`
+	Code    int64  `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	Reason  string `protobuf:"bytes,2,opt,name=reason,proto3" json:"reason,omitempty"`
 	Message string `protobuf:"bytes,3,opt,name=message,proto3" json:"message,omitempty"`
 }
 
@@ -437,8 +437,8 @@ type ProbeReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Content string `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
-	Timestamp int64 `protobuf:"varint,2,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
+	Content   string `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
+	Timestamp int64  `protobuf:"varint,2,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 }
 
 func (x *ProbeReply) Reset() {
@@ -492,7 +492,7 @@ type ProbeReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid   int64  `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	Buvid string `protobuf:"bytes,2,opt,name=buvid,proto3" json:"buvid,omitempty"`
 }
 
@@ -547,9 +547,9 @@ type ProbeStreamReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Sequence int64 `protobuf:"varint,1,opt,name=sequence,proto3" json:"sequence,omitempty"`
-	Timestamp int64 `protobuf:"varint,2,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Content string `protobuf:"bytes,3,opt,name=content,proto3" json:"content,omitempty"`
+	Sequence  int64  `protobuf:"varint,1,opt,name=sequence,proto3" json:"sequence,omitempty"`
+	Timestamp int64  `protobuf:"varint,2,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
+	Content   string `protobuf:"bytes,3,opt,name=content,proto3" json:"content,omitempty"`
 }
 
 func (x *ProbeStreamReply) Reset() {
@@ -610,7 +610,7 @@ type ProbeStreamReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid      int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	Sequence int64 `protobuf:"varint,2,opt,name=sequence,proto3" json:"sequence,omitempty"`
 }
 
@@ -759,10 +759,10 @@ type SimpleMessage struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id int32 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Num int64 `protobuf:"varint,2,opt,name=num,proto3" json:"num,omitempty"`
-	Lang string `protobuf:"bytes,3,opt,name=lang,proto3" json:"lang,omitempty"`
-	Cate int32 `protobuf:"varint,4,opt,name=cate,proto3" json:"cate,omitempty"`
+	Id       int32     `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Num      int64     `protobuf:"varint,2,opt,name=num,proto3" json:"num,omitempty"`
+	Lang     string    `protobuf:"bytes,3,opt,name=lang,proto3" json:"lang,omitempty"`
+	Cate     int32     `protobuf:"varint,4,opt,name=cate,proto3" json:"cate,omitempty"`
 	Embedded *Embedded `protobuf:"bytes,5,opt,name=embedded,proto3" json:"embedded,omitempty"`
 }
 

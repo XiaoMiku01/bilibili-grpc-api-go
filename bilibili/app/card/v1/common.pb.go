@@ -25,17 +25,17 @@ type Args struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type int32 `protobuf:"varint,1,opt,name=type,proto3" json:"type,omitempty"`
-	UpId int64 `protobuf:"varint,2,opt,name=up_id,json=upId,proto3" json:"up_id,omitempty"`
-	UpName string `protobuf:"bytes,3,opt,name=up_name,json=upName,proto3" json:"up_name,omitempty"`
-	Rid int32 `protobuf:"varint,4,opt,name=rid,proto3" json:"rid,omitempty"`
-	Rname string `protobuf:"bytes,5,opt,name=rname,proto3" json:"rname,omitempty"`
-	Tid int64 `protobuf:"varint,6,opt,name=tid,proto3" json:"tid,omitempty"`
-	Tname string `protobuf:"bytes,7,opt,name=tname,proto3" json:"tname,omitempty"`
-	TrackId string `protobuf:"bytes,8,opt,name=track_id,json=trackId,proto3" json:"track_id,omitempty"`
-	State string `protobuf:"bytes,9,opt,name=state,proto3" json:"state,omitempty"`
-	ConvergeType int32 `protobuf:"varint,10,opt,name=converge_type,json=convergeType,proto3" json:"converge_type,omitempty"`
-	Aid int64 `protobuf:"varint,11,opt,name=aid,proto3" json:"aid,omitempty"`
+	Type         int32  `protobuf:"varint,1,opt,name=type,proto3" json:"type,omitempty"`
+	UpId         int64  `protobuf:"varint,2,opt,name=up_id,json=upId,proto3" json:"up_id,omitempty"`
+	UpName       string `protobuf:"bytes,3,opt,name=up_name,json=upName,proto3" json:"up_name,omitempty"`
+	Rid          int32  `protobuf:"varint,4,opt,name=rid,proto3" json:"rid,omitempty"`
+	Rname        string `protobuf:"bytes,5,opt,name=rname,proto3" json:"rname,omitempty"`
+	Tid          int64  `protobuf:"varint,6,opt,name=tid,proto3" json:"tid,omitempty"`
+	Tname        string `protobuf:"bytes,7,opt,name=tname,proto3" json:"tname,omitempty"`
+	TrackId      string `protobuf:"bytes,8,opt,name=track_id,json=trackId,proto3" json:"track_id,omitempty"`
+	State        string `protobuf:"bytes,9,opt,name=state,proto3" json:"state,omitempty"`
+	ConvergeType int32  `protobuf:"varint,10,opt,name=converge_type,json=convergeType,proto3" json:"converge_type,omitempty"`
+	Aid          int64  `protobuf:"varint,11,opt,name=aid,proto3" json:"aid,omitempty"`
 }
 
 func (x *Args) Reset() {
@@ -152,13 +152,13 @@ type Avatar struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Cover string `protobuf:"bytes,1,opt,name=cover,proto3" json:"cover,omitempty"`
-	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
-	Uri string `protobuf:"bytes,3,opt,name=uri,proto3" json:"uri,omitempty"`
-	Type int32 `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
-	Event string `protobuf:"bytes,5,opt,name=event,proto3" json:"event,omitempty"`
-	EventV2 string `protobuf:"bytes,6,opt,name=event_v2,json=eventV2,proto3" json:"event_v2,omitempty"`
-	DefalutCover int32 `protobuf:"varint,7,opt,name=defalut_cover,json=defalutCover,proto3" json:"defalut_cover,omitempty"`
+	Cover        string `protobuf:"bytes,1,opt,name=cover,proto3" json:"cover,omitempty"`
+	Text         string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
+	Uri          string `protobuf:"bytes,3,opt,name=uri,proto3" json:"uri,omitempty"`
+	Type         int32  `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
+	Event        string `protobuf:"bytes,5,opt,name=event,proto3" json:"event,omitempty"`
+	EventV2      string `protobuf:"bytes,6,opt,name=event_v2,json=eventV2,proto3" json:"event_v2,omitempty"`
+	DefalutCover int32  `protobuf:"varint,7,opt,name=defalut_cover,json=defalutCover,proto3" json:"defalut_cover,omitempty"`
 }
 
 func (x *Avatar) Reset() {
@@ -262,23 +262,23 @@ type Base struct {
 	// 标题
 	Title string `protobuf:"bytes,6,opt,name=title,proto3" json:"title,omitempty"`
 	// 跳转uri
-	Uri string `protobuf:"bytes,7,opt,name=uri,proto3" json:"uri,omitempty"`
+	Uri        string      `protobuf:"bytes,7,opt,name=uri,proto3" json:"uri,omitempty"`
 	ThreePoint *ThreePoint `protobuf:"bytes,8,opt,name=three_point,json=threePoint,proto3" json:"three_point,omitempty"`
-	Args *Args `protobuf:"bytes,9,opt,name=args,proto3" json:"args,omitempty"`
+	Args       *Args       `protobuf:"bytes,9,opt,name=args,proto3" json:"args,omitempty"`
 	PlayerArgs *PlayerArgs `protobuf:"bytes,10,opt,name=player_args,json=playerArgs,proto3" json:"player_args,omitempty"`
 	// 条目排位序号
-	Idx int64 `protobuf:"varint,11,opt,name=idx,proto3" json:"idx,omitempty"`
+	Idx    int64   `protobuf:"varint,11,opt,name=idx,proto3" json:"idx,omitempty"`
 	AdInfo *AdInfo `protobuf:"bytes,12,opt,name=ad_info,json=adInfo,proto3" json:"ad_info,omitempty"`
-	Mask *Mask `protobuf:"bytes,13,opt,name=mask,proto3" json:"mask,omitempty"`
+	Mask   *Mask   `protobuf:"bytes,13,opt,name=mask,proto3" json:"mask,omitempty"`
 	// 来源标识
 	// recommend:推荐 operation:管理?
-	FromType string `protobuf:"bytes,14,opt,name=from_type,json=fromType,proto3" json:"from_type,omitempty"`
+	FromType     string          `protobuf:"bytes,14,opt,name=from_type,json=fromType,proto3" json:"from_type,omitempty"`
 	ThreePointV2 []*ThreePointV2 `protobuf:"bytes,15,rep,name=three_point_v2,json=threePointV2,proto3" json:"three_point_v2,omitempty"`
 	ThreePointV3 []*ThreePointV3 `protobuf:"bytes,16,rep,name=three_point_v3,json=threePointV3,proto3" json:"three_point_v3,omitempty"`
-	DescButton *Button `protobuf:"bytes,17,opt,name=desc_button,json=descButton,proto3" json:"desc_button,omitempty"`
+	DescButton   *Button         `protobuf:"bytes,17,opt,name=desc_button,json=descButton,proto3" json:"desc_button,omitempty"`
 	// 三点v4
 	ThreePointV4 *ThreePointV4 `protobuf:"bytes,18,opt,name=three_point_v4,json=threePointV4,proto3" json:"three_point_v4,omitempty"`
-	UpArgs *UpArgs `protobuf:"bytes,19,opt,name=up_args,json=upArgs,proto3" json:"up_args,omitempty"`
+	UpArgs       *UpArgs       `protobuf:"bytes,19,opt,name=up_args,json=upArgs,proto3" json:"up_args,omitempty"`
 }
 
 func (x *Base) Reset() {
@@ -456,10 +456,10 @@ type Button struct {
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
 	// 参数
 	Param string `protobuf:"bytes,2,opt,name=param,proto3" json:"param,omitempty"`
-	Uri string `protobuf:"bytes,3,opt,name=uri,proto3" json:"uri,omitempty"`
+	Uri   string `protobuf:"bytes,3,opt,name=uri,proto3" json:"uri,omitempty"`
 	// 事件
-	Event string `protobuf:"bytes,4,opt,name=event,proto3" json:"event,omitempty"`
-	Selected int32 `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
+	Event    string `protobuf:"bytes,4,opt,name=event,proto3" json:"event,omitempty"`
+	Selected int32  `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
 	// 类型
 	Type int32 `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
 	// 事件v2
@@ -561,7 +561,7 @@ type DislikeReason struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id   int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 }
 
@@ -616,12 +616,12 @@ type LikeButton struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Aid int64 `protobuf:"varint,1,opt,name=Aid,proto3" json:"Aid,omitempty"`
-	Count int32 `protobuf:"varint,2,opt,name=count,proto3" json:"count,omitempty"`
-	ShowCount bool `protobuf:"varint,3,opt,name=show_count,json=showCount,proto3" json:"show_count,omitempty"`
-	Event string `protobuf:"bytes,4,opt,name=event,proto3" json:"event,omitempty"`
-	Selected int32 `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
-	EventV2 string `protobuf:"bytes,6,opt,name=event_v2,json=eventV2,proto3" json:"event_v2,omitempty"`
+	Aid       int64  `protobuf:"varint,1,opt,name=Aid,proto3" json:"Aid,omitempty"`
+	Count     int32  `protobuf:"varint,2,opt,name=count,proto3" json:"count,omitempty"`
+	ShowCount bool   `protobuf:"varint,3,opt,name=show_count,json=showCount,proto3" json:"show_count,omitempty"`
+	Event     string `protobuf:"bytes,4,opt,name=event,proto3" json:"event,omitempty"`
+	Selected  int32  `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
+	EventV2   string `protobuf:"bytes,6,opt,name=event_v2,json=eventV2,proto3" json:"event_v2,omitempty"`
 }
 
 func (x *LikeButton) Reset() {
@@ -758,16 +758,16 @@ type PlayerArgs struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsLive int32 `protobuf:"varint,1,opt,name=is_live,json=isLive,proto3" json:"is_live,omitempty"`
-	Aid int64 `protobuf:"varint,2,opt,name=aid,proto3" json:"aid,omitempty"`
-	Cid int64 `protobuf:"varint,3,opt,name=cid,proto3" json:"cid,omitempty"`
-	SubType int32 `protobuf:"varint,4,opt,name=sub_type,json=subType,proto3" json:"sub_type,omitempty"`
-	RoomId int64 `protobuf:"varint,5,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"`
-	EpId int64 `protobuf:"varint,7,opt,name=ep_id,json=epId,proto3" json:"ep_id,omitempty"`
-	IsPreview int32 `protobuf:"varint,8,opt,name=is_preview,json=isPreview,proto3" json:"is_preview,omitempty"`
-	Type string `protobuf:"bytes,9,opt,name=type,proto3" json:"type,omitempty"`
-	Duration int64 `protobuf:"varint,10,opt,name=duration,proto3" json:"duration,omitempty"`
-	SeasonId int64 `protobuf:"varint,11,opt,name=season_id,json=seasonId,proto3" json:"season_id,omitempty"`
+	IsLive    int32  `protobuf:"varint,1,opt,name=is_live,json=isLive,proto3" json:"is_live,omitempty"`
+	Aid       int64  `protobuf:"varint,2,opt,name=aid,proto3" json:"aid,omitempty"`
+	Cid       int64  `protobuf:"varint,3,opt,name=cid,proto3" json:"cid,omitempty"`
+	SubType   int32  `protobuf:"varint,4,opt,name=sub_type,json=subType,proto3" json:"sub_type,omitempty"`
+	RoomId    int64  `protobuf:"varint,5,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"`
+	EpId      int64  `protobuf:"varint,7,opt,name=ep_id,json=epId,proto3" json:"ep_id,omitempty"`
+	IsPreview int32  `protobuf:"varint,8,opt,name=is_preview,json=isPreview,proto3" json:"is_preview,omitempty"`
+	Type      string `protobuf:"bytes,9,opt,name=type,proto3" json:"type,omitempty"`
+	Duration  int64  `protobuf:"varint,10,opt,name=duration,proto3" json:"duration,omitempty"`
+	SeasonId  int64  `protobuf:"varint,11,opt,name=season_id,json=seasonId,proto3" json:"season_id,omitempty"`
 }
 
 func (x *PlayerArgs) Reset() {
@@ -898,13 +898,13 @@ type ReasonStyle struct {
 	IconNightUrl string `protobuf:"bytes,9,opt,name=icon_night_url,json=iconNightUrl,proto3" json:"icon_night_url,omitempty"`
 	// 背景风格id
 	// 1:无背景 2:有背景
-	BgStyle int32 `protobuf:"varint,10,opt,name=bg_style,json=bgStyle,proto3" json:"bg_style,omitempty"`
-	Uri string `protobuf:"bytes,11,opt,name=uri,proto3" json:"uri,omitempty"`
-	IconBgUrl string `protobuf:"bytes,12,opt,name=icon_bg_url,json=iconBgUrl,proto3" json:"icon_bg_url,omitempty"`
-	Event string `protobuf:"bytes,13,opt,name=event,proto3" json:"event,omitempty"`
-	EventV2 string `protobuf:"bytes,14,opt,name=event_v2,json=eventV2,proto3" json:"event_v2,omitempty"`
-	RightIconType int32 `protobuf:"varint,15,opt,name=right_icon_type,json=rightIconType,proto3" json:"right_icon_type,omitempty"`
-	LeftIconType string `protobuf:"bytes,16,opt,name=left_icon_type,json=leftIconType,proto3" json:"left_icon_type,omitempty"`
+	BgStyle       int32  `protobuf:"varint,10,opt,name=bg_style,json=bgStyle,proto3" json:"bg_style,omitempty"`
+	Uri           string `protobuf:"bytes,11,opt,name=uri,proto3" json:"uri,omitempty"`
+	IconBgUrl     string `protobuf:"bytes,12,opt,name=icon_bg_url,json=iconBgUrl,proto3" json:"icon_bg_url,omitempty"`
+	Event         string `protobuf:"bytes,13,opt,name=event,proto3" json:"event,omitempty"`
+	EventV2       string `protobuf:"bytes,14,opt,name=event_v2,json=eventV2,proto3" json:"event_v2,omitempty"`
+	RightIconType int32  `protobuf:"varint,15,opt,name=right_icon_type,json=rightIconType,proto3" json:"right_icon_type,omitempty"`
+	LeftIconType  string `protobuf:"bytes,16,opt,name=left_icon_type,json=leftIconType,proto3" json:"left_icon_type,omitempty"`
 }
 
 func (x *ReasonStyle) Reset() {
@@ -1146,7 +1146,7 @@ type SharePlane struct {
 	ShortLink string `protobuf:"bytes,10,opt,name=short_link,json=shortLink,proto3" json:"short_link,omitempty"`
 	// 播放次数文案
 	PlayNumber string `protobuf:"bytes,11,opt,name=play_number,json=playNumber,proto3" json:"play_number,omitempty"`
-	FirstCid int64 `protobuf:"varint,12,opt,name=first_cid,json=firstCid,proto3" json:"first_cid,omitempty"`
+	FirstCid   int64  `protobuf:"varint,12,opt,name=first_cid,json=firstCid,proto3" json:"first_cid,omitempty"`
 }
 
 func (x *SharePlane) Reset() {
@@ -1271,7 +1271,7 @@ type ThreePoint struct {
 	unknownFields protoimpl.UnknownFields
 
 	DislikeReasons []*DislikeReason `protobuf:"bytes,1,rep,name=dislike_reasons,json=dislikeReasons,proto3" json:"dislike_reasons,omitempty"`
-	Feedbacks []*DislikeReason `protobuf:"bytes,2,rep,name=feedbacks,proto3" json:"feedbacks,omitempty"`
+	Feedbacks      []*DislikeReason `protobuf:"bytes,2,rep,name=feedbacks,proto3" json:"feedbacks,omitempty"`
 	// 稍后再看
 	WatchLater int32 `protobuf:"varint,3,opt,name=watch_later,json=watchLater,proto3" json:"watch_later,omitempty"`
 }
@@ -1334,11 +1334,11 @@ type ThreePointV2 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Subtitle string `protobuf:"bytes,2,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
-	Reasons []*DislikeReason `protobuf:"bytes,3,rep,name=reasons,proto3" json:"reasons,omitempty"`
-	Type string `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`
-	Id int64 `protobuf:"varint,5,opt,name=id,proto3" json:"id,omitempty"`
+	Title    string           `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Subtitle string           `protobuf:"bytes,2,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
+	Reasons  []*DislikeReason `protobuf:"bytes,3,rep,name=reasons,proto3" json:"reasons,omitempty"`
+	Type     string           `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`
+	Id       int64            `protobuf:"varint,5,opt,name=id,proto3" json:"id,omitempty"`
 }
 
 func (x *ThreePointV2) Reset() {
@@ -1413,17 +1413,17 @@ type ThreePointV3 struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	SelectedTitle string `protobuf:"bytes,2,opt,name=selected_title,json=selectedTitle,proto3" json:"selected_title,omitempty"`
-	Subtitle string `protobuf:"bytes,3,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
-	Reasons []*DislikeReason `protobuf:"bytes,4,rep,name=reasons,proto3" json:"reasons,omitempty"`
-	Type string `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`
-	Id int64 `protobuf:"varint,6,opt,name=id,proto3" json:"id,omitempty"`
-	Selected int32 `protobuf:"varint,7,opt,name=selected,proto3" json:"selected,omitempty"`
-	Icon string `protobuf:"bytes,8,opt,name=icon,proto3" json:"icon,omitempty"`
-	SelectedIcon string `protobuf:"bytes,9,opt,name=selected_icon,json=selectedIcon,proto3" json:"selected_icon,omitempty"`
-	Url string `protobuf:"bytes,10,opt,name=url,proto3" json:"url,omitempty"`
-	DefaultId int32 `protobuf:"varint,11,opt,name=default_id,json=defaultId,proto3" json:"default_id,omitempty"`
+	Title         string           `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	SelectedTitle string           `protobuf:"bytes,2,opt,name=selected_title,json=selectedTitle,proto3" json:"selected_title,omitempty"`
+	Subtitle      string           `protobuf:"bytes,3,opt,name=subtitle,proto3" json:"subtitle,omitempty"`
+	Reasons       []*DislikeReason `protobuf:"bytes,4,rep,name=reasons,proto3" json:"reasons,omitempty"`
+	Type          string           `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`
+	Id            int64            `protobuf:"varint,6,opt,name=id,proto3" json:"id,omitempty"`
+	Selected      int32            `protobuf:"varint,7,opt,name=selected,proto3" json:"selected,omitempty"`
+	Icon          string           `protobuf:"bytes,8,opt,name=icon,proto3" json:"icon,omitempty"`
+	SelectedIcon  string           `protobuf:"bytes,9,opt,name=selected_icon,json=selectedIcon,proto3" json:"selected_icon,omitempty"`
+	Url           string           `protobuf:"bytes,10,opt,name=url,proto3" json:"url,omitempty"`
+	DefaultId     int32            `protobuf:"varint,11,opt,name=default_id,json=defaultId,proto3" json:"default_id,omitempty"`
 }
 
 func (x *ThreePointV3) Reset() {
@@ -1598,13 +1598,13 @@ type Up struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Desc string `protobuf:"bytes,3,opt,name=desc,proto3" json:"desc,omitempty"`
-	Avatar *Avatar `protobuf:"bytes,4,opt,name=avatar,proto3" json:"avatar,omitempty"`
-	OfficialIcon int32 `protobuf:"varint,5,opt,name=official_icon,json=officialIcon,proto3" json:"official_icon,omitempty"`
-	DescButton *Button `protobuf:"bytes,6,opt,name=desc_button,json=descButton,proto3" json:"desc_button,omitempty"`
-	Cooperation string `protobuf:"bytes,7,opt,name=cooperation,proto3" json:"cooperation,omitempty"`
+	Id           int64   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name         string  `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Desc         string  `protobuf:"bytes,3,opt,name=desc,proto3" json:"desc,omitempty"`
+	Avatar       *Avatar `protobuf:"bytes,4,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	OfficialIcon int32   `protobuf:"varint,5,opt,name=official_icon,json=officialIcon,proto3" json:"official_icon,omitempty"`
+	DescButton   *Button `protobuf:"bytes,6,opt,name=desc_button,json=descButton,proto3" json:"desc_button,omitempty"`
+	Cooperation  string  `protobuf:"bytes,7,opt,name=cooperation,proto3" json:"cooperation,omitempty"`
 }
 
 func (x *Up) Reset() {
@@ -1693,10 +1693,10 @@ type UpArgs struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UpId int64 `protobuf:"varint,1,opt,name=up_id,json=upId,proto3" json:"up_id,omitempty"`
-	UpName string `protobuf:"bytes,2,opt,name=up_name,json=upName,proto3" json:"up_name,omitempty"`
-	UpFace string `protobuf:"bytes,3,opt,name=up_face,json=upFace,proto3" json:"up_face,omitempty"`
-	Selected int64 `protobuf:"varint,4,opt,name=selected,proto3" json:"selected,omitempty"`
+	UpId     int64  `protobuf:"varint,1,opt,name=up_id,json=upId,proto3" json:"up_id,omitempty"`
+	UpName   string `protobuf:"bytes,2,opt,name=up_name,json=upName,proto3" json:"up_name,omitempty"`
+	UpFace   string `protobuf:"bytes,3,opt,name=up_face,json=upFace,proto3" json:"up_face,omitempty"`
+	Selected int64  `protobuf:"varint,4,opt,name=selected,proto3" json:"selected,omitempty"`
 }
 
 func (x *UpArgs) Reset() {

@@ -872,10 +872,10 @@ type CreateActivity struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ActivityId int64 `protobuf:"varint,1,opt,name=activity_id,json=activityId,proto3" json:"activity_id,omitempty"`
+	ActivityId    int64 `protobuf:"varint,1,opt,name=activity_id,json=activityId,proto3" json:"activity_id,omitempty"`
 	ActivityState int32 `protobuf:"varint,2,opt,name=activity_state,json=activityState,proto3" json:"activity_state,omitempty"`
 	IsNewActivity int32 `protobuf:"varint,3,opt,name=is_new_activity,json=isNewActivity,proto3" json:"is_new_activity,omitempty"`
-	Action int32 `protobuf:"varint,4,opt,name=action,proto3" json:"action,omitempty"`
+	Action        int32 `protobuf:"varint,4,opt,name=action,proto3" json:"action,omitempty"`
 }
 
 func (x *CreateActivity) Reset() {
@@ -1009,8 +1009,8 @@ type CreateCheckResp struct {
 	// 分享渠道信息
 	ShareInfo *ShareChannel `protobuf:"bytes,3,opt,name=share_info,json=shareInfo,proto3" json:"share_info,omitempty"`
 	// 小黄条
-	YellowBar *PublishYellowBar `protobuf:"bytes,4,opt,name=yellow_bar,json=yellowBar,proto3" json:"yellow_bar,omitempty"`
-	PlusRedDot *PlusRedDot `protobuf:"bytes,5,opt,name=plus_red_dot,json=plusRedDot,proto3" json:"plus_red_dot,omitempty"`
+	YellowBar  *PublishYellowBar `protobuf:"bytes,4,opt,name=yellow_bar,json=yellowBar,proto3" json:"yellow_bar,omitempty"`
+	PlusRedDot *PlusRedDot       `protobuf:"bytes,5,opt,name=plus_red_dot,json=plusRedDot,proto3" json:"plus_red_dot,omitempty"`
 }
 
 func (x *CreateCheckResp) Reset() {
@@ -1089,8 +1089,8 @@ type CreateCommonAttachCard struct {
 	// 通用附加卡的类型
 	Type AttachCardType `protobuf:"varint,1,opt,name=type,proto3,enum=bilibili.dynamic.AttachCardType" json:"type,omitempty"`
 	// 通用附加卡的业务id
-	BizId int64 `protobuf:"varint,2,opt,name=biz_id,json=bizId,proto3" json:"biz_id,omitempty"`
-	ReserveSource int32 `protobuf:"varint,3,opt,name=reserve_source,json=reserveSource,proto3" json:"reserve_source,omitempty"`
+	BizId          int64 `protobuf:"varint,2,opt,name=biz_id,json=bizId,proto3" json:"biz_id,omitempty"`
+	ReserveSource  int32 `protobuf:"varint,3,opt,name=reserve_source,json=reserveSource,proto3" json:"reserve_source,omitempty"`
 	ReserveLottery int32 `protobuf:"varint,4,opt,name=reserve_lottery,json=reserveLottery,proto3" json:"reserve_lottery,omitempty"`
 }
 
@@ -1328,8 +1328,8 @@ type CreateDynVideo struct {
 	// 动态来源
 	DynamicFrom string `protobuf:"bytes,22,opt,name=dynamic_from,json=dynamicFrom,proto3" json:"dynamic_from,omitempty"`
 	// 抽奖服务生成的ID
-	LotteryId int64 `protobuf:"varint,23,opt,name=lottery_id,json=lotteryId,proto3" json:"lottery_id,omitempty"`
-	Vote *DynVideoVote `protobuf:"bytes,24,opt,name=vote,proto3" json:"vote,omitempty"`
+	LotteryId int64         `protobuf:"varint,23,opt,name=lottery_id,json=lotteryId,proto3" json:"lottery_id,omitempty"`
+	Vote      *DynVideoVote `protobuf:"bytes,24,opt,name=vote,proto3" json:"vote,omitempty"`
 	// 精选评论开关, true为开
 	UpSelectionReply bool `protobuf:"varint,25,opt,name=up_selection_reply,json=upSelectionReply,proto3" json:"up_selection_reply,omitempty"`
 	// up主关闭评论
@@ -1337,7 +1337,7 @@ type CreateDynVideo struct {
 	// up主关闭弹幕
 	UpCloseDanmu bool `protobuf:"varint,27,opt,name=up_close_danmu,json=upCloseDanmu,proto3" json:"up_close_danmu,omitempty"`
 	// 稿件投稿来源
-	UpFrom int64 `protobuf:"varint,28,opt,name=up_from,json=upFrom,proto3" json:"up_from,omitempty"`
+	UpFrom   int64 `protobuf:"varint,28,opt,name=up_from,json=upFrom,proto3" json:"up_from,omitempty"`
 	Duration int64 `protobuf:"varint,29,opt,name=duration,proto3" json:"duration,omitempty"`
 }
 
@@ -1581,7 +1581,7 @@ type CreateDynVideoResult struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 	// 推荐的活动信息
 	SubmitactBanner *DynVideoSubmitActBanner `protobuf:"bytes,3,opt,name=submitact_banner,json=submitactBanner,proto3" json:"submitact_banner,omitempty"`
-	PushIntro *DynVideoPushIntro `protobuf:"bytes,4,opt,name=push_intro,json=pushIntro,proto3" json:"push_intro,omitempty"`
+	PushIntro       *DynVideoPushIntro       `protobuf:"bytes,4,opt,name=push_intro,json=pushIntro,proto3" json:"push_intro,omitempty"`
 }
 
 func (x *CreateDynVideoResult) Reset() {
@@ -1713,9 +1713,9 @@ type CreateOption struct {
 	AuditLevel int32 `protobuf:"varint,4,opt,name=audit_level,json=auditLevel,proto3" json:"audit_level,omitempty"`
 	// 根据转发内容同步生成一条源动态/资源的评论
 	// 仅转发和分享时有效
-	SyncToComment int32 `protobuf:"varint,5,opt,name=sync_to_comment,json=syncToComment,proto3" json:"sync_to_comment,omitempty"`
+	SyncToComment  int32           `protobuf:"varint,5,opt,name=sync_to_comment,json=syncToComment,proto3" json:"sync_to_comment,omitempty"`
 	VideoShareInfo *VideoShareInfo `protobuf:"bytes,6,opt,name=video_share_info,json=videoShareInfo,proto3" json:"video_share_info,omitempty"`
-	Activity *CreateActivity `protobuf:"bytes,7,opt,name=activity,proto3" json:"activity,omitempty"`
+	Activity       *CreateActivity `protobuf:"bytes,7,opt,name=activity,proto3" json:"activity,omitempty"`
 }
 
 func (x *CreateOption) Reset() {
@@ -1812,7 +1812,7 @@ type CreatePic struct {
 	// 图片高度
 	ImgHeight float64 `protobuf:"fixed64,3,opt,name=img_height,json=imgHeight,proto3" json:"img_height,omitempty"`
 	// 图片大小，单位KB
-	ImgSize float64 `protobuf:"fixed64,4,opt,name=img_size,json=imgSize,proto3" json:"img_size,omitempty"`
+	ImgSize float64         `protobuf:"fixed64,4,opt,name=img_size,json=imgSize,proto3" json:"img_size,omitempty"`
 	ImgTags []*CreatePicTag `protobuf:"bytes,5,rep,name=img_tags,json=imgTags,proto3" json:"img_tags,omitempty"`
 }
 
@@ -1888,20 +1888,20 @@ type CreatePicTag struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ItemId int64 `protobuf:"varint,1,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
-	Tid int64 `protobuf:"varint,2,opt,name=tid,proto3" json:"tid,omitempty"`
-	Mid int64 `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
-	Text string `protobuf:"bytes,4,opt,name=text,proto3" json:"text,omitempty"`
-	TextString string `protobuf:"bytes,5,opt,name=text_string,json=textString,proto3" json:"text_string,omitempty"`
-	Type int64 `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
-	SourceType int64 `protobuf:"varint,7,opt,name=source_type,json=sourceType,proto3" json:"source_type,omitempty"`
-	Url string `protobuf:"bytes,8,opt,name=url,proto3" json:"url,omitempty"`
-	SchemaUrl string `protobuf:"bytes,9,opt,name=schema_url,json=schemaUrl,proto3" json:"schema_url,omitempty"`
-	JumpUrl string `protobuf:"bytes,10,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
-	Orientation int64 `protobuf:"varint,11,opt,name=orientation,proto3" json:"orientation,omitempty"`
-	X int64 `protobuf:"varint,12,opt,name=x,proto3" json:"x,omitempty"`
-	Y int64 `protobuf:"varint,13,opt,name=y,proto3" json:"y,omitempty"`
-	Poi string `protobuf:"bytes,14,opt,name=poi,proto3" json:"poi,omitempty"`
+	ItemId      int64  `protobuf:"varint,1,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
+	Tid         int64  `protobuf:"varint,2,opt,name=tid,proto3" json:"tid,omitempty"`
+	Mid         int64  `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
+	Text        string `protobuf:"bytes,4,opt,name=text,proto3" json:"text,omitempty"`
+	TextString  string `protobuf:"bytes,5,opt,name=text_string,json=textString,proto3" json:"text_string,omitempty"`
+	Type        int64  `protobuf:"varint,6,opt,name=type,proto3" json:"type,omitempty"`
+	SourceType  int64  `protobuf:"varint,7,opt,name=source_type,json=sourceType,proto3" json:"source_type,omitempty"`
+	Url         string `protobuf:"bytes,8,opt,name=url,proto3" json:"url,omitempty"`
+	SchemaUrl   string `protobuf:"bytes,9,opt,name=schema_url,json=schemaUrl,proto3" json:"schema_url,omitempty"`
+	JumpUrl     string `protobuf:"bytes,10,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
+	Orientation int64  `protobuf:"varint,11,opt,name=orientation,proto3" json:"orientation,omitempty"`
+	X           int64  `protobuf:"varint,12,opt,name=x,proto3" json:"x,omitempty"`
+	Y           int64  `protobuf:"varint,13,opt,name=y,proto3" json:"y,omitempty"`
+	Poi         string `protobuf:"bytes,14,opt,name=poi,proto3" json:"poi,omitempty"`
 }
 
 func (x *CreatePicTag) Reset() {
@@ -2200,7 +2200,7 @@ type CreateTopic struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id   int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 }
 
@@ -2371,7 +2371,7 @@ type DynVideoEditor struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Cid int64 `protobuf:"varint,1,opt,name=cid,proto3" json:"cid,omitempty"`
+	Cid    int64 `protobuf:"varint,1,opt,name=cid,proto3" json:"cid,omitempty"`
 	Upfrom int32 `protobuf:"varint,2,opt,name=upfrom,proto3" json:"upfrom,omitempty"`
 	// 滤镜
 	Filters string `protobuf:"bytes,3,opt,name=filters,proto3" json:"filters,omitempty"`
@@ -2418,23 +2418,23 @@ type DynVideoEditor struct {
 	// 录音题词
 	RecordText bool `protobuf:"varint,24,opt,name=record_text,json=recordText,proto3" json:"record_text,omitempty"`
 	// 虚拟形象上报
-	Vupers string `protobuf:"bytes,25,opt,name=vupers,proto3" json:"vupers,omitempty"`
-	Features string `protobuf:"bytes,26,opt,name=features,proto3" json:"features,omitempty"`
+	Vupers       string `protobuf:"bytes,25,opt,name=vupers,proto3" json:"vupers,omitempty"`
+	Features     string `protobuf:"bytes,26,opt,name=features,proto3" json:"features,omitempty"`
 	BcutFeatures string `protobuf:"bytes,27,opt,name=bcut_features,json=bcutFeatures,proto3" json:"bcut_features,omitempty"`
-	AudioRecord int32 `protobuf:"varint,28,opt,name=audio_record,json=audioRecord,proto3" json:"audio_record,omitempty"`
-	Camera int32 `protobuf:"varint,29,opt,name=camera,proto3" json:"camera,omitempty"`
-	Speed int32 `protobuf:"varint,30,opt,name=speed,proto3" json:"speed,omitempty"`
-	CameraRotate int32 `protobuf:"varint,31,opt,name=camera_rotate,json=cameraRotate,proto3" json:"camera_rotate,omitempty"`
-	ScreenRecord int32 `protobuf:"varint,32,opt,name=screen_record,json=screenRecord,proto3" json:"screen_record,omitempty"`
-	DefaultEnd int32 `protobuf:"varint,33,opt,name=default_end,json=defaultEnd,proto3" json:"default_end,omitempty"`
-	Duration int32 `protobuf:"varint,34,opt,name=duration,proto3" json:"duration,omitempty"`
-	PicCount int32 `protobuf:"varint,35,opt,name=pic_count,json=picCount,proto3" json:"pic_count,omitempty"`
-	VideoCount int32 `protobuf:"varint,36,opt,name=video_count,json=videoCount,proto3" json:"video_count,omitempty"`
-	ShotDuration int32 `protobuf:"varint,37,opt,name=shot_duration,json=shotDuration,proto3" json:"shot_duration,omitempty"`
-	ShotGame string `protobuf:"bytes,38,opt,name=shot_game,json=shotGame,proto3" json:"shot_game,omitempty"`
-	Highlight bool `protobuf:"varint,39,opt,name=highlight,proto3" json:"highlight,omitempty"`
-	HighlightCnt int32 `protobuf:"varint,40,opt,name=highlight_cnt,json=highlightCnt,proto3" json:"highlight_cnt,omitempty"`
-	PipCount int32 `protobuf:"varint,41,opt,name=pip_count,json=pipCount,proto3" json:"pip_count,omitempty"`
+	AudioRecord  int32  `protobuf:"varint,28,opt,name=audio_record,json=audioRecord,proto3" json:"audio_record,omitempty"`
+	Camera       int32  `protobuf:"varint,29,opt,name=camera,proto3" json:"camera,omitempty"`
+	Speed        int32  `protobuf:"varint,30,opt,name=speed,proto3" json:"speed,omitempty"`
+	CameraRotate int32  `protobuf:"varint,31,opt,name=camera_rotate,json=cameraRotate,proto3" json:"camera_rotate,omitempty"`
+	ScreenRecord int32  `protobuf:"varint,32,opt,name=screen_record,json=screenRecord,proto3" json:"screen_record,omitempty"`
+	DefaultEnd   int32  `protobuf:"varint,33,opt,name=default_end,json=defaultEnd,proto3" json:"default_end,omitempty"`
+	Duration     int32  `protobuf:"varint,34,opt,name=duration,proto3" json:"duration,omitempty"`
+	PicCount     int32  `protobuf:"varint,35,opt,name=pic_count,json=picCount,proto3" json:"pic_count,omitempty"`
+	VideoCount   int32  `protobuf:"varint,36,opt,name=video_count,json=videoCount,proto3" json:"video_count,omitempty"`
+	ShotDuration int32  `protobuf:"varint,37,opt,name=shot_duration,json=shotDuration,proto3" json:"shot_duration,omitempty"`
+	ShotGame     string `protobuf:"bytes,38,opt,name=shot_game,json=shotGame,proto3" json:"shot_game,omitempty"`
+	Highlight    bool   `protobuf:"varint,39,opt,name=highlight,proto3" json:"highlight,omitempty"`
+	HighlightCnt int32  `protobuf:"varint,40,opt,name=highlight_cnt,json=highlightCnt,proto3" json:"highlight_cnt,omitempty"`
+	PipCount     int32  `protobuf:"varint,41,opt,name=pip_count,json=pipCount,proto3" json:"pip_count,omitempty"`
 }
 
 func (x *DynVideoEditor) Reset() {
@@ -2761,13 +2761,13 @@ type DynVideoHotAct struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ActId int64 `protobuf:"varint,1,opt,name=act_id,json=actId,proto3" json:"act_id,omitempty"`
-	Etime int64 `protobuf:"varint,2,opt,name=etime,proto3" json:"etime,omitempty"`
-	Id int64 `protobuf:"varint,3,opt,name=id,proto3" json:"id,omitempty"`
-	Pic string `protobuf:"bytes,4,opt,name=pic,proto3" json:"pic,omitempty"`
-	Stime int64 `protobuf:"varint,5,opt,name=stime,proto3" json:"stime,omitempty"`
+	ActId int64  `protobuf:"varint,1,opt,name=act_id,json=actId,proto3" json:"act_id,omitempty"`
+	Etime int64  `protobuf:"varint,2,opt,name=etime,proto3" json:"etime,omitempty"`
+	Id    int64  `protobuf:"varint,3,opt,name=id,proto3" json:"id,omitempty"`
+	Pic   string `protobuf:"bytes,4,opt,name=pic,proto3" json:"pic,omitempty"`
+	Stime int64  `protobuf:"varint,5,opt,name=stime,proto3" json:"stime,omitempty"`
 	Title string `protobuf:"bytes,6,opt,name=title,proto3" json:"title,omitempty"`
-	Link string `protobuf:"bytes,7,opt,name=link,proto3" json:"link,omitempty"`
+	Link  string `protobuf:"bytes,7,opt,name=link,proto3" json:"link,omitempty"`
 }
 
 func (x *DynVideoHotAct) Reset() {
@@ -2861,7 +2861,7 @@ type DynVideoMultiP struct {
 	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
 	// 分P的文件名
 	Filename string `protobuf:"bytes,2,opt,name=filename,proto3" json:"filename,omitempty"`
-	Cid int64 `protobuf:"varint,3,opt,name=cid,proto3" json:"cid,omitempty"`
+	Cid      int64  `protobuf:"varint,3,opt,name=cid,proto3" json:"cid,omitempty"`
 	// 编辑环境上报信息
 	Editor *DynVideoEditor `protobuf:"bytes,4,opt,name=editor,proto3" json:"editor,omitempty"`
 }
@@ -2931,7 +2931,7 @@ type DynVideoPushIntro struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Show int32 `protobuf:"varint,1,opt,name=show,proto3" json:"show,omitempty"`
+	Show int32  `protobuf:"varint,1,opt,name=show,proto3" json:"show,omitempty"`
 	Text string `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
 }
 
@@ -2986,9 +2986,9 @@ type DynVideoSubmitActBanner struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	HotactText string `protobuf:"bytes,1,opt,name=hotact_text,json=hotactText,proto3" json:"hotact_text,omitempty"`
-	HotactUrl string `protobuf:"bytes,2,opt,name=hotact_url,json=hotactUrl,proto3" json:"hotact_url,omitempty"`
-	List []*DynVideoHotAct `protobuf:"bytes,3,rep,name=list,proto3" json:"list,omitempty"`
+	HotactText string            `protobuf:"bytes,1,opt,name=hotact_text,json=hotactText,proto3" json:"hotact_text,omitempty"`
+	HotactUrl  string            `protobuf:"bytes,2,opt,name=hotact_url,json=hotactUrl,proto3" json:"hotact_url,omitempty"`
+	List       []*DynVideoHotAct `protobuf:"bytes,3,rep,name=list,proto3" json:"list,omitempty"`
 }
 
 func (x *DynVideoSubmitActBanner) Reset() {
@@ -3049,9 +3049,9 @@ type DynVideoVote struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	VoteId int64 `protobuf:"varint,1,opt,name=vote_id,json=voteId,proto3" json:"vote_id,omitempty"`
-	VoteTitle string `protobuf:"bytes,2,opt,name=vote_title,json=voteTitle,proto3" json:"vote_title,omitempty"`
-	TopForReply int32 `protobuf:"varint,3,opt,name=top_for_reply,json=topForReply,proto3" json:"top_for_reply,omitempty"`
+	VoteId      int64  `protobuf:"varint,1,opt,name=vote_id,json=voteId,proto3" json:"vote_id,omitempty"`
+	VoteTitle   string `protobuf:"bytes,2,opt,name=vote_title,json=voteTitle,proto3" json:"vote_title,omitempty"`
+	TopForReply int32  `protobuf:"varint,3,opt,name=top_for_reply,json=topForReply,proto3" json:"top_for_reply,omitempty"`
 }
 
 func (x *DynVideoVote) Reset() {
@@ -3182,14 +3182,14 @@ type ExtLbs struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Address string `protobuf:"bytes,1,opt,name=address,proto3" json:"address,omitempty"`
-	Distance int64 `protobuf:"varint,2,opt,name=distance,proto3" json:"distance,omitempty"`
-	Type int64 `protobuf:"varint,3,opt,name=type,proto3" json:"type,omitempty"`
-	Poi string `protobuf:"bytes,4,opt,name=poi,proto3" json:"poi,omitempty"`
-	Location *LbsLoc `protobuf:"bytes,5,opt,name=location,proto3" json:"location,omitempty"`
-	ShowTitle string `protobuf:"bytes,6,opt,name=show_title,json=showTitle,proto3" json:"show_title,omitempty"`
-	Title string `protobuf:"bytes,7,opt,name=title,proto3" json:"title,omitempty"`
-	ShowDistance string `protobuf:"bytes,8,opt,name=show_distance,json=showDistance,proto3" json:"show_distance,omitempty"`
+	Address      string  `protobuf:"bytes,1,opt,name=address,proto3" json:"address,omitempty"`
+	Distance     int64   `protobuf:"varint,2,opt,name=distance,proto3" json:"distance,omitempty"`
+	Type         int64   `protobuf:"varint,3,opt,name=type,proto3" json:"type,omitempty"`
+	Poi          string  `protobuf:"bytes,4,opt,name=poi,proto3" json:"poi,omitempty"`
+	Location     *LbsLoc `protobuf:"bytes,5,opt,name=location,proto3" json:"location,omitempty"`
+	ShowTitle    string  `protobuf:"bytes,6,opt,name=show_title,json=showTitle,proto3" json:"show_title,omitempty"`
+	Title        string  `protobuf:"bytes,7,opt,name=title,proto3" json:"title,omitempty"`
+	ShowDistance string  `protobuf:"bytes,8,opt,name=show_distance,json=showDistance,proto3" json:"show_distance,omitempty"`
 }
 
 func (x *ExtLbs) Reset() {
@@ -4086,8 +4086,8 @@ type RepostInitCheck struct {
 	unknownFields protoimpl.UnknownFields
 
 	RepostSrc *DynIdentity `protobuf:"bytes,1,opt,name=repost_src,json=repostSrc,proto3" json:"repost_src,omitempty"`
-	ShareId string `protobuf:"bytes,2,opt,name=share_id,json=shareId,proto3" json:"share_id,omitempty"`
-	ShareMode int32 `protobuf:"varint,3,opt,name=share_mode,json=shareMode,proto3" json:"share_mode,omitempty"`
+	ShareId   string       `protobuf:"bytes,2,opt,name=share_id,json=shareId,proto3" json:"share_id,omitempty"`
+	ShareMode int32        `protobuf:"varint,3,opt,name=share_mode,json=shareMode,proto3" json:"share_mode,omitempty"`
 }
 
 func (x *RepostInitCheck) Reset() {
@@ -4309,10 +4309,10 @@ type ShareReserve struct {
 	// 二维码附带文本
 	QrCodeText string `protobuf:"bytes,4,opt,name=qr_code_text,json=qrCodeText,proto3" json:"qr_code_text,omitempty"`
 	// 二维码链接
-	QrCodeUrl string `protobuf:"bytes,5,opt,name=qr_code_url,json=qrCodeUrl,proto3" json:"qr_code_url,omitempty"`
-	Name string `protobuf:"bytes,6,opt,name=name,proto3" json:"name,omitempty"`
-	Face string `protobuf:"bytes,7,opt,name=face,proto3" json:"face,omitempty"`
-	Poster *ShareReservePoster `protobuf:"bytes,8,opt,name=poster,proto3" json:"poster,omitempty"`
+	QrCodeUrl      string               `protobuf:"bytes,5,opt,name=qr_code_url,json=qrCodeUrl,proto3" json:"qr_code_url,omitempty"`
+	Name           string               `protobuf:"bytes,6,opt,name=name,proto3" json:"name,omitempty"`
+	Face           string               `protobuf:"bytes,7,opt,name=face,proto3" json:"face,omitempty"`
+	Poster         *ShareReservePoster  `protobuf:"bytes,8,opt,name=poster,proto3" json:"poster,omitempty"`
 	ReserveLottery *ShareReserveLottery `protobuf:"bytes,9,opt,name=reserve_lottery,json=reserveLottery,proto3" json:"reserve_lottery,omitempty"`
 }
 
@@ -4471,8 +4471,8 @@ type ShareReservePoster struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Url string `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`
-	Width float64 `protobuf:"fixed64,2,opt,name=width,proto3" json:"width,omitempty"`
+	Url    string  `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`
+	Width  float64 `protobuf:"fixed64,2,opt,name=width,proto3" json:"width,omitempty"`
 	Height float64 `protobuf:"fixed64,3,opt,name=height,proto3" json:"height,omitempty"`
 }
 
@@ -4534,8 +4534,8 @@ type ShareResult struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ShareEnable int64 `protobuf:"varint,1,opt,name=share_enable,json=shareEnable,proto3" json:"share_enable,omitempty"`
-	Toast string `protobuf:"bytes,2,opt,name=toast,proto3" json:"toast,omitempty"`
+	ShareEnable int64  `protobuf:"varint,1,opt,name=share_enable,json=shareEnable,proto3" json:"share_enable,omitempty"`
+	Toast       string `protobuf:"bytes,2,opt,name=toast,proto3" json:"toast,omitempty"`
 }
 
 func (x *ShareResult) Reset() {
@@ -4755,7 +4755,7 @@ type UpPermission struct {
 	Items []*UpPermissionItem `protobuf:"bytes,1,rep,name=items,proto3" json:"items,omitempty"`
 	// 已经创建的活动列表
 	LaunchedActivity *LaunchedActivity `protobuf:"bytes,2,opt,name=launched_activity,json=launchedActivity,proto3" json:"launched_activity,omitempty"`
-	ShareResult *ShareResult `protobuf:"bytes,3,opt,name=share_result,json=shareResult,proto3" json:"share_result,omitempty"`
+	ShareResult      *ShareResult      `protobuf:"bytes,3,opt,name=share_result,json=shareResult,proto3" json:"share_result,omitempty"`
 }
 
 func (x *UpPermission) Reset() {
@@ -4831,8 +4831,8 @@ type UpPermissionItem struct {
 	// 跳转链接，permission=1时点击按钮跳到此链接
 	JumpUrl string `protobuf:"bytes,6,opt,name=jump_url,json=jumpUrl,proto3" json:"jump_url,omitempty"`
 	// 错误提示，permission=2时点击按钮会弹出此提示，目前仅预约使用
-	Toast string `protobuf:"bytes,7,opt,name=toast,proto3" json:"toast,omitempty"`
-	HasRedDot int64 `protobuf:"varint,8,opt,name=has_red_dot,json=hasRedDot,proto3" json:"has_red_dot,omitempty"`
+	Toast     string `protobuf:"bytes,7,opt,name=toast,proto3" json:"toast,omitempty"`
+	HasRedDot int64  `protobuf:"varint,8,opt,name=has_red_dot,json=hasRedDot,proto3" json:"has_red_dot,omitempty"`
 }
 
 func (x *UpPermissionItem) Reset() {
@@ -4995,7 +4995,7 @@ type VideoShareInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Cid int64 `protobuf:"varint,1,opt,name=cid,proto3" json:"cid,omitempty"`
+	Cid  int64 `protobuf:"varint,1,opt,name=cid,proto3" json:"cid,omitempty"`
 	Part int32 `protobuf:"varint,2,opt,name=part,proto3" json:"part,omitempty"`
 }
 

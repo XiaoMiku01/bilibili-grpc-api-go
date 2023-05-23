@@ -26,9 +26,9 @@ type FeedPagination struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PageSize int32 `protobuf:"varint,1,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
-	Offset string `protobuf:"bytes,2,opt,name=offset,proto3" json:"offset,omitempty"`
-	IsRefresh bool `protobuf:"varint,3,opt,name=is_refresh,json=isRefresh,proto3" json:"is_refresh,omitempty"`
+	PageSize  int32  `protobuf:"varint,1,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
+	Offset    string `protobuf:"bytes,2,opt,name=offset,proto3" json:"offset,omitempty"`
+	IsRefresh bool   `protobuf:"varint,3,opt,name=is_refresh,json=isRefresh,proto3" json:"is_refresh,omitempty"`
 }
 
 func (x *FeedPagination) Reset() {
@@ -90,8 +90,8 @@ type FeedPaginationReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	NextOffset string `protobuf:"bytes,1,opt,name=next_offset,json=nextOffset,proto3" json:"next_offset,omitempty"`
-	PrevOffset string `protobuf:"bytes,2,opt,name=prev_offset,json=prevOffset,proto3" json:"prev_offset,omitempty"`
+	NextOffset     string `protobuf:"bytes,1,opt,name=next_offset,json=nextOffset,proto3" json:"next_offset,omitempty"`
+	PrevOffset     string `protobuf:"bytes,2,opt,name=prev_offset,json=prevOffset,proto3" json:"prev_offset,omitempty"`
 	LastReadOffset string `protobuf:"bytes,3,opt,name=last_read_offset,json=lastReadOffset,proto3" json:"last_read_offset,omitempty"`
 }
 
@@ -154,8 +154,8 @@ type Pagination struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PageSize int32 `protobuf:"varint,1,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
-	Next string `protobuf:"bytes,2,opt,name=next,proto3" json:"next,omitempty"`
+	PageSize int32  `protobuf:"varint,1,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
+	Next     string `protobuf:"bytes,2,opt,name=next,proto3" json:"next,omitempty"`
 }
 
 func (x *Pagination) Reset() {

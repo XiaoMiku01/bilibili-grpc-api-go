@@ -26,10 +26,10 @@ type ArchiveReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Item []*BiliSpaceVideo `protobuf:"bytes,1,rep,name=item,proto3" json:"item,omitempty"`
-	Count int32 `protobuf:"varint,2,opt,name=count,proto3" json:"count,omitempty"`
-	EpisodicButton *EpisodicButton `protobuf:"bytes,3,opt,name=episodic_button,json=episodicButton,proto3" json:"episodic_button,omitempty"`
-	Order []*OrderConfig `protobuf:"bytes,4,rep,name=order,proto3" json:"order,omitempty"`
+	Item           []*BiliSpaceVideo `protobuf:"bytes,1,rep,name=item,proto3" json:"item,omitempty"`
+	Count          int32             `protobuf:"varint,2,opt,name=count,proto3" json:"count,omitempty"`
+	EpisodicButton *EpisodicButton   `protobuf:"bytes,3,opt,name=episodic_button,json=episodicButton,proto3" json:"episodic_button,omitempty"`
+	Order          []*OrderConfig    `protobuf:"bytes,4,rep,name=order,proto3" json:"order,omitempty"`
 }
 
 func (x *ArchiveReply) Reset() {
@@ -98,9 +98,9 @@ type ArchiveReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Vmid int64 `protobuf:"varint,1,opt,name=vmid,proto3" json:"vmid,omitempty"`
-	Pn int32 `protobuf:"varint,2,opt,name=pn,proto3" json:"pn,omitempty"`
-	Ps int32 `protobuf:"varint,3,opt,name=ps,proto3" json:"ps,omitempty"`
+	Vmid  int64  `protobuf:"varint,1,opt,name=vmid,proto3" json:"vmid,omitempty"`
+	Pn    int32  `protobuf:"varint,2,opt,name=pn,proto3" json:"pn,omitempty"`
+	Ps    int32  `protobuf:"varint,3,opt,name=ps,proto3" json:"ps,omitempty"`
 	Order string `protobuf:"bytes,4,opt,name=order,proto3" json:"order,omitempty"`
 }
 
@@ -169,14 +169,14 @@ type Badge struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	TextColor string `protobuf:"bytes,2,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
-	TextColorNight string `protobuf:"bytes,3,opt,name=text_color_night,json=textColorNight,proto3" json:"text_color_night,omitempty"`
-	BgColor string `protobuf:"bytes,4,opt,name=bg_color,json=bgColor,proto3" json:"bg_color,omitempty"`
-	BgColorNight string `protobuf:"bytes,5,opt,name=bg_color_night,json=bgColorNight,proto3" json:"bg_color_night,omitempty"`
-	BorderColor string `protobuf:"bytes,6,opt,name=border_color,json=borderColor,proto3" json:"border_color,omitempty"`
+	Text             string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
+	TextColor        string `protobuf:"bytes,2,opt,name=text_color,json=textColor,proto3" json:"text_color,omitempty"`
+	TextColorNight   string `protobuf:"bytes,3,opt,name=text_color_night,json=textColorNight,proto3" json:"text_color_night,omitempty"`
+	BgColor          string `protobuf:"bytes,4,opt,name=bg_color,json=bgColor,proto3" json:"bg_color,omitempty"`
+	BgColorNight     string `protobuf:"bytes,5,opt,name=bg_color_night,json=bgColorNight,proto3" json:"bg_color_night,omitempty"`
+	BorderColor      string `protobuf:"bytes,6,opt,name=border_color,json=borderColor,proto3" json:"border_color,omitempty"`
 	BorderColorNight string `protobuf:"bytes,7,opt,name=border_color_night,json=borderColorNight,proto3" json:"border_color_night,omitempty"`
-	BgStyle int32 `protobuf:"varint,8,opt,name=bg_style,json=bgStyle,proto3" json:"bg_style,omitempty"`
+	BgStyle          int32  `protobuf:"varint,8,opt,name=bg_style,json=bgStyle,proto3" json:"bg_style,omitempty"`
 }
 
 func (x *Badge) Reset() {
@@ -272,23 +272,23 @@ type BiliSpaceVideo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Title string `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	Tname string `protobuf:"bytes,2,opt,name=tname,proto3" json:"tname,omitempty"`
-	Duration int64 `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
-	Cover string `protobuf:"bytes,4,opt,name=cover,proto3" json:"cover,omitempty"`
-	Uri string `protobuf:"bytes,5,opt,name=uri,proto3" json:"uri,omitempty"`
-	Param string `protobuf:"bytes,6,opt,name=param,proto3" json:"param,omitempty"`
-	Danmaku string `protobuf:"bytes,7,opt,name=danmaku,proto3" json:"danmaku,omitempty"`
-	Play int32 `protobuf:"varint,8,opt,name=play,proto3" json:"play,omitempty"`
-	Ctime int64 `protobuf:"varint,9,opt,name=ctime,proto3" json:"ctime,omitempty"`
-	State bool `protobuf:"varint,10,opt,name=state,proto3" json:"state,omitempty"`
-	IsPopular bool `protobuf:"varint,11,opt,name=is_popular,json=isPopular,proto3" json:"is_popular,omitempty"`
-	Badges []*Badge `protobuf:"bytes,12,rep,name=badges,proto3" json:"badges,omitempty"`
-	CoverRight string `protobuf:"bytes,13,opt,name=cover_right,json=coverRight,proto3" json:"cover_right,omitempty"`
-	Bvid string `protobuf:"bytes,14,opt,name=bvid,proto3" json:"bvid,omitempty"`
-	IsSteins bool `protobuf:"varint,15,opt,name=is_steins,json=isSteins,proto3" json:"is_steins,omitempty"`
-	IsUgcpay bool `protobuf:"varint,16,opt,name=is_ugcpay,json=isUgcpay,proto3" json:"is_ugcpay,omitempty"`
-	IsCooperation bool `protobuf:"varint,17,opt,name=is_cooperation,json=isCooperation,proto3" json:"is_cooperation,omitempty"`
+	Title         string   `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	Tname         string   `protobuf:"bytes,2,opt,name=tname,proto3" json:"tname,omitempty"`
+	Duration      int64    `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
+	Cover         string   `protobuf:"bytes,4,opt,name=cover,proto3" json:"cover,omitempty"`
+	Uri           string   `protobuf:"bytes,5,opt,name=uri,proto3" json:"uri,omitempty"`
+	Param         string   `protobuf:"bytes,6,opt,name=param,proto3" json:"param,omitempty"`
+	Danmaku       string   `protobuf:"bytes,7,opt,name=danmaku,proto3" json:"danmaku,omitempty"`
+	Play          int32    `protobuf:"varint,8,opt,name=play,proto3" json:"play,omitempty"`
+	Ctime         int64    `protobuf:"varint,9,opt,name=ctime,proto3" json:"ctime,omitempty"`
+	State         bool     `protobuf:"varint,10,opt,name=state,proto3" json:"state,omitempty"`
+	IsPopular     bool     `protobuf:"varint,11,opt,name=is_popular,json=isPopular,proto3" json:"is_popular,omitempty"`
+	Badges        []*Badge `protobuf:"bytes,12,rep,name=badges,proto3" json:"badges,omitempty"`
+	CoverRight    string   `protobuf:"bytes,13,opt,name=cover_right,json=coverRight,proto3" json:"cover_right,omitempty"`
+	Bvid          string   `protobuf:"bytes,14,opt,name=bvid,proto3" json:"bvid,omitempty"`
+	IsSteins      bool     `protobuf:"varint,15,opt,name=is_steins,json=isSteins,proto3" json:"is_steins,omitempty"`
+	IsUgcpay      bool     `protobuf:"varint,16,opt,name=is_ugcpay,json=isUgcpay,proto3" json:"is_ugcpay,omitempty"`
+	IsCooperation bool     `protobuf:"varint,17,opt,name=is_cooperation,json=isCooperation,proto3" json:"is_cooperation,omitempty"`
 }
 
 func (x *BiliSpaceVideo) Reset() {
@@ -448,7 +448,7 @@ type EpisodicButton struct {
 	unknownFields protoimpl.UnknownFields
 
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	Uri string `protobuf:"bytes,2,opt,name=uri,proto3" json:"uri,omitempty"`
+	Uri  string `protobuf:"bytes,2,opt,name=uri,proto3" json:"uri,omitempty"`
 }
 
 func (x *EpisodicButton) Reset() {

@@ -22,7 +22,9 @@ import (
 
 	dynamicapi "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/v2"
 	onlineapi "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playeronline/v1"
+	replyapi "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/main/community/reply/v1"
 	bilimetadata "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata"
+	atapi "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/relation/interfaces"
 )
 
 // init a grpc client
@@ -156,10 +158,47 @@ func GrpcApiGetDynamicWithAuthorize() {
 		return
 	}
 	log.Println(string(jsonString))
-	return
+}
+
+func GrpcApiGetReplyInfo() {
+	accessKey := ""
+	md := getBiliBiliMetaData(accessKey)
+	ctx := metadata.NewOutgoingContext(context.Background(), md)
+	replyClient := replyapi.NewReplyClient(grpcClient)
+	replyReq := &replyapi.ReplyInfoReq{
+		Rpid: 165764000816,
+	}
+	replyResp, err := replyClient.ReplyInfo(ctx, replyReq)
+	if err != nil {
+		grpcErr(err)
+		return
+	}
+	jsonString, err := json.Marshal(replyResp)
+	if err != nil {
+		log.Fatalf("BiliGRPC get reply info error: %v", err)
+		return
+	}
+	log.Println(string(jsonString))
+}
+func Test() {
+	//md := getBiliBiliMetaData("")
+	//ctx := metadata.NewOutgoingContext(context.Background(), md)
+	ctx := context.Background()
+	atClient := atapi.NewRelationInterfaceClient(grpcClient)
+	testReq, err := atClient.AtSearch(ctx, &atapi.AtSearchReq{
+		Mid:     2,
+		Keyword: "陈睿",
+	})
+	if err != nil {
+		grpcErr(err)
+		return
+	}
+	log.Println(testReq)
 }
 
 func main() {
-	GrpcApiOnline()
-	GrpcApiGetDynamicWithAuthorize()
+	//GrpcApiOnline()
+	// GrpcApiGetDynamicWithAuthorize()
+	Test()
+	//GrpcApiGetReplyInfo()
 }

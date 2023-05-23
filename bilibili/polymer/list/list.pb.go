@@ -72,7 +72,7 @@ type CheckAccountReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uid int64 `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Uid     int64  `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
 	Periods string `protobuf:"bytes,2,opt,name=periods,proto3" json:"periods,omitempty"`
 }
 
@@ -128,7 +128,7 @@ type FavoriteTabItem struct {
 	unknownFields protoimpl.UnknownFields
 
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Uri string `protobuf:"bytes,2,opt,name=uri,proto3" json:"uri,omitempty"`
+	Uri  string `protobuf:"bytes,2,opt,name=uri,proto3" json:"uri,omitempty"`
 	Type string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
 }
 

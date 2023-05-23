@@ -275,7 +275,7 @@ type FrameOption struct {
 	Status *rpc.Status `protobuf:"bytes,4,opt,name=status,proto3" json:"status,omitempty"`
 	// 业务ack来源, 仅downstream时候由服务端填写.
 	AckOrigin string `protobuf:"bytes,5,opt,name=ack_origin,json=ackOrigin,proto3" json:"ack_origin,omitempty"`
-	Timestamp int64 `protobuf:"varint,6,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
+	Timestamp int64  `protobuf:"varint,6,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 }
 
 func (x *FrameOption) Reset() {

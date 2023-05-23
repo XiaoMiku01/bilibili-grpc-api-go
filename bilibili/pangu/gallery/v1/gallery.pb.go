@@ -261,7 +261,7 @@ type AgreePolicyReq struct {
 	unknownFields protoimpl.UnknownFields
 
 	PolicyType PolicyType `protobuf:"varint,1,opt,name=policy_type,json=policyType,proto3,enum=bilibili.pangu.gallery.v1.PolicyType" json:"policy_type,omitempty"`
-	Version string `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
+	Version    string     `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
 }
 
 func (x *AgreePolicyReq) Reset() {
@@ -315,10 +315,10 @@ type BasicInfoReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CustomerServiceUrl string `protobuf:"bytes,1,opt,name=customer_service_url,json=customerServiceUrl,proto3" json:"customer_service_url,omitempty"`
-	AgreementUrl string `protobuf:"bytes,2,opt,name=agreement_url,json=agreementUrl,proto3" json:"agreement_url,omitempty"`
-	PrivacyUrl string `protobuf:"bytes,3,opt,name=privacy_url,json=privacyUrl,proto3" json:"privacy_url,omitempty"`
-	Links []*Link `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
+	CustomerServiceUrl string  `protobuf:"bytes,1,opt,name=customer_service_url,json=customerServiceUrl,proto3" json:"customer_service_url,omitempty"`
+	AgreementUrl       string  `protobuf:"bytes,2,opt,name=agreement_url,json=agreementUrl,proto3" json:"agreement_url,omitempty"`
+	PrivacyUrl         string  `protobuf:"bytes,3,opt,name=privacy_url,json=privacyUrl,proto3" json:"privacy_url,omitempty"`
+	Links              []*Link `protobuf:"bytes,4,rep,name=links,proto3" json:"links,omitempty"`
 }
 
 func (x *BasicInfoReply) Reset() {
@@ -435,8 +435,8 @@ type Display struct {
 
 	BgThemeLight string `protobuf:"bytes,1,opt,name=bg_theme_light,json=bgThemeLight,proto3" json:"bg_theme_light,omitempty"`
 	BgThemeNight string `protobuf:"bytes,2,opt,name=bg_theme_night,json=bgThemeNight,proto3" json:"bg_theme_night,omitempty"`
-	NftPoster string `protobuf:"bytes,3,opt,name=nft_poster,json=nftPoster,proto3" json:"nft_poster,omitempty"`
-	NftRaw string `protobuf:"bytes,4,opt,name=nft_raw,json=nftRaw,proto3" json:"nft_raw,omitempty"`
+	NftPoster    string `protobuf:"bytes,3,opt,name=nft_poster,json=nftPoster,proto3" json:"nft_poster,omitempty"`
+	NftRaw       string `protobuf:"bytes,4,opt,name=nft_raw,json=nftRaw,proto3" json:"nft_raw,omitempty"`
 }
 
 func (x *Display) Reset() {
@@ -504,9 +504,9 @@ type GetLastPolicyReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ShortDesc string `protobuf:"bytes,1,opt,name=short_desc,json=shortDesc,proto3" json:"short_desc,omitempty"`
+	ShortDesc  string `protobuf:"bytes,1,opt,name=short_desc,json=shortDesc,proto3" json:"short_desc,omitempty"`
 	DetailJump string `protobuf:"bytes,2,opt,name=detail_jump,json=detailJump,proto3" json:"detail_jump,omitempty"`
-	Version string `protobuf:"bytes,3,opt,name=version,proto3" json:"version,omitempty"`
+	Version    string `protobuf:"bytes,3,opt,name=version,proto3" json:"version,omitempty"`
 }
 
 func (x *GetLastPolicyReply) Reset() {
@@ -614,11 +614,11 @@ type GetUserInfoReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
-	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Address string `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
+	Mid       int64  `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Name      string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Address   string `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
 	AvatarUrl string `protobuf:"bytes,4,opt,name=avatar_url,json=avatarUrl,proto3" json:"avatar_url,omitempty"`
-	HelpUrl string `protobuf:"bytes,5,opt,name=help_url,json=helpUrl,proto3" json:"help_url,omitempty"`
+	HelpUrl   string `protobuf:"bytes,5,opt,name=help_url,json=helpUrl,proto3" json:"help_url,omitempty"`
 }
 
 func (x *GetUserInfoReply) Reset() {
@@ -740,8 +740,8 @@ type Link struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	LinkUrl string `protobuf:"bytes,2,opt,name=link_url,json=linkUrl,proto3" json:"link_url,omitempty"`
+	Name         string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	LinkUrl      string `protobuf:"bytes,2,opt,name=link_url,json=linkUrl,proto3" json:"link_url,omitempty"`
 	TrackEventId string `protobuf:"bytes,3,opt,name=track_event_id,json=trackEventId,proto3" json:"track_event_id,omitempty"`
 }
 
@@ -803,9 +803,9 @@ type ListNFTByMidReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Nfts []*NFT `protobuf:"bytes,1,rep,name=nfts,proto3" json:"nfts,omitempty"`
-	AnchorId int64 `protobuf:"varint,2,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
-	End bool `protobuf:"varint,3,opt,name=end,proto3" json:"end,omitempty"`
+	Nfts     []*NFT `protobuf:"bytes,1,rep,name=nfts,proto3" json:"nfts,omitempty"`
+	AnchorId int64  `protobuf:"varint,2,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
+	End      bool   `protobuf:"varint,3,opt,name=end,proto3" json:"end,omitempty"`
 }
 
 func (x *ListNFTByMidReply) Reset() {
@@ -866,11 +866,11 @@ type ListNFTByMidReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid      int64  `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	Category string `protobuf:"bytes,2,opt,name=category,proto3" json:"category,omitempty"`
-	BizType string `protobuf:"bytes,3,opt,name=biz_type,json=bizType,proto3" json:"biz_type,omitempty"`
-	AnchorId int64 `protobuf:"varint,4,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
-	PageSize int64 `protobuf:"varint,5,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
+	BizType  string `protobuf:"bytes,3,opt,name=biz_type,json=bizType,proto3" json:"biz_type,omitempty"`
+	AnchorId int64  `protobuf:"varint,4,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
+	PageSize int64  `protobuf:"varint,5,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
 }
 
 func (x *ListNFTByMidReq) Reset() {
@@ -945,9 +945,9 @@ type ListOrderByMidReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Orders []*Order `protobuf:"bytes,1,rep,name=orders,proto3" json:"orders,omitempty"`
-	AnchorId int64 `protobuf:"varint,2,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
-	End bool `protobuf:"varint,3,opt,name=end,proto3" json:"end,omitempty"`
+	Orders   []*Order `protobuf:"bytes,1,rep,name=orders,proto3" json:"orders,omitempty"`
+	AnchorId int64    `protobuf:"varint,2,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
+	End      bool     `protobuf:"varint,3,opt,name=end,proto3" json:"end,omitempty"`
 }
 
 func (x *ListOrderByMidReply) Reset() {
@@ -1008,7 +1008,7 @@ type ListOrderByMidReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid      int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	AnchorId int64 `protobuf:"varint,2,opt,name=anchor_id,json=anchorId,proto3" json:"anchor_id,omitempty"`
 	PageSize int64 `protobuf:"varint,3,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
 }
@@ -1071,14 +1071,14 @@ type NFT struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	NftId string `protobuf:"bytes,1,opt,name=nft_id,json=nftId,proto3" json:"nft_id,omitempty"`
-	ItemName string `protobuf:"bytes,2,opt,name=item_name,json=itemName,proto3" json:"item_name,omitempty"`
-	SerialNumber string `protobuf:"bytes,3,opt,name=serial_number,json=serialNumber,proto3" json:"serial_number,omitempty"`
-	Issuer string `protobuf:"bytes,4,opt,name=issuer,proto3" json:"issuer,omitempty"`
-	Display *Display `protobuf:"bytes,5,opt,name=display,proto3" json:"display,omitempty"`
-	DetailUrl string `protobuf:"bytes,6,opt,name=detail_url,json=detailUrl,proto3" json:"detail_url,omitempty"`
-	NftStatus NFTStatus `protobuf:"varint,7,opt,name=nft_status,json=nftStatus,proto3,enum=bilibili.pangu.gallery.v1.NFTStatus" json:"nft_status,omitempty"`
-	ItemId int64 `protobuf:"varint,8,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
+	NftId        string    `protobuf:"bytes,1,opt,name=nft_id,json=nftId,proto3" json:"nft_id,omitempty"`
+	ItemName     string    `protobuf:"bytes,2,opt,name=item_name,json=itemName,proto3" json:"item_name,omitempty"`
+	SerialNumber string    `protobuf:"bytes,3,opt,name=serial_number,json=serialNumber,proto3" json:"serial_number,omitempty"`
+	Issuer       string    `protobuf:"bytes,4,opt,name=issuer,proto3" json:"issuer,omitempty"`
+	Display      *Display  `protobuf:"bytes,5,opt,name=display,proto3" json:"display,omitempty"`
+	DetailUrl    string    `protobuf:"bytes,6,opt,name=detail_url,json=detailUrl,proto3" json:"detail_url,omitempty"`
+	NftStatus    NFTStatus `protobuf:"varint,7,opt,name=nft_status,json=nftStatus,proto3,enum=bilibili.pangu.gallery.v1.NFTStatus" json:"nft_status,omitempty"`
+	ItemId       int64     `protobuf:"varint,8,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
 }
 
 func (x *NFT) Reset() {
@@ -1174,18 +1174,18 @@ type Order struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ItemName string `protobuf:"bytes,1,opt,name=item_name,json=itemName,proto3" json:"item_name,omitempty"`
-	SerialNumber string `protobuf:"bytes,2,opt,name=serial_number,json=serialNumber,proto3" json:"serial_number,omitempty"`
-	TxHash string `protobuf:"bytes,3,opt,name=tx_hash,json=txHash,proto3" json:"tx_hash,omitempty"`
-	TxTime string `protobuf:"bytes,4,opt,name=tx_time,json=txTime,proto3" json:"tx_time,omitempty"`
-	Issuer string `protobuf:"bytes,5,opt,name=issuer,proto3" json:"issuer,omitempty"`
-	IssueTime string `protobuf:"bytes,6,opt,name=issue_time,json=issueTime,proto3" json:"issue_time,omitempty"`
-	TokenId string `protobuf:"bytes,7,opt,name=token_id,json=tokenId,proto3" json:"token_id,omitempty"`
-	Display *Display `protobuf:"bytes,8,opt,name=display,proto3" json:"display,omitempty"`
-	ContractAddress string `protobuf:"bytes,9,opt,name=contract_address,json=contractAddress,proto3" json:"contract_address,omitempty"`
-	HashJump string `protobuf:"bytes,10,opt,name=hash_jump,json=hashJump,proto3" json:"hash_jump,omitempty"`
-	ContractJump string `protobuf:"bytes,11,opt,name=contract_jump,json=contractJump,proto3" json:"contract_jump,omitempty"`
-	DisableBrowserJump bool `protobuf:"varint,12,opt,name=disable_browser_jump,json=disableBrowserJump,proto3" json:"disable_browser_jump,omitempty"`
+	ItemName           string   `protobuf:"bytes,1,opt,name=item_name,json=itemName,proto3" json:"item_name,omitempty"`
+	SerialNumber       string   `protobuf:"bytes,2,opt,name=serial_number,json=serialNumber,proto3" json:"serial_number,omitempty"`
+	TxHash             string   `protobuf:"bytes,3,opt,name=tx_hash,json=txHash,proto3" json:"tx_hash,omitempty"`
+	TxTime             string   `protobuf:"bytes,4,opt,name=tx_time,json=txTime,proto3" json:"tx_time,omitempty"`
+	Issuer             string   `protobuf:"bytes,5,opt,name=issuer,proto3" json:"issuer,omitempty"`
+	IssueTime          string   `protobuf:"bytes,6,opt,name=issue_time,json=issueTime,proto3" json:"issue_time,omitempty"`
+	TokenId            string   `protobuf:"bytes,7,opt,name=token_id,json=tokenId,proto3" json:"token_id,omitempty"`
+	Display            *Display `protobuf:"bytes,8,opt,name=display,proto3" json:"display,omitempty"`
+	ContractAddress    string   `protobuf:"bytes,9,opt,name=contract_address,json=contractAddress,proto3" json:"contract_address,omitempty"`
+	HashJump           string   `protobuf:"bytes,10,opt,name=hash_jump,json=hashJump,proto3" json:"hash_jump,omitempty"`
+	ContractJump       string   `protobuf:"bytes,11,opt,name=contract_jump,json=contractJump,proto3" json:"contract_jump,omitempty"`
+	DisableBrowserJump bool     `protobuf:"varint,12,opt,name=disable_browser_jump,json=disableBrowserJump,proto3" json:"disable_browser_jump,omitempty"`
 }
 
 func (x *Order) Reset() {
@@ -1310,7 +1310,7 @@ type UserCheckReply struct {
 	unknownFields protoimpl.UnknownFields
 
 	PolicyStatus int32 `protobuf:"varint,1,opt,name=policy_status,json=policyStatus,proto3" json:"policy_status,omitempty"`
-	Gt14 int32 `protobuf:"varint,2,opt,name=gt14,proto3" json:"gt14,omitempty"`
+	Gt14         int32 `protobuf:"varint,2,opt,name=gt14,proto3" json:"gt14,omitempty"`
 }
 
 func (x *UserCheckReply) Reset() {
@@ -1364,7 +1364,7 @@ type UserCheckReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Mid int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid        int64 `protobuf:"varint,1,opt,name=mid,proto3" json:"mid,omitempty"`
 	PolicyType int32 `protobuf:"varint,2,opt,name=policy_type,json=policyType,proto3" json:"policy_type,omitempty"`
 }
 

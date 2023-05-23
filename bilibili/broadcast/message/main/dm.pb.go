@@ -219,7 +219,7 @@ type CommandDm struct {
 	// 对象视频cid
 	Oid int64 `protobuf:"varint,2,opt,name=oid,proto3" json:"oid,omitempty"`
 	// 发送者mid
-	Mid int64 `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
+	Mid  int64 `protobuf:"varint,3,opt,name=mid,proto3" json:"mid,omitempty"`
 	Type int32 `protobuf:"varint,4,opt,name=type,proto3" json:"type,omitempty"`
 	// 互动弹幕指令
 	Command string `protobuf:"bytes,5,opt,name=command,proto3" json:"command,omitempty"`
