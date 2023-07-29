@@ -1,7 +1,7 @@
 name: Sync Protobuf
 
 on:
-  push:
+#  push:
   workflow_dispatch:
 jobs:
   build:

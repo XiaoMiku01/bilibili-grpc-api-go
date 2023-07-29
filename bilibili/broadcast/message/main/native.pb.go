@@ -4,7 +4,7 @@
 // 	protoc        v3.12.4
 // source: bilibili/broadcast/message/main/native.proto
 
-package main
+package main1
 
 import (
 	empty "github.com/golang/protobuf/ptypes/empty"
@@ -27,8 +27,8 @@ type NativePageEvent struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Native页ID
-	PageID int64 `protobuf:"varint,1,opt,name=PageID,proto3" json:"PageID,omitempty"`
-	Items []*EventItem `protobuf:"bytes,2,rep,name=Items,proto3" json:"Items,omitempty"`
+	PageID int64        `protobuf:"varint,1,opt,name=PageID,proto3" json:"PageID,omitempty"`
+	Items  []*EventItem `protobuf:"bytes,2,rep,name=Items,proto3" json:"Items,omitempty"`
 }
 
 func (x *NativePageEvent) Reset() {

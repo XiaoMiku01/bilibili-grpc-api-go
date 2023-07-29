@@ -4,7 +4,7 @@
 // 	protoc        v3.12.4
 // source: bilibili/broadcast/message/main/search.proto
 
-package main
+package main1
 
 import (
 	v2 "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/v2"
@@ -74,11 +74,11 @@ type ChatResult struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code int32 `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
-	SessionId string `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
-	Bubble []*Bubble `protobuf:"bytes,3,rep,name=bubble,proto3" json:"bubble,omitempty"`
-	RewriteWord string `protobuf:"bytes,4,opt,name=rewrite_word,json=rewriteWord,proto3" json:"rewrite_word,omitempty"`
-	Title string `protobuf:"bytes,5,opt,name=title,proto3" json:"title,omitempty"`
+	Code        int32     `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	SessionId   string    `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
+	Bubble      []*Bubble `protobuf:"bytes,3,rep,name=bubble,proto3" json:"bubble,omitempty"`
+	RewriteWord string    `protobuf:"bytes,4,opt,name=rewrite_word,json=rewriteWord,proto3" json:"rewrite_word,omitempty"`
+	Title       string    `protobuf:"bytes,5,opt,name=title,proto3" json:"title,omitempty"`
 }
 
 func (x *ChatResult) Reset() {
