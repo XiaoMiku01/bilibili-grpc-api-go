@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: bilibili/broadcast/message/main/native.proto
 
-package main1
+package main
 
 import (
 	context "context"

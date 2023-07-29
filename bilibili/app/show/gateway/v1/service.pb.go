@@ -7,7 +7,7 @@
 package v1
 
 import (
-	main1 "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main1"
+	main "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -86,7 +86,7 @@ type GetActProgressReply struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 进度数据
-	Event *main1.NativePageEvent `protobuf:"bytes,1,opt,name=event,proto3" json:"event,omitempty"`
+	Event *main.NativePageEvent `protobuf:"bytes,1,opt,name=event,proto3" json:"event,omitempty"`
 }
 
 func (x *GetActProgressReply) Reset() {
@@ -121,7 +121,7 @@ func (*GetActProgressReply) Descriptor() ([]byte, []int) {
 	return file_bilibili_app_show_gateway_v1_service_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *GetActProgressReply) GetEvent() *main1.NativePageEvent {
+func (x *GetActProgressReply) GetEvent() *main.NativePageEvent {
 	if x != nil {
 		return x.Event
 	}
@@ -178,9 +178,9 @@ func file_bilibili_app_show_gateway_v1_service_proto_rawDescGZIP() []byte {
 
 var file_bilibili_app_show_gateway_v1_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_bilibili_app_show_gateway_v1_service_proto_goTypes = []interface{}{
-	(*GetActProgressReq)(nil),     // 0: bilibili.app.show.gateway.v1.GetActProgressReq
-	(*GetActProgressReply)(nil),   // 1: bilibili.app.show.gateway.v1.GetActProgressReply
-	(*main1.NativePageEvent)(nil), // 2: bilibili.broadcast.message.main.NativePageEvent
+	(*GetActProgressReq)(nil),    // 0: bilibili.app.show.gateway.v1.GetActProgressReq
+	(*GetActProgressReply)(nil),  // 1: bilibili.app.show.gateway.v1.GetActProgressReply
+	(*main.NativePageEvent)(nil), // 2: bilibili.broadcast.message.main.NativePageEvent
 }
 var file_bilibili_app_show_gateway_v1_service_proto_depIdxs = []int32{
 	2, // 0: bilibili.app.show.gateway.v1.GetActProgressReply.event:type_name -> bilibili.broadcast.message.main.NativePageEvent
