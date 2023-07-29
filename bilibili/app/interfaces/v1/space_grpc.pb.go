@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Space_SearchTab_FullMethodName     = "/bilibili.app.interfaces.v1.Space/SearchTab"
-	Space_SearchArchive_FullMethodName = "/bilibili.app.interfaces.v1.Space/SearchArchive"
-	Space_SearchDynamic_FullMethodName = "/bilibili.app.interfaces.v1.Space/SearchDynamic"
+	Space_SearchTab_FullMethodName     = "/bilibili.app.interface.v1.Space/SearchTab"
+	Space_SearchArchive_FullMethodName = "/bilibili.app.interface.v1.Space/SearchArchive"
+	Space_SearchDynamic_FullMethodName = "/bilibili.app.interface.v1.Space/SearchDynamic"
 )
 
 // SpaceClient is the client API for Space service.
@@ -162,7 +162,7 @@ func _Space_SearchDynamic_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Space_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bilibili.app.interfaces.v1.Space",
+	ServiceName: "bilibili.app.interface.v1.Space",
 	HandlerType: (*SpaceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
