@@ -8,7 +8,7 @@ package v2
 
 import (
 	context "context"
-	main1 "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main1"
+	main1 "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

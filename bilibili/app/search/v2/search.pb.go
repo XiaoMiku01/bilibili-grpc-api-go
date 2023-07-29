@@ -7,7 +7,7 @@
 package v2
 
 import (
-	main1 "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main1"
+	main1 "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -26,7 +26,7 @@ type CancelChatTaskReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SessionId string `protobuf:"bytes,1,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
+	SessionId  string `protobuf:"bytes,1,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
 	FromSource string `protobuf:"bytes,2,opt,name=from_source,json=fromSource,proto3" json:"from_source,omitempty"`
 }
 
@@ -128,8 +128,8 @@ type GetChatResultReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Query string `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
-	SessionId string `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
+	Query      string `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
+	SessionId  string `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
 	FromSource string `protobuf:"bytes,3,opt,name=from_source,json=fromSource,proto3" json:"from_source,omitempty"`
 }
 
@@ -191,19 +191,19 @@ type SearchEggInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	EggType int32 `protobuf:"varint,1,opt,name=egg_type,json=eggType,proto3" json:"egg_type,omitempty"`
-	Id int64 `protobuf:"varint,2,opt,name=id,proto3" json:"id,omitempty"`
-	IsCommercial int32 `protobuf:"varint,3,opt,name=is_commercial,json=isCommercial,proto3" json:"is_commercial,omitempty"`
-	MaskColor string `protobuf:"bytes,4,opt,name=mask_color,json=maskColor,proto3" json:"mask_color,omitempty"`
-	MaskTransparency int64 `protobuf:"varint,5,opt,name=mask_transparency,json=maskTransparency,proto3" json:"mask_transparency,omitempty"`
-	Md5 string `protobuf:"bytes,6,opt,name=md5,proto3" json:"md5,omitempty"`
-	ReType int32 `protobuf:"varint,7,opt,name=re_type,json=reType,proto3" json:"re_type,omitempty"`
-	ReUrl string `protobuf:"bytes,8,opt,name=re_url,json=reUrl,proto3" json:"re_url,omitempty"`
-	ReValue string `protobuf:"bytes,9,opt,name=re_value,json=reValue,proto3" json:"re_value,omitempty"`
-	ShowCount int32 `protobuf:"varint,10,opt,name=show_count,json=showCount,proto3" json:"show_count,omitempty"`
-	Size int64 `protobuf:"varint,11,opt,name=size,proto3" json:"size,omitempty"`
-	Source int64 `protobuf:"varint,12,opt,name=source,proto3" json:"source,omitempty"`
-	Url string `protobuf:"bytes,13,opt,name=url,proto3" json:"url,omitempty"`
+	EggType          int32  `protobuf:"varint,1,opt,name=egg_type,json=eggType,proto3" json:"egg_type,omitempty"`
+	Id               int64  `protobuf:"varint,2,opt,name=id,proto3" json:"id,omitempty"`
+	IsCommercial     int32  `protobuf:"varint,3,opt,name=is_commercial,json=isCommercial,proto3" json:"is_commercial,omitempty"`
+	MaskColor        string `protobuf:"bytes,4,opt,name=mask_color,json=maskColor,proto3" json:"mask_color,omitempty"`
+	MaskTransparency int64  `protobuf:"varint,5,opt,name=mask_transparency,json=maskTransparency,proto3" json:"mask_transparency,omitempty"`
+	Md5              string `protobuf:"bytes,6,opt,name=md5,proto3" json:"md5,omitempty"`
+	ReType           int32  `protobuf:"varint,7,opt,name=re_type,json=reType,proto3" json:"re_type,omitempty"`
+	ReUrl            string `protobuf:"bytes,8,opt,name=re_url,json=reUrl,proto3" json:"re_url,omitempty"`
+	ReValue          string `protobuf:"bytes,9,opt,name=re_value,json=reValue,proto3" json:"re_value,omitempty"`
+	ShowCount        int32  `protobuf:"varint,10,opt,name=show_count,json=showCount,proto3" json:"show_count,omitempty"`
+	Size             int64  `protobuf:"varint,11,opt,name=size,proto3" json:"size,omitempty"`
+	Source           int64  `protobuf:"varint,12,opt,name=source,proto3" json:"source,omitempty"`
+	Url              string `protobuf:"bytes,13,opt,name=url,proto3" json:"url,omitempty"`
 }
 
 func (x *SearchEggInfo) Reset() {
@@ -381,8 +381,8 @@ type SearchEggReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code int32 `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
-	Seid string `protobuf:"bytes,2,opt,name=seid,proto3" json:"seid,omitempty"`
+	Code   int32           `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	Seid   string          `protobuf:"bytes,2,opt,name=seid,proto3" json:"seid,omitempty"`
 	Result *SearchEggInfos `protobuf:"bytes,3,opt,name=result,proto3" json:"result,omitempty"`
 }
 
@@ -482,7 +482,7 @@ type SubmitChatTaskReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Code int32 `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	Code      int32  `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	SessionId string `protobuf:"bytes,2,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
 }
 
@@ -537,8 +537,8 @@ type SubmitChatTaskReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Query string `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
-	TrackId string `protobuf:"bytes,2,opt,name=track_id,json=trackId,proto3" json:"track_id,omitempty"`
+	Query      string `protobuf:"bytes,1,opt,name=query,proto3" json:"query,omitempty"`
+	TrackId    string `protobuf:"bytes,2,opt,name=track_id,json=trackId,proto3" json:"track_id,omitempty"`
 	FromSource string `protobuf:"bytes,3,opt,name=from_source,json=fromSource,proto3" json:"from_source,omitempty"`
 }
 

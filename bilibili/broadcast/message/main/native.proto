@@ -35,4 +35,4 @@ message EventItem {
     int64 dimension = 6;
 }
 
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main1";
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main";
