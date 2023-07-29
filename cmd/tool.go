@@ -58,17 +58,17 @@ func fixFile(filename string) {
 }
 
 func main() {
-	xfiles, _ := GetAllFiles(".")
-	for _, file := range xfiles {
-		//fmt.Println(file)
-		fixFile(file)
+	for i := 0; i < 3; i++ {
+		xfiles, _ := GetAllFiles(".")
+		for _, file := range xfiles {
+			//fmt.Println(file)
+			fixFile(file)
 
-		cmd := exec.Command("protoc", "--go_out=paths=source_relative:.", "--go-grpc_out=paths=source_relative:.", "--proto_path=.", file)
-		e := cmd.Run()
-		if e != nil {
-			fmt.Println("err:", cmd.String(), e.Error())
-			//fmt.Println(e)
-			//break
+			cmd := exec.Command("protoc", "--go_out=paths=source_relative:.", "--go-grpc_out=paths=source_relative:.", "--proto_path=.", file)
+			e := cmd.Run()
+			if e != nil {
+				fmt.Println("err:", cmd.String(), e.Error())
+			}
 		}
 	}
 }

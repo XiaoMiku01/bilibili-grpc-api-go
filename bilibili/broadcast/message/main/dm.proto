@@ -62,4 +62,4 @@ message CommandDm {
     string idStr = 12;
 }
 
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main";
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main1";
