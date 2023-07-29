@@ -27,3 +27,5 @@ message ChatResult {
     // 
     string title = 5;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main";

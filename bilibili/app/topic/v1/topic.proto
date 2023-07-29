@@ -578,3 +578,5 @@ message VideoSmallCardItem {
     //
     string card_stat_text2 = 6;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/topic/v1";

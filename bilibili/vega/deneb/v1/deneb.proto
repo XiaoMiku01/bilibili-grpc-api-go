@@ -36,3 +36,5 @@ message MessagePullsReq {
     int32 ps = 4;
 }
 
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/vega/deneb/v1";

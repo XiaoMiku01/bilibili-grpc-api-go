@@ -12,3 +12,5 @@ message PGCAnyModel {
     bilibili.pgc.gateway.player.v2.PlayExtInfo play_ext_info = 7;
 }
 
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playerunite/pgcanymodel";

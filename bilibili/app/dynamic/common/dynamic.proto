@@ -20,3 +20,5 @@ enum WHRatio {
     W_H_RATIO_3_4 = 2;
     W_H_RATIO_CUSTOM = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/common";

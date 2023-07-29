@@ -1273,3 +1273,5 @@ message VipLabel {
     //
     string path = 1;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/web/interfaces/v1";

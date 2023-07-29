@@ -57,3 +57,5 @@ enum OpusType {
     OPUS_TYPE_NOTE = 2;
     OPUS_TYPE_WORD = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/v2";

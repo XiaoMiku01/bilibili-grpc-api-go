@@ -9,3 +9,4 @@ message NightSettingsConfig {
     // 
     bilibili.app.distribution.v1.BoolValue is_night_follow_system = 1;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/distribution/setting";

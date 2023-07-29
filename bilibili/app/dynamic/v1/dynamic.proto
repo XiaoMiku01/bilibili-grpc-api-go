@@ -1387,3 +1387,5 @@ message VipLabel {
     // 图片地址
     string path = 1;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/v1";

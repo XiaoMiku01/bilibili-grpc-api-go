@@ -37,3 +37,5 @@ message GetTicketResponse {
     // 
     Context context = 4;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/api/ticket/v1";

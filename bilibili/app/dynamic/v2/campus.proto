@@ -64,3 +64,4 @@ message WFItemDefault {
     // 
     map<string, string> annotations = 8;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/dynamic/v2";

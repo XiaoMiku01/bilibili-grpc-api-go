@@ -68,3 +68,4 @@ message ReportWatchReq {
     //
     string buvid = 3;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playeronline/v1";

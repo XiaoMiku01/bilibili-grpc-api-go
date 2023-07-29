@@ -1125,3 +1125,5 @@ message WatchProgress {
     // 上次观看的 AID
     int64 last_play_aid = 7;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/pgc/gateway/player/v2";

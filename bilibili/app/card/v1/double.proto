@@ -414,3 +414,5 @@ message SmallChannelSpecial {
     //
     ReasonStyle rcmd_reason_style_2 = 6;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/card/v1";

@@ -24,3 +24,5 @@ message LocaleIds {
     // A region designator is a code that represents a country or an area.
     string region = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/locale";

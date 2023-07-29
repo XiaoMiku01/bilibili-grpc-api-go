@@ -31,3 +31,4 @@ message PremiereStatusReply {
     // 1:下架 2:转点播
     int32 after_premiere_type = 6;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/pgc/service/premiere/v1";

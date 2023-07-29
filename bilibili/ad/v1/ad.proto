@@ -1009,3 +1009,5 @@ message WxProgramInfo {
     //
     string path = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/ad/v1";

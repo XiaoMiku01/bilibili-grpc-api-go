@@ -19,3 +19,5 @@ message FawkesReq {
     // 启动id, 8 位 0~9, a~z 组成的字符串
     string session_id = 3;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/fawkes";

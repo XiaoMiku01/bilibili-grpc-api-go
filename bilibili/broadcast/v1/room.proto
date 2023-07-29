@@ -76,3 +76,5 @@ message RoomResp {
         RoomErrorEvent err = 6;
     }
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/v1";

@@ -89,3 +89,5 @@ message ContractConfigReq {
     //
     int32 source = 5;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/polymer/contract/v1";

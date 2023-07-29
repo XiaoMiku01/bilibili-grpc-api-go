@@ -19,11 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Media_MediaTab_FullMethodName      = "/bilibili.app.interfaces.v1.Media/MediaTab"
-	Media_MediaDetail_FullMethodName   = "/bilibili.app.interfaces.v1.Media/MediaDetail"
-	Media_MediaVideo_FullMethodName    = "/bilibili.app.interfaces.v1.Media/MediaVideo"
-	Media_MediaRelation_FullMethodName = "/bilibili.app.interfaces.v1.Media/MediaRelation"
-	Media_MediaFollow_FullMethodName   = "/bilibili.app.interfaces.v1.Media/MediaFollow"
+	Media_MediaTab_FullMethodName      = "/bilibili.app.interface.v1.Media/MediaTab"
+	Media_MediaDetail_FullMethodName   = "/bilibili.app.interface.v1.Media/MediaDetail"
+	Media_MediaVideo_FullMethodName    = "/bilibili.app.interface.v1.Media/MediaVideo"
+	Media_MediaRelation_FullMethodName = "/bilibili.app.interface.v1.Media/MediaRelation"
+	Media_MediaFollow_FullMethodName   = "/bilibili.app.interface.v1.Media/MediaFollow"
 )
 
 // MediaClient is the client API for Media service.
@@ -228,7 +228,7 @@ func _Media_MediaFollow_Handler(srv interface{}, ctx context.Context, dec func(i
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Media_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bilibili.app.interfaces.v1.Media",
+	ServiceName: "bilibili.app.interface.v1.Media",
 	HandlerType: (*MediaServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

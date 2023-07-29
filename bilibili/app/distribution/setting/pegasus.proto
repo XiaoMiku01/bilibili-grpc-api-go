@@ -39,3 +39,4 @@ message PegasusDeviceConfig {
     // 
     PegasusAutoPlay auto_play = 3;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/distribution/setting";

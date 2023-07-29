@@ -185,3 +185,5 @@ message ReasonStyle {
     // 1:填充模式 2:镂空模式
     int32 bg_style = 8;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/interfaces/v1";

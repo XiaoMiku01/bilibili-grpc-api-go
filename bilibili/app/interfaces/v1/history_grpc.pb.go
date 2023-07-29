@@ -19,13 +19,13 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	History_HistoryTab_FullMethodName    = "/bilibili.app.interfaces.v1.History/HistoryTab"
-	History_Cursor_FullMethodName        = "/bilibili.app.interfaces.v1.History/Cursor"
-	History_CursorV2_FullMethodName      = "/bilibili.app.interfaces.v1.History/CursorV2"
-	History_Delete_FullMethodName        = "/bilibili.app.interfaces.v1.History/Delete"
-	History_Search_FullMethodName        = "/bilibili.app.interfaces.v1.History/Search"
-	History_Clear_FullMethodName         = "/bilibili.app.interfaces.v1.History/Clear"
-	History_LatestHistory_FullMethodName = "/bilibili.app.interfaces.v1.History/LatestHistory"
+	History_HistoryTab_FullMethodName    = "/bilibili.app.interface.v1.History/HistoryTab"
+	History_Cursor_FullMethodName        = "/bilibili.app.interface.v1.History/Cursor"
+	History_CursorV2_FullMethodName      = "/bilibili.app.interface.v1.History/CursorV2"
+	History_Delete_FullMethodName        = "/bilibili.app.interface.v1.History/Delete"
+	History_Search_FullMethodName        = "/bilibili.app.interface.v1.History/Search"
+	History_Clear_FullMethodName         = "/bilibili.app.interface.v1.History/Clear"
+	History_LatestHistory_FullMethodName = "/bilibili.app.interface.v1.History/LatestHistory"
 )
 
 // HistoryClient is the client API for History service.
@@ -308,7 +308,7 @@ func _History_LatestHistory_Handler(srv interface{}, ctx context.Context, dec fu
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var History_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bilibili.app.interfaces.v1.History",
+	ServiceName: "bilibili.app.interface.v1.History",
 	HandlerType: (*HistoryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

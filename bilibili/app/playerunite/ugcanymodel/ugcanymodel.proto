@@ -25,3 +25,5 @@ message UGCAnyModel {
     PlayLimit play_limit = 1;
 }
 
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playerunite/ugcanymodel";

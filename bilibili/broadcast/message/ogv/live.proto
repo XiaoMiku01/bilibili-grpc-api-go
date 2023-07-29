@@ -42,3 +42,5 @@ message CMDBody {
         LiveUpdateEvent update = 4;
     }
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/ogv";

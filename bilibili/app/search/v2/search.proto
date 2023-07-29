@@ -108,3 +108,5 @@ message SubmitChatTaskReq {
     string from_source = 3;
 }
 
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/search/v2";

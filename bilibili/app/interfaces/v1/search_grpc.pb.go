@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Search_Suggest3_FullMethodName     = "/bilibili.app.interfaces.v1.Search/Suggest3"
-	Search_DefaultWords_FullMethodName = "/bilibili.app.interfaces.v1.Search/DefaultWords"
+	Search_Suggest3_FullMethodName     = "/bilibili.app.interface.v1.Search/Suggest3"
+	Search_DefaultWords_FullMethodName = "/bilibili.app.interface.v1.Search/DefaultWords"
 )
 
 // SearchClient is the client API for Search service.
@@ -131,7 +131,7 @@ func _Search_DefaultWords_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Search_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bilibili.app.interfaces.v1.Search",
+	ServiceName: "bilibili.app.interface.v1.Search",
 	HandlerType: (*SearchServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -148,7 +148,7 @@ var Search_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	SearchTest_NotExist_FullMethodName = "/bilibili.app.interfaces.v1.SearchTest/NotExist"
+	SearchTest_NotExist_FullMethodName = "/bilibili.app.interface.v1.SearchTest/NotExist"
 )
 
 // SearchTestClient is the client API for SearchTest service.
@@ -225,7 +225,7 @@ func _SearchTest_NotExist_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SearchTest_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "bilibili.app.interfaces.v1.SearchTest",
+	ServiceName: "bilibili.app.interface.v1.SearchTest",
 	HandlerType: (*SearchTestServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

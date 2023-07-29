@@ -110,3 +110,4 @@ message ResNativeDraw {
     //
     bilibili.dagw.component.avatar.common.ResourceSource draw_src = 1;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/dagw/component/avatar/v1";

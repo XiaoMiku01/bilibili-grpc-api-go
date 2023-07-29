@@ -43,3 +43,5 @@ message PlayViewUniteReply {
     // 
     bilibili.playershared.History history = 8;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/playerunite/v1";

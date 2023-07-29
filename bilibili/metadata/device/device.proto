@@ -39,3 +39,5 @@ message Device {
     // 首次启动时的毫秒时间戳
     int64 fts = 15;
 }
+
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/metadata/device";

@@ -106,3 +106,4 @@ message SizeSpec {
     //
     double height = 2;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/dagw/component/avatar/common";

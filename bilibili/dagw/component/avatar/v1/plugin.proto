@@ -91,3 +91,4 @@ message PhysicalOrientationV2 {
     //
     repeated PhysicalOrientationAnimation animations = 3;
 }
+option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/dagw/component/avatar/v1";
