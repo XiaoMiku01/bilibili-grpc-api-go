@@ -129,5 +129,3 @@ message SplashReq {
     //
     string network = 5;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/splash/v1";

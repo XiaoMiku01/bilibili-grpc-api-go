@@ -23,4 +23,3 @@ message GetActProgressReply {
     // 进度数据
     bilibili.broadcast.message.main.NativePageEvent event = 1;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/show/gateway/v1";

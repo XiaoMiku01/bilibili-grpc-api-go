@@ -97,5 +97,3 @@ message ReqServerNotify {
     //
 	NotifyInfo notify_info = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/im";

@@ -44,5 +44,3 @@ message TestResp {
     // 扩展
     google.protobuf.Any extra = 4;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/v1";

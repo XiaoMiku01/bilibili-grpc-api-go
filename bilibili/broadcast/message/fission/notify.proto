@@ -16,4 +16,3 @@ message GameNotifyReply {
     // 数据字段
     string data = 2;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/fission";

@@ -369,5 +369,3 @@ message VideoSubtitle {
     // 视频字幕列表
     repeated SubtitleItem subtitles = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/tv/interfaces/dm/v1";

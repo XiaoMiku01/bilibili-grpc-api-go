@@ -114,5 +114,3 @@ message PopularResultReq {
 
 
 
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/show/popular/v1";

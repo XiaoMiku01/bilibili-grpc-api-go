@@ -248,4 +248,3 @@ message UserCheckReq {
     //
     int32 policy_type = 2;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/pangu/gallery/v1";

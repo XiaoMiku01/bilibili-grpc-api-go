@@ -376,5 +376,3 @@ message UserLabel {
     //
     int32 guardian_relation = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/im/type";

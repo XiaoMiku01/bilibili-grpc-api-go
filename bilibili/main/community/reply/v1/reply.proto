@@ -1239,5 +1239,3 @@ message Vote {
     // 参与人数
     int64 count = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/main/community/reply/v1";

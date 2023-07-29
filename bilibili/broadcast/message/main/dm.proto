@@ -61,5 +61,3 @@ message CommandDm {
     // 弹幕id str类型
     string idStr = 12;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/message/main";

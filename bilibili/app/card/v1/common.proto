@@ -338,5 +338,3 @@ message WatchLater {
     // 稿件bvid
     string bvid = 2;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/card/v1";

@@ -19,5 +19,3 @@ message LaserEventResp {
     // 指令参数json字符串
     string params = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/broadcast/v2";

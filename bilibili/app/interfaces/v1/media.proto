@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package bilibili.app.interfaces.v1;
+package bilibili.app.interface.v1;
 
 //
 service Media {
@@ -326,4 +326,3 @@ message UserCard {
     //
     int64 mid = 4;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/interfaces/v1";

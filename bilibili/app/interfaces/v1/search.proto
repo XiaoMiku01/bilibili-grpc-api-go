@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package bilibili.app.interfaces.v1;
+package bilibili.app.interface.v1;
 
 // 搜索
 service Search {
@@ -185,5 +185,3 @@ message ReasonStyle {
     // 1:填充模式 2:镂空模式
     int32 bg_style = 8;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/interfaces/v1";

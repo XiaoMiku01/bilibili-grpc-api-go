@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package bilibili.app.interfaces.v1;
+package bilibili.app.interface.v1;
 
 import "bilibili/app/archive/middleware/v1/preload.proto";
 
@@ -374,5 +374,3 @@ message SearchReq {
     // archive:视频 live:直播 article:专栏 goods:商品 show:展演
     string business = 3;
 }
-
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/interfaces/v1";

@@ -59,4 +59,3 @@ message SetPrivacyConfigRequest {
     // 隐私开关状态
     PrivacyConfigState state = 2;
 }
-option go_package = "github.com/XiaoMiku01/bilibili-grpc-api-go/bilibili/app/resource/privacy/v1";
